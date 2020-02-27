@@ -1,0 +1,11 @@
+kafka-producers:
+  image: 
+    repository: lsstts/salkafka
+    tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
+    pullPolicy: Always
+
+  env:
+    lsst_dds_domain: sandboxtest
+    broker_ip: kafka-0-sandbox-efd.lsst.codes
+    broker_port: 9094
+    registry_addr: https://schema-registry-sandbox-efd.lsst.codes
