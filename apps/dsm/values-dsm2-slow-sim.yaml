@@ -5,5 +5,5 @@ dsm:
     pullPolicy: Always
 
   env:
-    csc_index: 2
-    csc_mode: 2
+    cscIndex: 2
+    cscMode: 2

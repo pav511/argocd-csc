@@ -5,7 +5,7 @@ kafka-producers:
     pullPolicy: Always
 
   env:
-    lsst_dds_domain: sandboxtest
-    broker_ip: kafka-0-sandbox-efd.lsst.codes
-    broker_port: 9094
-    registry_addr: https://schema-registry-sandbox-efd.lsst.codes
+    lsstDdsDomain: sandboxtest
+    brokerIp: kafka-0-sandbox-efd.lsst.codes
+    brokerPort: 9094
+    registryAddr: https://schema-registry-sandbox-efd.lsst.codes
