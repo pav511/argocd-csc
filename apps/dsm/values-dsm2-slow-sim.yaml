@@ -1,0 +1,9 @@
+dsm:
+  image:
+    repository: lsstts/dsm
+    tag: develop
+    pullPolicy: Always
+
+  env:
+    cscIndex: 2
+    cscMode: 2

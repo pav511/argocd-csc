@@ -1,0 +1,3 @@
+dsm:
+  env:
+    lsstDdsDomain: sandboxtest
