@@ -1,0 +1,4 @@
+dependencies:
+- name: kafak-producers
+  version: 0.1.0
+  repository: https://lsst-ts.github.io/charts/
