@@ -8,7 +8,7 @@ kafka-producers:
     lsstDdsDomain:
       separate: false
       default: sandboxtest
-    brokerIp: kafka-0-sandbox-efd.lsst.codes
+    brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
     brokerPort: 9094
-    registryAddr: https://schema-registry-sandbox-efd.lsst.codes
+    registryAddr: cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
     logLevel: 20
