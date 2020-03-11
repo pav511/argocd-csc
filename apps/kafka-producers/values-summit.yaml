@@ -1,0 +1,14 @@
+kafka-producers:
+  image: 
+    repository: lsstts/salkafka
+    tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
+    pullPolicy: Always
+
+  env:
+    lsstDdsDomain:
+      separate: false
+      default: summit
+    brokerIp: kafka-0-summit-efd.lsst.codes
+    brokerPort: 31090
+    registryAddr: https://schema-registry-summit-efd.lsst.codes
+    logLevel: 10
