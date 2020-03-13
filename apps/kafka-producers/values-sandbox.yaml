@@ -10,5 +10,5 @@ kafka-producers:
       default: sandboxtest
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
     brokerPort: 9092
-    registryAddr: cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
+    registryAddr: https://schema-registry-sandbox-efd.lsst.codes
     logLevel: 20
