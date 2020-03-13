@@ -9,6 +9,6 @@ kafka-producers:
       separate: false
       default: sandboxtest
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
-    brokerPort: 9094
+    brokerPort: 9092
     registryAddr: cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
     logLevel: 20
