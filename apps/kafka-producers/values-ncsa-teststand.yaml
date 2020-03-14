@@ -6,9 +6,9 @@ kafka-producers:
 
   env:
     lsstDdsDomain:
-      auxtel: auxpath
+      auxtel: auxtelpath
       comcam: comcampath
-      latiss: auxpath
+      latiss: auxtelpath
       default: ncsa
     brokerIp: lsst-kafka-0-nts-efd.ncsa.illinois.edu
     brokerPort: 31090
