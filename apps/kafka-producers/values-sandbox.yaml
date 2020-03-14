@@ -6,7 +6,6 @@ kafka-producers:
 
   env:
     lsstDdsDomain:
-      separate: false
       default: sandboxtest
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
     brokerPort: 9092
