@@ -4,6 +4,11 @@ kafka-producers:
     tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
     pullPolicy: Always
 
+  producers:
+    - auxtel
+    - eas
+    - test
+
   env:
     lsstDdsDomain:
       default: sandboxtest
