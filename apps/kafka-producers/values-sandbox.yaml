@@ -7,7 +7,7 @@ kafka-producers:
   producers:
     - auxtel
     - eas
-    - test
+    - latiss
 
   env:
     lsstDdsDomain:
