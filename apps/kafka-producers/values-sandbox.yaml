@@ -8,6 +8,7 @@ kafka-producers:
     - auxtel
     - eas
     - latiss
+    - m1m3
 
   env:
     lsstDdsDomain:
@@ -16,3 +17,10 @@ kafka-producers:
     brokerPort: 9092
     registryAddr: https://schema-registry-sandbox-efd.lsst.codes
     logLevel: 20
+
+  cscs:
+    m1m3: >-
+      MTVMS
+      MTM1M3
+      MTPtg
+      MTAOS
