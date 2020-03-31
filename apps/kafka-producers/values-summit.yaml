@@ -6,7 +6,12 @@ kafka-producers:
 
   env:
     lsstDdsDomain:
-      separate: false
+      auxtel: lsatmcs
+      eas: lsatmcs
+      latiss: lsatmcs
+      m1m3: m1m3Test213
+      m2: m2
+      obssys: lsatmcs
       default: summit
     brokerIp: kafka-0-summit-efd.lsst.codes
     brokerPort: 31090

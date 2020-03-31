@@ -6,7 +6,6 @@ kafka-producers:
 
   env:
     lsstDdsDomain:
-      separate: false
       default: tucson
     brokerIp: kafka-0-tucson-teststand-efd.lsst.codes
     brokerPort: 31090
