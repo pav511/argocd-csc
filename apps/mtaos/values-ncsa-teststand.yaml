@@ -1,0 +1,10 @@
+csc:
+  image:
+    repository: lsstts/mtaos_sim
+    tag: w_2020_06_sal
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: comcampath
+
+  entrypoint: files/mtaos_setup.sh
