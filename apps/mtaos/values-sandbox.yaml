@@ -7,4 +7,4 @@ csc:
   env:
     LSST_DDS_DOMAIN: sandboxtest
 
-  entrypoint: files/mtaos_setup.sh
+  entrypoint: $ARGOCD_APP_SOURCE_PATH/files/mtaos_setup.sh
