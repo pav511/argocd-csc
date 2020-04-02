@@ -1,3 +1,8 @@
-dsm:
+csc:
+  image:
+    repository: lsstts/dsm
+    tag: develop
+    pullPolicy: Always
+
   env:
-    lsstDdsDomain: sandboxtest
+    LSST_DDS_DOMAIN: sandboxtest
