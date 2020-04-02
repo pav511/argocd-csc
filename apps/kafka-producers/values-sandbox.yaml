@@ -20,7 +20,5 @@ kafka-producers:
 
   cscs:
     m1m3: >-
-      MTVMS
       MTM1M3
-      MTPtg
       MTAOS
