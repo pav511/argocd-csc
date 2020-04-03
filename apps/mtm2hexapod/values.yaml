@@ -1,0 +1,3 @@
+csc:
+  env:
+    HEXAPOD_ID: -s 2
