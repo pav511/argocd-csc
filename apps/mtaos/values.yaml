@@ -20,6 +20,8 @@ csc:
 
     . repos/ts_sal/setup.env
 
+    export LSST_DDS_IP=`ip route get 1 | awk '{print $7;exit}'`
+
     echo "#"
 
     echo "# Setting up sal, salobj and scriptqueue"
