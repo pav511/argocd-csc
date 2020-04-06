@@ -8,6 +8,7 @@ kafka-producers:
     - auxtel
     - eas
     - latiss
+    - m1m3
     - m2
 
   env:
