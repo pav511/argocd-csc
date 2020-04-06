@@ -6,5 +6,3 @@ csc:
 
   env:
     LSST_DDS_DOMAIN: comcampath
-
-  entrypoint: $ARGOCD_APP_SOURCE_PATH/files/mtaos_setup.sh
