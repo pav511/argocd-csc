@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Parent application to bootstrap Main Telescope CSC deployment
+name: maintel
+version: 0.1.0
