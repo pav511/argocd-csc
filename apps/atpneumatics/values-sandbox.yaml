@@ -1,0 +1,8 @@
+csc:
+  image:
+    repository: lsstts/at_pneumatics_sim
+    tag: v0.4.0_b42
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: sandboxtest
