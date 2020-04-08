@@ -1,0 +1,8 @@
+csc:
+  image:
+    repository: lsstts/m2_sim
+    tag: DM-24028
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: comcampath

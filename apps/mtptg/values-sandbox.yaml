@@ -1,0 +1,8 @@
+csc: 
+  image:
+    repository: ts-dockerhub.lsst.org/ptkernel
+    tag: newATMCS_develop
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: sandboxtest
