@@ -1,0 +1,19 @@
+csc: 
+  image:
+    repository: lsstts/atdome
+    tag: v1.1_salobj_v5.4.0_idl_v1.1.2_xml_v4.7.0
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: lsatmcs
+
+  entrypoint: |
+    #!/usr/bin/env bash
+
+    source ~/miniconda3/bin/activate
+
+    source $OSPL_HOME/release.com
+    
+    source /home/saluser/.bashrc
+
+    run_atdome.py

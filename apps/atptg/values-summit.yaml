@@ -1,0 +1,8 @@
+csc: 
+  image:
+    repository: ts-dockerhub.lsst.org/ptkernel
+    tag: v1.1.0_rc4_b42
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: lsatmcs
