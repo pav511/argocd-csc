@@ -4,3 +4,5 @@ csc:
     tag: latest
     pullPolicy: Always
     useNexus3: true
+
+  deployEnv: ncsa-teststand

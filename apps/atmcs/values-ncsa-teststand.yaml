@@ -7,6 +7,8 @@ csc:
   env:
     LSST_DDS_DOMAIN: auxtelpath
 
+  deployEnv: ncsa-teststand
+
   entrypoint: |
     #!/usr/bin/env bash
 

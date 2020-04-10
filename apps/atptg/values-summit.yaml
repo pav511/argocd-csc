@@ -6,3 +6,5 @@ csc:
 
   env:
     LSST_DDS_DOMAIN: lsatmcs
+
+  deployEnv: summit
