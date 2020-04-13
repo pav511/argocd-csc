@@ -1,4 +1,4 @@
 dependencies:
 - name: csc
-  version: 0.3.0
+  version: 0.3.5
   repository: https://lsst-ts.github.io/charts/
