@@ -5,8 +5,8 @@ kind: Application
 metadata:
   {{- if eq $.Values.env "summit" }}
   name: {{ $csc }}
-  {{- else if eq $csc "hexapodsim" }}
-  name: {{ $csc | trunc 7 }}-sim
+  {{- else if contains "sim" $csc }}
+  name: {{ trimSuffix "sim" $csc }}-sim
   {{- else if and $.Values.no_sim (has $csc $.Values.no_sim) }}
   name: {{ $csc }}
   {{- else}}
