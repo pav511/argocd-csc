@@ -1,13 +1,22 @@
 kafka-producers:
-  image: 
-    repository: lsstts/salkafka
-    tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
-    pullPolicy: Always
+  defaults:
+    image: 
+      repository: lsstts/salkafka
+      tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
+      pullPolicy: Always
 
-  env:
-    lsstDdsDomain:
-      default: tucson
-    brokerIp: kafka-0-tucson-teststand-efd.lsst.codes
-    brokerPort: 31090
-    registryAddr: https://schema-registry-tucson-teststand-efd.lsst.codes
-    logLevel: 10
+    env:
+      lsstDdsDomain: tucson
+      brokerIp: kafka-0-tucson-teststand-efd.lsst.codes
+      brokerPort: 31090
+      registryAddr: https://schema-registry-tucson-teststand-efd.lsst.codes
+      partitions: 1
+      replication: 3
+      logLevel: 10
+
+  producers:
+    "m1m3": null
+    "m2": null
+    "eas":
+      cscs: >-
+        DSM

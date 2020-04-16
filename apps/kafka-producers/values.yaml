@@ -1,0 +1,47 @@
+# This configuration file keeps the main listings
+kafka-producers:
+  producers:
+    "auxtel": 
+      cscs: >-
+        ATAOS
+        ATDome
+        ATDomeTrajectory
+        ATHexapod
+        ATPneumatics
+        ATPtg
+        ATMCS
+    "comcam":
+      cscs: >-
+        CCArchiver
+        CCCamera
+        CCHeaderService
+    "eas":
+      cscs: >-
+        DIMM
+        DSM
+        Environment
+    "latiss":
+      cscs: >-
+        ATArchiver
+        ATCamera
+        ATHeaderService
+        ATSpectrograph
+    "m1m3":
+      cscs: >-
+        MTM1M3
+        MTVMS
+    "m2":
+      cscs: >-
+        Hexapod
+        MTM2
+        Rotator
+    "obssys":
+      cscs: >-
+        GenericCamera
+        Scheduler
+        Script
+        ScriptQueue
+        Watcher
+    "test":
+      cscs: >-
+        Test
