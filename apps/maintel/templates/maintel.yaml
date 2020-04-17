@@ -5,7 +5,7 @@ kind: Application
 metadata:
   {{- if eq $.Values.env "summit" }}
   name: {{ $csc }}
-  {{- else if and $.Values.no_sim (has $csc $.Values.no_sim) }}
+  {{- else if and $.Values.noSim (has $csc $.Values.noSim) }}
   name: {{ $csc }}
   {{- else}}
   name: {{ $csc }}-sim

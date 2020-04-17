@@ -16,5 +16,5 @@ cscs:
   - ataos
   - hexapodsim
 
-no_sim:
+noSim:
   - ataos
