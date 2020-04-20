@@ -1,17 +1,26 @@
 kafka-producers:
-  image: 
+  image:
     repository: lsstts/salkafka
     tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
     pullPolicy: Always
 
   env:
-    lsstDdsDomain:
-      comcam: mtcs
-      default: summit
+    lsstDdsDomain: base
     brokerIp: lsst-kafka-0-int-efd.ncsa.illinois.edu
     brokerPort: 31090
     registryAddr: https://lsst-schema-registry-int-efd.ncsa.illinois.edu
+    partitions: 1
+    replication: 3
     logLevel: 10
 
   producers:
-    - comcam
+    auxtel: null
+    comcam:
+      env:
+        lsstDdsDomain: mtcs
+    eas: null
+    latiss: null
+    m1m3: null
+    m2: null
+    obssys: null
+    test: null

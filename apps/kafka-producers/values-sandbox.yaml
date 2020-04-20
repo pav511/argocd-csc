@@ -1,25 +1,21 @@
 kafka-producers:
-  image: 
+  image:
     repository: lsstts/salkafka
     tag: v1.1.0_salobj_v5.7.0_xml_4.8.0
     pullPolicy: Always
-
-  producers:
-    - auxtel
-    - eas
-    - latiss
-    - m1m3
-    - m2
-
   env:
-    lsstDdsDomain:
-      default: sandboxtest
+    lsstDdsDomain: sandboxtest
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
     brokerPort: 9092
     registryAddr: https://schema-registry-sandbox-efd.lsst.codes
+    partitions: 1
+    replication: 3
     logLevel: 20
 
-  cscs:
-    m1m3: >-
-      MTM1M3
-      MTAOS
+  producers:
+    comcam: null
+    obssys: null
+    m1m3:
+      cscs: >-
+        MTM1M3
+        MTAOS
