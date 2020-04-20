@@ -1,31 +1,30 @@
 kafka-producers:
-  defaults:
-    image: 
-      repository: lsstts/salkafka
-      tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
-      pullPolicy: Always
+  image:
+    repository: lsstts/salkafka
+    tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
+    pullPolicy: Always
 
-    env:
-      lsstDdsDomain: ncsa
-      brokerIp: lsst-kafka-0-nts-efd.ncsa.illinois.edu
-      brokerPort: 31090
-      registryAddr: https://lsst-schema-registry-nts-efd.ncsa.illinois.edu
-      partitions: 1
-      replication: 3
-      logLevel: 10
+  env:
+    lsstDdsDomain: ncsa
+    brokerIp: lsst-kafka-0-nts-efd.ncsa.illinois.edu
+    brokerPort: 31090
+    registryAddr: https://lsst-schema-registry-nts-efd.ncsa.illinois.edu
+    partitions: 1
+    replication: 3
+    logLevel: 10
 
   producers:
-    "auxtel":
+    auxtel:
       env:
         lsstDdsDomain: auxtelpath
-    "comcam":
+    comcam:
       env:
         lsstDdsDomain: comcampath
-    "eas": null
-    "latiss":
+    eas: null
+    latiss:
       env:
         lsstDdsDomain: auxtelpath
-    "m1m3":
+    m1m3:
       env:
         lsstDdsDomain: comcampath
       cscs: >-
@@ -33,8 +32,8 @@ kafka-producers:
         MTM1M3
         MTPtg
         MTAOS
-    "m2":
+    m2:
       env:
         lsstDdsDomain: comcampath
-    "obssys": null
-    "test": null
+    obssys: null
+    test: null
