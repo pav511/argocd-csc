@@ -1,0 +1,6 @@
+csc:
+  image:
+    useNexus3: true
+
+  env:
+    TELESCOPE: Main

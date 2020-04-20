@@ -1,7 +1,7 @@
-csc:
+csc: 
   image:
-    repository: lsstts/dsm
-    tag: develop
+    repository: ts-dockerhub.lsst.org/ptkernel
+    tag: DM-22702_b42
     pullPolicy: Always
 
   env:

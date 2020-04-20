@@ -1,0 +1,10 @@
+csc:
+  image:
+    repository: lsstts/mtm1m3_sim
+    tag: latest
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: comcampath
+
+  deployEnv: ncsa-teststand

@@ -1,0 +1,10 @@
+csc: 
+  image:
+    repository: lsstts/watcher
+    tag: v1.0.2_rc1
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: lsatmcs
+
+  deployEnv: summit

@@ -1,0 +1,47 @@
+csc: 
+  image:
+    repository: lsstts/atspectrograph
+    tag: v0.5.0_b42
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: auxtelpath
+
+  deployEnv: ncsa-teststand
+
+  entrypoint: |
+    #!/usr/bin/env bash
+
+    # Source this file when starting the container to set it up
+
+    echo "#"
+
+    echo "# Loading LSST Stack"
+
+    . /opt/lsst/software/stack/loadLSST.bash
+
+    setup lsst_distrib
+
+    echo "#"
+
+    echo "# Loading sal environment"
+
+    . repos/ts_sal/setup.env
+
+    echo "#"
+
+    echo "# Setting up ts_atspectrograph."
+
+    setup ts_salobj -t current
+
+    setup ts_atspectrograph -t current
+
+    while :
+
+        do
+
+            echo "# Starting ATSpectrograph CSC in simulation mode"
+
+            atspec_csc.py -s
+            
+    done

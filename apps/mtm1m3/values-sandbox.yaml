@@ -1,7 +1,7 @@
-csc:
+csc: 
   image:
-    repository: lsstts/dsm
-    tag: develop
+    repository: lsstts/mtm1m3_sim
+    tag: latest
     pullPolicy: Always
 
   env:

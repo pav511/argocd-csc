@@ -1,7 +1,7 @@
-csc:
+csc: 
   image:
-    repository: lsstts/dsm
-    tag: develop
+    repository: lsstts/hexapod
+    tag: v0.4.0_b42
     pullPolicy: Always
 
   env:

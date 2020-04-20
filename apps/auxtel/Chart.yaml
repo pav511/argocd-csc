@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Parent application to bootstrap Auxiliary Telescope CSC deployment
+name: auxtel
+version: 0.1.0

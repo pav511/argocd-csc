@@ -1,0 +1,10 @@
+csc: 
+  image:
+    repository: lsstts/rotator
+    tag: v0.1.0_sim
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: comcampath
+
+  deployEnv: ncsa-teststand

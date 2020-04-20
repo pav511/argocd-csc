@@ -1,0 +1,10 @@
+csc: 
+  image:
+    repository: lsstts/scheduler
+    tag: DM-23757_b45
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: lsatmcs
+
+  deployEnv: summit

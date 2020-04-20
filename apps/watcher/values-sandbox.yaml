@@ -1,7 +1,7 @@
-csc:
+csc: 
   image:
-    repository: lsstts/dsm
-    tag: develop
+    repository: lsstts/watcher
+    tag: v1.0.2_rc1
     pullPolicy: Always
 
   env:

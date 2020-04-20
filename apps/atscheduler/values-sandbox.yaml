@@ -1,7 +1,7 @@
-csc:
+csc: 
   image:
-    repository: lsstts/dsm
-    tag: develop
+    repository: lsstts/scheduler
+    tag: DM-23757_b45
     pullPolicy: Always
 
   env:
