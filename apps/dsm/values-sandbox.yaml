@@ -1,7 +1,7 @@
 csc:
   image:
     repository: lsstts/dsm
-    tag: develop
+    tag: b55
     pullPolicy: Always
 
   env:

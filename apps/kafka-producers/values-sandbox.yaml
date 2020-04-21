@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: lsstts/salkafka
-    tag: v1.1.0_salobj_v5.7.0_xml_4.8.0
+    tag: v1.1.1_salobj_v5.10.0_xml_5.0.0
     pullPolicy: Always
   env:
     lsstDdsDomain: sandboxtest
