@@ -14,26 +14,14 @@ kafka-producers:
     logLevel: 10
 
   producers:
-    auxtel:
-      env:
-        lsstDdsDomain: auxtelpath
-    comcam:
-      env:
-        lsstDdsDomain: comcampath
     eas: null
     latiss:
-      env:
-        lsstDdsDomain: auxtelpath
     m1m3:
-      env:
-        lsstDdsDomain: comcampath
       cscs: >-
         MTVMS
         MTM1M3
         MTPtg
         MTAOS
     m2:
-      env:
-        lsstDdsDomain: comcampath
     obssys: null
     test: null
