@@ -1,7 +1,7 @@
 csc:
   image:
     repository: lsstts/dsm
-    tag: b55
+    tag: b56
     pullPolicy: Always
 
   env:
