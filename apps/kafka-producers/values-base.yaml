@@ -6,9 +6,9 @@ kafka-producers:
 
   env:
     lsstDdsDomain: base
-    brokerIp: lsst-kafka-0-int-efd.ncsa.illinois.edu
+    brokerIp: kafka-0-base-efd.lsst.codes
     brokerPort: 31090
-    registryAddr: https://lsst-schema-registry-int-efd.ncsa.illinois.edu
+    registryAddr: https://schema-registry-base-efd.lsst.codes
     partitions: 1
     replication: 3
     logLevel: 10
