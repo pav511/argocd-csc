@@ -19,3 +19,4 @@ kafka-producers:
       cscs: >-
         MTM1M3
         MTAOS
+    test: null
