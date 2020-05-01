@@ -20,4 +20,6 @@ kafka-producers:
     m1m3: null
     m2: null
     obssys: null
-    test: null
+    test:
+      image:
+        tag: v1.1.0_salobj_v5.7.0_xml_4.8.0
