@@ -4,3 +4,5 @@ csc:
 
   env:
     TELESCOPE: AuxTel
+
+  namespace: auxtel
