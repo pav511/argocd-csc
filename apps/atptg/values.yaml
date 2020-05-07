@@ -1,6 +1,6 @@
 csc:
   image:
-    useNexus3: true
+    nexus3: nexus3-docker
 
   env:
     TELESCOPE: AuxTel
