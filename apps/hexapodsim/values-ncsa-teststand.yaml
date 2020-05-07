@@ -4,5 +4,3 @@ csc:
     tag: latest
     pullPolicy: Always
     nexus3: nexus3-docker
-
-  deployEnv: ncsa-teststand
