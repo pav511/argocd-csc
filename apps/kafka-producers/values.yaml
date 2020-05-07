@@ -1,5 +1,7 @@
 # This configuration file keeps the main listings
 kafka-producers:
+  namespace: kafka-producers
+
   producers:
     auxtel: 
       cscs: >-

@@ -1,3 +1,5 @@
 csc:
   env:
     INDEX: 2
+
+  namespace: auxtel

@@ -6,5 +6,3 @@ csc:
 
   env:
     LSST_DDS_DOMAIN: m2
-
-  deployEnv: summit

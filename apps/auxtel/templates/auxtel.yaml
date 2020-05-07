@@ -16,7 +16,7 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: {{ $csc }}
+    namespace: auxtel
     server: {{ $.Values.spec.destination.server }}
   project: default
   source:

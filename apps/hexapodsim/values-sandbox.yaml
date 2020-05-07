@@ -3,6 +3,4 @@ csc:
     repository: ts-dockerhub.lsst.org/hexapod_simulator
     tag: latest
     pullPolicy: Always
-    useNexus3: true
-
-  deployEnv: sandbox
+    nexus3: nexus3-docker

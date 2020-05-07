@@ -14,7 +14,7 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: {{ $csc }}
+    namespace: maintel
     server: {{ $.Values.spec.destination.server }}
   project: default
   source:

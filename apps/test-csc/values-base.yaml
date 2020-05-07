@@ -7,4 +7,3 @@ csc:
   env:
     LSST_DDS_DOMAIN: base
 
-  deployEnv: base
