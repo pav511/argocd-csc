@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: lsstts/salkafka
-    tag: v1.1.1_salobj_v5.10.0_xml_v5.0.0
+    tag: v1.1.1_salobj_v5.10.0_xml_v5.1.0
     pullPolicy: Always
 
   env:
@@ -14,14 +14,10 @@ kafka-producers:
     logLevel: 10
 
   producers:
+    auxtel: null
     eas: null
-    latiss:
-    m1m3:
-      cscs: >-
-        MTVMS
-        MTM1M3
-        MTPtg
-        MTAOS
-    m2:
+    latiss: null
+    m1m3: null
+    m2: null
     obssys: null
     test: null
