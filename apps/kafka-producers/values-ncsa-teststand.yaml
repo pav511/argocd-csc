@@ -6,8 +6,8 @@ kafka-producers:
 
   env:
     lsstDdsDomain: ncsa
-    brokerIp: lsst-kafka-0-nts-efd.ncsa.illinois.edu
-    brokerPort: 31090
+    brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
+    brokerPort: 9092
     registryAddr: https://lsst-schema-registry-nts-efd.ncsa.illinois.edu
     partitions: 1
     replication: 3
