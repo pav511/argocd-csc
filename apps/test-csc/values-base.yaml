@@ -6,3 +6,9 @@ csc:
 
   env:
     LSST_DDS_DOMAIN: base
+
+  mountpoint:
+    - name: mnt
+      path: /mnt
+      accessMode: ReadWriteOnce
+      claimSize: 10Mib
