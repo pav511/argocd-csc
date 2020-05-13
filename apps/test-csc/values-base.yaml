@@ -11,4 +11,4 @@ csc:
     - name: mnt
       path: /mnt
       accessMode: ReadWriteOnce
-      claimSize: 10Mib
+      claimSize: 100Mib
