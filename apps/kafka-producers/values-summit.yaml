@@ -14,6 +14,8 @@ kafka-producers:
     logLevel: 10
 
   producers:
+    maintel: null
+    mtmount: null
     auxtel:
       env:
         lsstDdsDomain: lsatmcs

@@ -13,6 +13,8 @@ kafka-producers:
     logLevel: 20
 
   producers:
+    maintel: null
+    mtmount: null
     comcam: null
     obssys: null
     eas:
