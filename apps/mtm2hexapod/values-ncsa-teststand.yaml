@@ -1,7 +1,7 @@
 csc: 
   image:
     repository: lsstts/hexapod
-    tag: v0.4.0_b42
+    tag: v0.5.2
     pullPolicy: Always
 
   env:

@@ -1,7 +1,7 @@
 csc:
   image:
     repository: lsstts/m2_sim
-    tag: DM-24028
+    tag: v0.1
     pullPolicy: Always
 
   env:

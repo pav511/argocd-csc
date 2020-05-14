@@ -1,7 +1,7 @@
 csc: 
   image:
     repository: ts-dockerhub.lsst.org/ptkernel
-    tag: newATMCS_develop
+    tag: DM-24828
     pullPolicy: Always
 
   env:
