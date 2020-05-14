@@ -1,8 +1,8 @@
 csc:
   image:
-    repository: lsstts/m2_sim
+    repository: lsstts/m2
     tag: v0.1
     pullPolicy: Always
 
   env:
-    LSST_DDS_DOMAIN: comcampath
+    LSST_DDS_DOMAIN: ncsa
