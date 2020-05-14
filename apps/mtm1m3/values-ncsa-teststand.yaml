@@ -1,7 +1,7 @@
 csc:
   image:
     repository: lsstts/mtm1m3_sim
-    tag: latest
+    tag: v1.7.0
     pullPolicy: Always
 
   env:

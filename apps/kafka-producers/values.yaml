@@ -12,6 +12,16 @@ kafka-producers:
         ATPneumatics
         ATPtg
         ATMCS
+    maintel:
+      cscs: >-
+        MTAOS
+        Dome
+        MTDomeTrajectory
+        MTPtg
+    mtmount:
+      cscs: >-
+        MTMount
+        NewMTMount
     comcam:
       cscs: >-
         CCArchiver

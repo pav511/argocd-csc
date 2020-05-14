@@ -1,7 +1,7 @@
-csc:
+csc: 
   image:
-    repository: lsstts/mtaos_sim
-    tag: w_2020_20
+    repository: lsstts/mtmount
+    tag: v0.1.0
     pullPolicy: Always
 
   env:

@@ -1,5 +1,5 @@
 csc:
   env:
-    HEXAPOD_ID: -s 2
+    RUN_ARG: -s 2
 
   namespace: maintel
