@@ -1,5 +1,5 @@
 csc:
   env:
-    RUN_ARG: -s 2
+    RUN_ARG: -s
 
   namespace: maintel
