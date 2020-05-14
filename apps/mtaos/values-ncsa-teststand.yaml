@@ -1,7 +1,7 @@
 csc:
   image:
     repository: lsstts/mtaos_sim
-    tag: w_2020_06_sal
+    tag: w_2020_20
     pullPolicy: Always
 
   env:
