@@ -3,6 +3,6 @@ csc:
     nexus3: nexus3-docker
 
   env:
-    TELESCOPE: Main
+    TELESCOPE: MT
 
   namespace: maintel
