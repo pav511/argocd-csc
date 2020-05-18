@@ -14,7 +14,17 @@ kafka-producers:
     logLevel: 20
 
   producers:
+    comcam: null
     auxtel: null
     eas: null
     latiss: null
     test: null
+    ccarchiver:
+      cscs: >-
+        CCArchiver
+    cccamera:
+      cscs: >-
+        CCCamera
+    ccheaderservice:
+      cscs: >-
+        CCHeaderService

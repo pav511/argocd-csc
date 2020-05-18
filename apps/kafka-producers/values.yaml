@@ -3,7 +3,7 @@ kafka-producers:
   namespace: kafka-producers
 
   producers:
-    auxtel: 
+    auxtel:
       cscs: >-
         ATAOS
         ATDome
