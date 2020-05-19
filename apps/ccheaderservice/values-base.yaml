@@ -1,0 +1,31 @@
+csc: 
+  image:
+    repository: lsstts/headerservice
+    tag: v2.2.0_salobj_v5.11.0_idl_v1.2.0_xml_v5.1.0
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: base
+
+  entrypoint: |
+    #!/usr/bin/env bash
+
+    source ~/miniconda3/bin/activate
+
+    source $OSPL_HOME/release.com
+
+    source /home/saluser/.bashrc
+
+    source $CONDA_PREFIX/HeaderService/setpath.sh $CONDA_PREFIX/HeaderService
+
+    echo "# Starting CCHeaderService CSC"
+  
+    headerservice -c $HEADERSERVICE_DIR/etc/conf/ccTelemetry.yaml  
+
+    echo "# CCHeaderService exited."
+
+  mountpoint:
+    - name: www
+      path: /home/saluser/www
+      accessMode: ReadWriteMany
+      claimSize: 50Gi
