@@ -11,7 +11,7 @@ kafka-producers:
     registryAddr: https://schema-registry-base-efd.lsst.codes
     partitions: 1
     replication: 3
-    logLevel: 10
+    logLevel: 20
 
   producers:
     auxtel: null
