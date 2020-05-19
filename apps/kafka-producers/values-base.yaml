@@ -18,7 +18,6 @@ kafka-producers:
     maintel: null
     mtmount: null
     eas: null
-    latiss: null
     m1m3: null
     m2: null
     obssys: null
