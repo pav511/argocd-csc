@@ -11,6 +11,7 @@ kafka-producers:
     registryAddr: https://lsst-schema-registry-nts-efd.ncsa.illinois.edu
     partitions: 1
     replication: 3
+    waitAck: 1
     logLevel: 20
 
   producers:

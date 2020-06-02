@@ -11,6 +11,7 @@ kafka-producers:
     registryAddr: https://schema-registry-summit-efd.lsst.codes
     partitions: 1
     replication: 3
+    waitAck: 1
     logLevel: 10
 
   producers:
