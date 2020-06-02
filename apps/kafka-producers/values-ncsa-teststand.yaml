@@ -8,7 +8,7 @@ kafka-producers:
     lsstDdsDomain: ncsa
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
     brokerPort: 9092
-    registryAddr: https://lsst-schema-registry-nts-efd.ncsa.illinois.edu
+    registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
     partitions: 1
     replication: 3
     waitAck: 1
