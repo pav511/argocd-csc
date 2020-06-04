@@ -1,0 +1,5 @@
+env: summit
+
+cscs:
+  - mtaos
+  - mtptg

@@ -5,8 +5,8 @@ spec:
     repoURL: https://github.com/lsst-ts/argocd-csc
     targetRevision: HEAD
 
-## Enviroment where the CSCs are deployed. Possible values are summit,
-## tucson-teststand, ncsa-teststand and sandbox.
+## Environment where the CSCs are deployed. Possible values are summit,
+## base, tucson-teststand, ncsa-teststand and sandbox.
 ## This parameter is usually set via the `argocd app create command` see
 ## https://github.com/lsst-ts/argocd-csc
 
@@ -21,3 +21,6 @@ cscs:
   - mtmount
   - mtptg
   - mtrotator
+
+noSim:
+  - mtptg
