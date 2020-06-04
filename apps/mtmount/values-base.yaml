@@ -1,0 +1,8 @@
+csc:
+  image:
+    repository: lsstts/mtmount
+    tag: v0.1.0
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: base

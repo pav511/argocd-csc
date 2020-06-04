@@ -1,0 +1,8 @@
+csc: 
+  image:
+    repository: ts-dockerhub.lsst.org/ptkernel
+    tag: DM-24828
+    pullPolicy: Always
+
+  env:
+    LSST_DDS_DOMAIN: base
