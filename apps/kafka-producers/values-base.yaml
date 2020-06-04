@@ -1,14 +1,14 @@
 kafka-producers:
   image:
     repository: lsstts/salkafka
-    tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
+    tag: v1.1.3_salobj_v5.15.0_xml_v5.1.0
     pullPolicy: Always
 
   env:
     lsstDdsDomain: base
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
     brokerPort: 9092
-    registryAddr: https://schema-registry-base-efd.lsst.codes
+    registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
     partitions: 1
     replication: 3
     waitAck: 1
@@ -16,12 +16,5 @@ kafka-producers:
 
   producers:
     auxtel: null
-    maintel: null
-    mtmount: null
     eas: null
-    m1m3: null
-    m2: null
     obssys: null
-    test:
-      image:
-        tag: v1.1.0_salobj_v5.7.0_xml_4.8.0
