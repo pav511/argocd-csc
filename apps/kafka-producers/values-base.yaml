@@ -16,5 +16,6 @@ kafka-producers:
 
   producers:
     auxtel: null
+    latiss: null
     eas: null
     obssys: null
