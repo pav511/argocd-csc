@@ -20,9 +20,7 @@ csc:
 
     echo "# Starting CCHeaderService CSC"
   
-    headerservice -c $HEADERSERVICE_DIR/etc/conf/ccTelemetry.yaml  
-
-    echo "# CCHeaderService exited."
+    headerservice -c $HEADERSERVICE_DIR/etc/conf/ccTelemetry.yaml
 
   mountpoint:
     - name: www
