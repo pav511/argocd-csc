@@ -25,5 +25,5 @@ csc:
   mountpoint:
     - name: www
       path: /home/saluser/www
-      accessMode: ReadWriteMany
+      accessMode: ReadWriteOnce
       claimSize: 50Gi
