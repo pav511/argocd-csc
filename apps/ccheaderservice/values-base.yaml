@@ -1,7 +1,7 @@
 csc: 
   image:
     repository: lsstts/headerservice
-    tag: v2.2.1_salobj_v5.14.0_idl_v1.2.0_xml_v5.1.0
+    tag: v2.3.0_salobj_v5.14.0_idl_v1.2.0_xml_v5.1.0
     pullPolicy: Always
 
   env:
