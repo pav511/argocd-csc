@@ -1,8 +1,16 @@
-apiVersion: networking.k8s.io/v1beta1
+{{- if .Values.ingress.use }}
+apiVersion: extensions/v1beta1 
 kind: Ingress
 metadata:
-  name: ccheaderservice-ingress
+  name: {{ .Release.Name }}-ingress
+  namespace: {{ .Values.csc.namespace }}
 spec:
-  backend:
-    serviceName: ccheaderservice-service
-    servicePort: 8000
+  rules:
+    - host: {{ .Values.ingress.hostname }}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ .Release.Name }}-service
+              servicePort: 8000
+{{- end }}

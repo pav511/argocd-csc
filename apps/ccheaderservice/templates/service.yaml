@@ -1,14 +1,16 @@
+{{- if .Values.ingress.use }}
 apiVersion: v1
 kind: Service
 metadata:
   labels:
-    csc: ccheaderservice
-  name: ccheaderservice-service
-  namespace: maintel
+    csc: {{ .Release.Name }}
+  name: {{ .Release.Name }}-service
+  namespace: {{ .Values.csc.namespace }}
 spec:
   ports:
   - port: 8000
     targetPort: 8000
   selector:
-    csc: ccheaderservice
+    csc: {{ .Release.Name }}
   type: ClusterIP
+{{- end }}
