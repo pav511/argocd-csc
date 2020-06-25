@@ -1,7 +1,7 @@
 csc: 
   image:
     repository: ts-dockerhub.lsst.org/ptkernel
-    tag: DM-24828
+    tag: v2.1.0
     pullPolicy: Always
 
   env:
