@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Parent application to bootstrap Observatory Systems CSC deployment
+name: obssys
+version: 0.1.0

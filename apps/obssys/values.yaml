@@ -1,0 +1,12 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/lsst-ts/argocd-csc
+    targetRevision: HEAD
+
+noSim:
+  - atscheduler
+  - atqueue
+  - mtqueue
+  - watcher
