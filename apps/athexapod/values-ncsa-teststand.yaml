@@ -1,6 +1,6 @@
 csc:
   image:
-    repository: lsstts/ts_athexapod
+    repository: lsstts/athexapod
     tag: c0009
     pullPolicy: Always
 
