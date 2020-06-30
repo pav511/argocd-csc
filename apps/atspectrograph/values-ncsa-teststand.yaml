@@ -1,6 +1,6 @@
 csc:
   image:
-    repository: lsstts/atspectrograph
+    repository: lsstts/atspec
     tag: c0009
     pullPolicy: Always
 
