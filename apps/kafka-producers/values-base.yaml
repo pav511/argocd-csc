@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: lsstts/salkafka
-    tag: v1.1.3_5.15.0_1.2.2_4.1.1_6.0.0
+    tag: cycle-0009
     pullPolicy: Always
 
   env:
