@@ -1,7 +1,7 @@
-csc: 
+csc:
   image:
     repository: lsstts/ts_athexapod
-    tag: v0.3.0_b42
+    tag: c0009
     pullPolicy: Always
 
   env:
