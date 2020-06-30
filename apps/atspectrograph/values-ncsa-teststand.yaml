@@ -5,5 +5,5 @@ csc:
     pullPolicy: Always
 
   env:
-    LSST_DDS_DOMAIN: auxtelpath
+    LSST_DDS_DOMAIN: ncsa
     RUN_ARG: -s
