@@ -1,7 +1,7 @@
 csc:
   image:
     repository: lsstts/mtmount
-    tag: v0.2.0_5.15.0_1.2.2_4.1.1_6.0.0
+    tag: c0009
     pullPolicy: Always
 
   env:

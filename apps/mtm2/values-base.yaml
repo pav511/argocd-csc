@@ -1,7 +1,7 @@
 csc:
   image:
     repository: lsstts/m2
-    tag: v0.1
+    tag: c0009
     pullPolicy: Always
 
   env:
