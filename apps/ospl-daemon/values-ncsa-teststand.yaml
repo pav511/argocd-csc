@@ -1,3 +1,5 @@
 ospl-daemon:
   env:
     LSST_DDS_DOMAIN: ncsa
+
+  shmemDir: /scratch.local/ospl
