@@ -1,0 +1,3 @@
+ospl-daemon:
+  env:
+    LSST_DDS_DOMAIN: ncsa
