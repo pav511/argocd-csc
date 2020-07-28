@@ -1,8 +1,12 @@
 csc:
   image:
-    repository: lsstts/ataos
-    tag: c0009
+    repository: ts-dockerhub.lsst.org/ataos
+    tag: c0010
     pullPolicy: Always
+    nexus3: nexus3-docker
 
   env:
     LSST_DDS_DOMAIN: ncsa
+
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl

@@ -1,11 +1,15 @@
 csc: 
   image:
-    repository: lsstts/develop-env
-    tag: b101
+    repository: ts-dockerhub.lsst.org/develop-env
+    tag: c0010
     pullPolicy: Always
+    nexus3: nexus3-docker
 
   env:
     LSST_DDS_DOMAIN: ncsa
+
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl
 
   entrypoint: |
     #!/usr/bin/env bash

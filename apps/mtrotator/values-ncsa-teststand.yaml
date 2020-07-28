@@ -1,8 +1,12 @@
 csc: 
   image:
-    repository: lsstts/rotator
-    tag: v0.4.4
+    repository: ts-dockerhub.lsst.org/rotator
+    tag: c0010
     pullPolicy: Always
+    nexus3: nexus3-docker
 
   env:
     LSST_DDS_DOMAIN: ncsa
+
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl

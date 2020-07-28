@@ -1,8 +1,12 @@
 csc: 
   image:
     repository: ts-dockerhub.lsst.org/ptkernel
-    tag: v2.1.0
+    tag: c0010
     pullPolicy: Always
+    nexus3: nexus3-docker
 
   env:
     LSST_DDS_DOMAIN: ncsa
+
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl
