@@ -1,0 +1,7 @@
+ospl-config:
+  namespaces:
+    - auxtel
+    - maintel
+    - obssys
+    - kafka-producers
+    - ospl-daemon
