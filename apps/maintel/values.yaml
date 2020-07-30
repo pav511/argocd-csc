@@ -5,17 +5,5 @@ spec:
     repoURL: https://github.com/lsst-ts/argocd-csc
     targetRevision: HEAD
 
-env: ncsa-teststand
-
-cscs:
-  - mtaos
-  - mtcamhexapod
-  - mtm1m3
-  - mtm2
-  - mtm2hexapod
-  - mtmount
-  - mtptg
-  - mtrotator
-
 noSim:
   - mtptg
