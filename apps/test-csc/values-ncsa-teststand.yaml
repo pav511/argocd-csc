@@ -6,5 +6,7 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_DOMAIN: ncsa
+    OSPL_INFOFILE: /tmp/ospl-info-test.log
+    OSPL_ERRORFILE: /tmp/ospl-error-test.log
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl

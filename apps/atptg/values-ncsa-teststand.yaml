@@ -7,6 +7,8 @@ csc:
   env:
     LSST_DDS_DOMAIN: ncsa
     TELESCOPE: AT
+    OSPL_INFOFILE: /tmp/ospl-info-atptg.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atptg.log
 
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl

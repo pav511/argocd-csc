@@ -8,6 +8,8 @@ csc:
   env:
     LSST_DDS_DOMAIN: ncsa
     RUN_ARG: -s
+    OSPL_INFOFILE: /tmp/ospl-info-atspectrograph.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atspectrograph.log
 
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl

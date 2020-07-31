@@ -7,6 +7,8 @@ csc:
 
   env:
     LSST_DDS_DOMAIN: ncsa
+    OSPL_INFOFILE: /tmp/ospl-info-atpneumatics.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atpneumatics.log
 
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl
