@@ -20,3 +20,9 @@ kafka-producers:
 
   producers:
     eas: null
+    m1m3:
+      env:
+        partitions: 3
+    m2:
+      env:
+        partitions: 3
