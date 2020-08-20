@@ -3,3 +3,4 @@ env: ncsa-teststand
 cscs:
   - atqueue
   - mtqueue
+  - watcher
