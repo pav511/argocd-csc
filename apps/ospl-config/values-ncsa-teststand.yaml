@@ -5,3 +5,4 @@ ospl-config:
     - obssys
     - kafka-producers
     - ospl-daemon
+  domainId: 2
