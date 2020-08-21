@@ -1,7 +1,7 @@
-csc: 
+csc:
   image:
     repository: ts-dockerhub.lsst.org/test_csc
-    tag: c0010
+    tag: c0011
     pullPolicy: Always
     nexus3: nexus3-docker
   env:

@@ -1,10 +1,9 @@
 kafka-producers:
   image:
     repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0010
+    tag: c0011
     pullPolicy: Always
     nexus3: nexus3-docker
-
   env:
     lsstDdsDomain: ncsa
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
@@ -14,10 +13,8 @@ kafka-producers:
     replication: 3
     waitAck: 1
     logLevel: 20
-
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl
-
   producers:
     eas: null
     m1m3:

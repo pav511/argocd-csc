@@ -1,14 +1,12 @@
-csc: 
+csc:
   image:
     repository: ts-dockerhub.lsst.org/ptkernel
-    tag: c0010
+    tag: c0011
     pullPolicy: Always
     nexus3: nexus3-docker
-
   env:
     LSST_DDS_DOMAIN: ncsa
     OSPL_INFOFILE: /tmp/ospl-info-mtptg.log
     OSPL_ERRORFILE: /tmp/ospl-error-mtptg.log
-
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl
