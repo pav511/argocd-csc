@@ -1,63 +1,15 @@
 csc: 
   image:
-    repository: ts-dockerhub.lsst.org/develop-env
+    repository: ts-dockerhub.lsst.org/scriptqueue
     tag: c0010
     pullPolicy: Always
     nexus3: nexus3-docker
 
   env:
     LSST_DDS_DOMAIN: ncsa
+    RUN_ARG: 2
     OSPL_INFOFILE: /tmp/ospl-info-atqueue.log
     OSPL_ERRORFILE: /tmp/ospl-error-atqueue.log
 
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl
-
-  entrypoint: |
-    #!/usr/bin/env bash
-
-    # Source this file when starting the container to set it up
-
-    echo "#"
-
-    echo "# Loading LSST Stack"
-
-    . /opt/lsst/software/stack/loadLSST.bash
-
-    setup lsst_distrib
-
-    echo "#"
-
-    echo "# Loading sal environment"
-
-    . repos/ts_sal/setup.env
-
-    echo "#"
-
-    echo "# Setting up sal, salobj and scriptqueue"
-
-    setup ts_xml -t current
-
-    setup ts_sal -t current
-
-    setup ts_salobj -t current
-
-    setup ts_scriptqueue -t current
-
-    setup ts_ATDome -t current
-
-    setup ts_ATDomeTrajectory -t current
-
-    setup ts_standardscripts -t current
-
-    setup ts_externalscripts -t current
-
-    while :
-
-        do
-
-            run_script_queue.py 2
-
-            echo "# Queue exited. Restarting..."
-            
-    done
