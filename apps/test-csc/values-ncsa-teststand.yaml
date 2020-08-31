@@ -5,7 +5,7 @@ csc:
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa
+    LSST_DDS_DOMAIN: ncsa.obs
     OSPL_INFOFILE: /tmp/ospl-info-test.log
     OSPL_ERRORFILE: /tmp/ospl-error-test.log
   osplVersion: V6.10.4

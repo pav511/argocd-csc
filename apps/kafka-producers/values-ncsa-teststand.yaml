@@ -16,10 +16,33 @@ kafka-producers:
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl
   producers:
+    auxtel:
+      env:
+        lsstDdsDomain: ncsa.obs.at.cs
+    comcam:
+      env:
+        lsstDdsDomain: ncsa.obs.mt.comcam
     eas: null
+    latiss:
+      env:
+        lsstDdsDomain: ncsa.obs.at.latiss
+    maintel:
+      env:
+        lsstDdsDomain: ncsa.obs.mt.cs
+    mtmount:
+      env:
+        lsstDdsDomain: ncsa.obs.mt.cs.mount
     m1m3:
       env:
+        lsstDdsDomain: ncsa.obs.mt.cs.m1m3
         partitions: 3
     m2:
       env:
+        lsstDdsDomain: ncsa.obs.mt.cs.m2
         partitions: 3
+    obssys:
+      env:
+        lsstDdsDomain: ncsa.obs
+    test:
+      env:
+        lsstDdsDomain: ncsa.obs

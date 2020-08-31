@@ -4,7 +4,7 @@ csc:
     tag: c0011
     pullPolicy: Always
   env:
-    LSST_DDS_DOMAIN: ncsa
+    LSST_DDS_DOMAIN: ncsa.obs.at.cs
     TELESCOPE: AT
     OSPL_INFOFILE: /tmp/ospl-info-atptg.log
     OSPL_ERRORFILE: /tmp/ospl-error-atptg.log
