@@ -1,11 +1,11 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/scriptqueue
-    tag: c0011
+    tag: c0012
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa.obs
+    LSST_DDS_PARTITION_PREFIX: ncsa
     RUN_ARG: 1
     OSPL_INFOFILE: /tmp/ospl-info-mtqueue.log
     OSPL_ERRORFILE: /tmp/ospl-error-mtqueue.log

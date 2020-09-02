@@ -1,11 +1,11 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/atdome
-    tag: c0011
+    tag: c0012
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa.obs.at.cs
+    LSST_DDS_PARTITION_PREFIX: ncsa
     RUN_ARG: -s
     OSPL_INFOFILE: /tmp/ospl-info-atdome.log
     OSPL_ERRORFILE: /tmp/ospl-error-atdome.log

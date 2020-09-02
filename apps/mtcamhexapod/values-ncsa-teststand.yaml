@@ -1,11 +1,11 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/hexapod
-    tag: c0011
+    tag: c0012
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa.obs.mt.cs.m2
+    LSST_DDS_PARTITION_PREFIX: ncsa
     OSPL_INFOFILE: /tmp/ospl-info-mtcamhexapod.log
     OSPL_ERRORFILE: /tmp/ospl-error-mtcamhexapod.log
   osplVersion: V6.10.4

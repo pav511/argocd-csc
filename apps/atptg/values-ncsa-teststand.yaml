@@ -1,10 +1,10 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/ptkernel
-    tag: c0011
+    tag: c0012
     pullPolicy: Always
   env:
-    LSST_DDS_DOMAIN: ncsa.obs.at.cs
+    LSST_DDS_PARTITION_PREFIX: ncsa
     TELESCOPE: AT
     OSPL_INFOFILE: /tmp/ospl-info-atptg.log
     OSPL_ERRORFILE: /tmp/ospl-error-atptg.log
