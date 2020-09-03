@@ -1,2 +1,4 @@
 ospl-daemon:
+  env:
+    LSST_DDS_PARTITION_PREFIX: ncsa
   shmemDir: /scratch.local/ospl
