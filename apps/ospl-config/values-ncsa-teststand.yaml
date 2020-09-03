@@ -6,3 +6,11 @@ ospl-config:
     - kafka-producers
     - ospl-daemon
   domainId: 2
+  shmemSize: 104857600
+  maxSamplesWarnAt: 50000
+  schedulingClass: Default
+  schedulingPriority: 0
+  monitorStackSize: 6000000
+  waterMarksWhcHigh: 8MB
+  deliveryQueueMaxSamples: 2500
+  lsstDdsPartitionPrefix: ncsa
