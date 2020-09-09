@@ -12,5 +12,5 @@ ospl-config:
   schedulingPriority: 0
   monitorStackSize: 6000000
   waterMarksWhcHigh: 8MB
-  deliveryQueueMaxSamples: 2500
+  deliveryQueueMaxSamples: 10000
   squashParticipants: true
