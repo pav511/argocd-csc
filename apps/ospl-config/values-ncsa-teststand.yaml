@@ -14,3 +14,4 @@ ospl-config:
   waterMarksWhcHigh: 8MB
   deliveryQueueMaxSamples: 10000
   squashParticipants: true
+  namespacePolicyAlignee: Lazy
