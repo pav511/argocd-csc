@@ -9,11 +9,15 @@ metadata:
   name: {{ trimSuffix "sim" $csc }}-sim
   {{- else if and $.Values.noSim (has $csc $.Values.noSim) }}
   name: {{ $csc }}
-  {{- else}}
+  {{- else }}
   name: {{ $csc }}-sim
-  {{- end}}
+  {{- end }}
   finalizers:
   - resources-finalizer.argocd.argoproj.io
+  {{- if contains "hexapodsim" $csc }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+  {{- end }}
 spec:
   destination:
     namespace: auxtel
