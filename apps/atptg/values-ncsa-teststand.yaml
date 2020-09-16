@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/ptkernel
-    tag: c0012
+    tag: c0013
     pullPolicy: Always
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa

@@ -1,6 +1,12 @@
 ospl-daemon:
+  image:
+    repository: ts-dockerhub.lsst.org/ospl-daemon 
+    tag: c0013
+    pullPolicy: Always
+    nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
     OSPL_INFOFILE: /tmp/ospl-info-daemon.log
     OSPL_ERRORFILE: /tmp/ospl-error-daemon.log
   shmemDir: /scratch.local/ospl
+  osplVersion: V6.10.4
