@@ -1,0 +1,12 @@
+csc:
+  image:
+    repository: ts-dockerhub.lsst.org/mtdometrajectory
+    tag: c0012
+    pullPolicy: Always
+    nexus3: nexus3-docker
+  env:
+    LSST_DDS_PARTITION_PREFIX: ncsa
+    OSPL_INFOFILE: /tmp/ospl-info-mtdometrajectory.log
+    OSPL_ERRORFILE: /tmp/ospl-error-mtdometrajectory.log
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl

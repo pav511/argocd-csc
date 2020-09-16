@@ -7,3 +7,5 @@ cscs:
   - mtm2hexapod
   - mtmount
   - mtrotator
+  - mtdome
+  - mtdometrajectory
