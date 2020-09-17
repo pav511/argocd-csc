@@ -18,6 +18,8 @@ kafka-producers:
   producers:
     eas: null
     m1m3:
+      cscs: >-
+        --file m1m3.yaml
       env:
         partitions: 3
     m2:
