@@ -13,6 +13,9 @@ kafka-producers:
     replication: 3
     waitAck: 1
     logLevel: 20
+    extras:
+      OSPL_INFOFILE: /tmp/ospl-info-kafka-producers.log
+      OSPL_ERRORFILE: /tmp/ospl-error-kafka-producers.log
   osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl
   producers:
