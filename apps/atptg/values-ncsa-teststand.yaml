@@ -1,9 +1,12 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/ptkernel
-    tag: c0009
+    tag: c0013
     pullPolicy: Always
-
   env:
-    LSST_DDS_DOMAIN: ncsa
+    LSST_DDS_PARTITION_PREFIX: ncsa
     TELESCOPE: AT
+    OSPL_INFOFILE: /tmp/ospl-info-atptg.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atptg.log
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl

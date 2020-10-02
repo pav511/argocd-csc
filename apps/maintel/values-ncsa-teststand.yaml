@@ -1,0 +1,11 @@
+env: ncsa-teststand
+
+cscs:
+  - mtaos
+  - mtptg
+  - mtcamhexapod
+  - mtm2hexapod
+  - mtmount
+  - mtrotator
+  - mtdome
+  - mtdometrajectory

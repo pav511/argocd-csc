@@ -7,6 +7,7 @@ spec:
 
 noSim:
   - atscheduler
+  - mtscheduler
   - atqueue
   - mtqueue
   - watcher

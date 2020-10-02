@@ -1,11 +1,11 @@
 kafka-producers:
   image:
-    repository: lsstts/salkafka
-    tag: v1.1.3_5.15.0_1.2.2_4.1.1_6.0.0
+    repository: ts-dockerhub.lsst.org/salkafka
+    tag: c0013
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    lsstDdsDomain: ncsa
+    lsstDdsPartitionPrefix: ncsa
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
     brokerPort: 9092
     registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
@@ -13,19 +13,18 @@ kafka-producers:
     replication: 3
     waitAck: 1
     logLevel: 20
-
+    extras:
+      OSPL_INFOFILE: /tmp/ospl-info-kafka-producers.log
+      OSPL_ERRORFILE: /tmp/ospl-error-kafka-producers.log
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl
   producers:
-    comcam: null
-    auxtel: null
     eas: null
-    latiss: null
-    test: null
-    ccarchiver:
+    m1m3:
       cscs: >-
-        CCArchiver
-    cccamera:
-      cscs: >-
-        CCCamera
-    ccheaderservice:
-      cscs: >-
-        CCHeaderService
+        --file m1m3.yaml
+      env:
+        partitions: 3
+    m2:
+      env:
+        partitions: 3

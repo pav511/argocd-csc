@@ -1,8 +1,12 @@
 csc:
   image:
-    repository: lsstts/mtaos_sim
-    tag: w_2020_20_sal
+    repository: ts-dockerhub.lsst.org/mtaos_sim
+    tag: c0013
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa
+    LSST_DDS_PARTITION_PREFIX: ncsa
+    OSPL_INFOFILE: /tmp/ospl-info-mtaos.log
+    OSPL_ERRORFILE: /tmp/ospl-error-mtaos.log
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl

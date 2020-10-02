@@ -1,9 +1,13 @@
 csc:
   image:
-    repository: lsstts/atdome
-    tag: c0009
+    repository: ts-dockerhub.lsst.org/atdome
+    tag: c0013
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa
+    LSST_DDS_PARTITION_PREFIX: ncsa
     RUN_ARG: -s
+    OSPL_INFOFILE: /tmp/ospl-info-atdome.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atdome.log
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl

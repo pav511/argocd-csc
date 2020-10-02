@@ -1,8 +1,12 @@
 csc:
   image:
-    repository: lsstts/atmcs_sim
-    tag: c0009
+    repository: ts-dockerhub.lsst.org/atmcs_sim
+    tag: c0013
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa
+    LSST_DDS_PARTITION_PREFIX: ncsa
+    OSPL_INFOFILE: /tmp/ospl-info-atmcs.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atmcs.log
+  osplVersion: V6.10.4
+  shmemDir: /scratch.local/ospl
