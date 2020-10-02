@@ -5,7 +5,7 @@ ospl-config:
     - obssys
     - kafka-producers
     - ospl-daemon
-  domainId: 2
+  domainId: 0
   shmemSize: 104857600
   maxSamplesWarnAt: 50000
   schedulingClass: Default
