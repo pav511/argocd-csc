@@ -14,10 +14,10 @@ metadata:
   {{- end }}
   finalizers:
   - resources-finalizer.argocd.argoproj.io
-  {{- if contains "hexapodsim" $csc }}
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
-  {{- end }}
+  # {{- if contains "hexapodsim" $csc }}
+  # annotations:
+  #   argocd.argoproj.io/sync-wave: "-1"
+  # {{- end }}
 spec:
   destination:
     namespace: auxtel
