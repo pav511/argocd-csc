@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/mtdome
-    tag: c0013
+    tag: c0014
     pullPolicy: Always
     nexus3: nexus3-docker
   env:

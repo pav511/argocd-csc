@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0013
+    tag: c0014
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -21,8 +21,7 @@ kafka-producers:
   producers:
     eas: null
     m1m3:
-      cscs: >-
-        --file m1m3.yaml
+      cscs: --file m1m3.yaml
       env:
         partitions: 3
     m2:
