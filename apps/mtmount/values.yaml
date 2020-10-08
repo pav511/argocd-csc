@@ -1,5 +1,5 @@
 csc:
   env:
-    RUN_ARG: -s
+    RUN_ARG: --simulate
 
   namespace: maintel
