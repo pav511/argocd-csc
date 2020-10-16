@@ -6,7 +6,7 @@ ospl-config:
     - kafka-producers
     - ospl-daemon
   domainId: 0
-  shmemSize: 104857600
+  shmemSize: 504857600
   maxSamplesWarnAt: 50000
   schedulingClass: Default
   schedulingPriority: 0
