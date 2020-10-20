@@ -6,6 +6,7 @@ csc:
 
   env:
     LSST_DDS_DOMAIN: base
+    IP_HEADERSERVICE: wangulen.ls.lsst.org
 
   entrypoint: |
     #!/usr/bin/env bash
