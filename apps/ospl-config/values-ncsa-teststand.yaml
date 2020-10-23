@@ -17,7 +17,7 @@ ospl-config:
   namespacePolicyAlignee: Initial
   ddsi2TracingEnabled: true
   ddsi2TracingVerbosity: finer
-  ddsi2TracingLogfile: /ddsi2.log
+  ddsi2TracingLogfile: stdout
   durabilityServiceTracingEnabled: true
   durabilityServiceTracingVerbosity: FINER
-  durabilityServiceTracingLogfile: /durability.log
+  durabilityServiceTracingLogfile: stdout
