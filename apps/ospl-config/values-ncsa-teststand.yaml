@@ -15,9 +15,10 @@ ospl-config:
   deliveryQueueMaxSamples: 10000
   squashParticipants: true
   namespacePolicyAlignee: Initial
-  ddsi2TracingEnabled: true
+  domainReportEnabled: false
+  ddsi2TracingEnabled: false
   ddsi2TracingVerbosity: finer
   ddsi2TracingLogfile: stdout
-  durabilityServiceTracingEnabled: true
+  durabilityServiceTracingEnabled: false
   durabilityServiceTracingVerbosity: FINER
   durabilityServiceTracingLogfile: stdout

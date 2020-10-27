@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0014
+    tag: c0015
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
