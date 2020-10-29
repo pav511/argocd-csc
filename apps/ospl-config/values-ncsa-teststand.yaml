@@ -14,7 +14,7 @@ ospl-config:
   waterMarksWhcHigh: 8MB
   deliveryQueueMaxSamples: 10000
   squashParticipants: true
-  namespacePolicyAlignee: Initial
+  namespacePolicyAlignee: Lazy
   domainReportEnabled: false
   ddsi2TracingEnabled: false
   ddsi2TracingVerbosity: finer
