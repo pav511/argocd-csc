@@ -1,39 +1,15 @@
 kafka-producers:
   image:
-    repository: lsstts/salkafka
-    tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
+    repository: ts-dockerhub.lsst.org/salkafka
+    tag: c0015
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    lsstDdsDomain: summit
-    brokerIp: kafka-0-summit-efd.lsst.codes
-    brokerPort: 31090
-    registryAddr: https://schema-registry-summit-efd.lsst.codes
+    lsstDdsPartitionPrefix: summit
+    brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
+    brokerPort: 9092
+    registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
     partitions: 1
     replication: 3
     waitAck: 1
-    logLevel: 10
-
-  producers:
-    maintel: null
-    mtmount: null
-    auxtel:
-      env:
-        lsstDdsDomain: lsatmcs
-    comcam: null
-    eas:
-      env:
-        lsstDdsDomain: lsatmcs
-    latiss:
-      env:
-        lsstDdsDomain: lsatmcs
-    m1m3:
-      env:
-        lsstDdsDomain: m1m3Test213
-    m2:
-      env:
-        lsstDdsDomain: m2
-    obssys:
-      env:
-        lsstDdsDomain: lsatmcs
-    test: null
+    logLevel: 20
