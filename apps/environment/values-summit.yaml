@@ -1,8 +1,0 @@
-csc: 
-  image:
-    repository: lsstts/environment
-    tag: v1.0.0_sal_v4.0.0_salobj_v5.0.0
-    pullPolicy: Always
-
-  env:
-    LSST_DDS_DOMAIN: lsatmcs

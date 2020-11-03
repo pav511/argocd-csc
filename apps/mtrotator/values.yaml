@@ -1,5 +1,6 @@
 csc:
-  env:
-    RUN_ARG: -s
-
   namespace: maintel
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-mtrotator.log
+    OSPL_ERRORFILE: /tmp/ospl-error-mtrotator.log
+  osplVersion: V6.10.4

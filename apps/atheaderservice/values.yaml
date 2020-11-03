@@ -1,2 +1,6 @@
 csc:
   namespace: auxtel
+  env:
+    CAMERA: at
+    OSPL_INFOFILE: /tmp/ospl-info-atheaderservice.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atheaderservice.log

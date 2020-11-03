@@ -1,5 +1,14 @@
 env: summit
-
 cscs:
   - mtaos
   - mtptg
+  - mtcamhexapod
+  - mtm2hexapod
+  - mtmount
+  - mtrotator
+  - mtdome
+  - mtdometrajectory
+runAsSim:
+  - mtaos
+  - mtdome
+  - mtmount

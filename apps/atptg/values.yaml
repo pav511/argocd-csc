@@ -1,8 +1,7 @@
 csc:
-  image:
-    nexus3: nexus3-docker
-
-  env:
-    TELESCOPE: AuxTel
-
   namespace: auxtel
+  env:
+    TELESCOPE: AT
+    OSPL_INFOFILE: /tmp/ospl-info-atptg.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atptg.log
+  osplVersion: V6.10.4

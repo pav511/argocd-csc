@@ -1,2 +1,6 @@
 csc:
   namespace: maintel
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-mtm1m3.log
+    OSPL_ERRORFILE: /tmp/ospl-error-mtm1m3.log
+  osplVersion: V6.10.4

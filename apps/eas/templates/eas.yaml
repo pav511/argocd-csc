@@ -1,0 +1,40 @@
+{{- range $csc := .Values.cscs }}
+{{- $isIndexed := false }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  {{- if eq $.Values.env "summit" }}
+  name: {{ $csc }}
+  {{- else if and $.Values.noSim (has $csc $.Values.noSim) }}
+  name: {{ $csc }}
+  {{- else }}
+  name: {{ $csc }}-sim
+  {{- end }}
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: eas
+    server: {{ $.Values.spec.destination.server }}
+  project: default
+  source:
+    {{- if $.Values.indexed }}
+    {{- range $key, $index := $.Values.indexed }}
+    {{- if hasPrefix $key $csc }}
+    {{- $isIndexed = true }}
+    path: apps/{{ substr 0 ($index | int) $csc }}
+    {{- end }}
+    {{- end }}
+    {{- else }}
+    path: apps/{{ $csc }}
+    {{- end }}
+    repoURL: {{ $.Values.spec.source.repoURL }}
+    targetRevision: {{ $.Values.spec.source.targetRevision }}
+    helm:
+      valueFiles:
+        {{- if $isIndexed }}
+        - values-{{ $csc }}.yaml
+        {{- end }}
+        - values-{{ $.Values.env }}.yaml
+{{ end }}

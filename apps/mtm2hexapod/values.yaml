@@ -1,5 +1,6 @@
 csc:
-  env:
-    RUN_ARG: -s 2
-
   namespace: maintel
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-mtm2hexapod.log
+    OSPL_ERRORFILE: /tmp/ospl-error-mtm2hexapod.log
+  osplVersion: V6.10.4

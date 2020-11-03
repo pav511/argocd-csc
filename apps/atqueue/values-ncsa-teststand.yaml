@@ -6,8 +6,4 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    RUN_ARG: 2
-    OSPL_INFOFILE: /tmp/ospl-info-atqueue.log
-    OSPL_ERRORFILE: /tmp/ospl-error-atqueue.log
-  osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl

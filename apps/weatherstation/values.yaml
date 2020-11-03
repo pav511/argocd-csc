@@ -1,0 +1,6 @@
+csc:
+  namespace: eas
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-weatherstation.log
+    OSPL_ERRORFILE: /tmp/ospl-error-weatherstation.log
+  osplVersion: V6.10.4

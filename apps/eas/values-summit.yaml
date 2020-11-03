@@ -1,0 +1,5 @@
+env: summit
+cscs:
+  - weatherstation1
+  - dimm1
+  - dimm2

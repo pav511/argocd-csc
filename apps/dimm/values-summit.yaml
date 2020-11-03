@@ -1,8 +1,9 @@
-csc: 
+csc:
   image:
-    repository: lsstts/dimm
-    tag: v0.2.0_sal_v4.0.0_salobj_v5.0.0
+    repository: ts-dockerhub.lsst.org/dimm
+    tag: c0015
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: lsatmcs
+    LSST_DDS_PARTITION_PREFIX: summit
+  shmemDir: /run/ospl

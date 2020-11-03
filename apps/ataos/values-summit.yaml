@@ -1,19 +1,9 @@
 csc:
   image:
-    repository: lsstts/ataos
-    tag: v1.5_salobj_v5.4.0_idl_v1.1.2_xml_v4.7.0
+    repository: ts-dockerhub.lsst.org/ataos
+    tag: c0015
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: lsatmcs
-
-  entrypoint: |
-    #!/usr/bin/env bash
-
-    source ~/miniconda3/bin/activate
-
-    source $OSPL_HOME/release.com
-    
-    source /home/saluser/.bashrc
-
-    ataos_csc.py
+    LSST_DDS_PARTITION_PREFIX: summit
+  shmemDir: /run/ospl

@@ -1,8 +1,10 @@
+# Deployment at NCSA is handled by docker-compose for M1M3
+# This is here as an emergency
 csc:
   image:
-    repository: lsstts/mtm1m3_sim
-    tag: v1.7.0
+    repository: ts-dockerhub.lsst.org/mtm1m3_sim
+    tag: c0015
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa
+    LSST_DDS_PARTITION_PREFIX: ncsa
