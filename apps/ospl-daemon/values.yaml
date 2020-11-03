@@ -1,2 +1,6 @@
 ospl-daemon:
   namespace: ospl-daemon
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-daemon.log
+    OSPL_ERRORFILE: /tmp/ospl-error-daemon.log
+  osplVersion: V6.10.4
