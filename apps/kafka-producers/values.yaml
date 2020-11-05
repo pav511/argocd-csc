@@ -1,7 +1,11 @@
 # This configuration file keeps the main listings
 kafka-producers:
   namespace: kafka-producers
-
+  env:
+    extras:
+      OSPL_INFOFILE: /tmp/ospl-info-kafka-producers.log
+      OSPL_ERRORFILE: /tmp/ospl-error-kafka-producers.log
+  osplVersion: V6.10.4
   producers:
     auxtel:
       cscs: >-
@@ -40,8 +44,7 @@ kafka-producers:
         ATSpectrograph
     m1m3:
       cscs: >-
-        MTM1M3
-        MTVMS
+        --file m1m3.yaml
     m2:
       cscs: >-
         Hexapod

@@ -1,11 +1,11 @@
 kafka-producers:
   image:
-    repository: lsstts/salkafka
-    tag: cycle-0009
+    repository: ts-dockerhub.lsst.org/salkafka
+    tag: c0015
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    lsstDdsDomain: base
+    lsstDdsPartitionPrefix: base
     brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
     brokerPort: 9092
     registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
@@ -13,14 +13,8 @@ kafka-producers:
     replication: 3
     waitAck: 1
     logLevel: 20
-
   producers:
-    auxtel: null
-    latiss: null
+    latiss:
+      cscs: >-
+        ATSpectrograph
     eas: null
-    obssys: null
-    m1m3: null
-    m2: null
-    maintel: null
-    mtmount: null
-    test: null

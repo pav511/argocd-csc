@@ -4,5 +4,21 @@ ospl-config:
     - maintel
     - obssys
     - kafka-producers
-
+    - ospl-daemon
   networkInterface: net1
+  shmemSize: 504857600
+  maxSamplesWarnAt: 50000
+  schedulingClass: Default
+  schedulingPriority: 0
+  monitorStackSize: 6000000
+  waterMarksWhcHigh: 8MB
+  deliveryQueueMaxSamples: 10000
+  squashParticipants: true
+  namespacePolicyAlignee: Lazy
+  domainReportEnabled: false
+  ddsi2TracingEnabled: false
+  ddsi2TracingVerbosity: finer
+  ddsi2TracingLogfile: stdout
+  durabilityServiceTracingEnabled: false
+  durabilityServiceTracingVerbosity: FINER
+  durabilityServiceTracingLogfile: stdout

@@ -1,9 +1,1 @@
 deployEnv: ncsa-teststand
-
-cluster-config:
-  namespaces:
-    - auxtel
-    - maintel
-    - obssys
-    - kafka-producers
-    - ospl-daemon
