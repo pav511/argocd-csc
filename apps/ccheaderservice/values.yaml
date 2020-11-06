@@ -1,2 +1,5 @@
 csc:
   namespace: maintel
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-ccheaderservice.log
+    OSPL_ERRORFILE: /tmp/ospl-error-ccheaderservice.log
