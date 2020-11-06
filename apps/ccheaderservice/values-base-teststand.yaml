@@ -7,13 +7,6 @@ csc:
   env:
     LSST_DDS_PARTITION_PREFIX: base
     IP_HEADERSERVICE: wangulen.ls.lsst.org
-  entrypoint: |
-    #!/usr/bin/env bash
-
-    echo "# Starting CCHeaderService CSC"
-  
-    source start_CCHeaderService.sh
-
   mountpoint:
     - name: www
       path: /home/saluser/www
