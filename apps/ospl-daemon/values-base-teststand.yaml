@@ -6,3 +6,4 @@ ospl-daemon:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: base
+  shmemDir: /tmp
