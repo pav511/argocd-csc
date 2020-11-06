@@ -7,6 +7,7 @@ csc:
   env:
     LSST_DDS_PARTITION_PREFIX: base
     IP_HEADERSERVICE: wangulen.ls.lsst.org
+    URL_SPEC: --url_format "http://{ip_address}/{filename_HDR}"
   mountpoint:
     - name: www
       path: /home/saluser/www
