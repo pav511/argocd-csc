@@ -13,6 +13,7 @@ kafka-producers:
     replication: 3
     waitAck: 1
     logLevel: 20
+  shmemDir: /run/ospl
   producers:
     latiss:
       cscs: >-

@@ -27,6 +27,7 @@ csc:
       path: /home/saluser/www
       accessMode: ReadWriteOnce
       claimSize: 50Gi
+  shmemDir: /run/ospl
 ingress:
   use: true
   hostname: wangulen.ls.lsst.org
