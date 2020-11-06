@@ -10,17 +10,9 @@ csc:
   entrypoint: |
     #!/usr/bin/env bash
 
-    source ~/miniconda3/bin/activate
-
-    source $OSPL_HOME/release.com
-
-    source /home/saluser/.bashrc
-
-    source $CONDA_PREFIX/HeaderService/setpath.sh $CONDA_PREFIX/HeaderService
-
     echo "# Starting CCHeaderService CSC"
   
-    headerservice -c $HEADERSERVICE_DIR/etc/conf/ccTelemetry.yaml
+    start_CCHeaderService.sh
 
   mountpoint:
     - name: www
