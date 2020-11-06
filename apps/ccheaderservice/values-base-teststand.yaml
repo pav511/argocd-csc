@@ -12,7 +12,7 @@ csc:
 
     echo "# Starting CCHeaderService CSC"
   
-    start_CCHeaderService.sh
+    source start_CCHeaderService.sh
 
   mountpoint:
     - name: www
