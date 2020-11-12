@@ -1,8 +1,9 @@
-csc: 
+csc:
   image:
-    repository: lsstts/watcher
-    tag: v1.0.2_rc1
+    repository: ts-dockerhub.lsst.org/watcher
+    tag: c0015
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: lsatmcs
+    LSST_DDS_PARTITION_PREFIX: summit
+  shmemDir: /run/ospl

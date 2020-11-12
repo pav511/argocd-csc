@@ -1,0 +1,9 @@
+csc:
+  image:
+    repository: ts-dockerhub.lsst.org/watcher
+    tag: c0015
+    pullPolicy: Always
+    nexus3: nexus3-docker
+  env:
+    LSST_DDS_PARTITION_PREFIX: base
+  shmemDir: /run/ospl

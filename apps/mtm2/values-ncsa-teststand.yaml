@@ -1,8 +1,10 @@
+# Deployment at NCSA is handled by docker-compose for M2
+# This is here as an emergency
 csc:
   image:
-    repository: lsstts/m2
-    tag: v0.1
+    repository: ts-dockerhub.lsst.org/m2
+    tag: c0015
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: ncsa
+    LSST_DDS_PARTITION_PREFIX: ncsa

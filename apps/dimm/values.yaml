@@ -1,2 +1,6 @@
 csc:
-  namespace: obssys
+  namespace: eas
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-dimm.log
+    OSPL_ERRORFILE: /tmp/ospl-error-dimm.log
+  osplVersion: V6.10.4

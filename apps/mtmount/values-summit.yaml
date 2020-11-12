@@ -1,0 +1,13 @@
+csc:
+  image:
+    repository: ts-dockerhub.lsst.org/mtmount
+    tag: c0015
+    pullPolicy: Always
+    nexus3: nexus3-docker
+  env:
+    LSST_DDS_PARTITION_PREFIX: summit
+  shmemDir: /run/ospl
+ingress:
+  use: true
+  hostname: mtmount.cp.lsst.org
+  port: 8000

@@ -7,7 +7,4 @@ csc:
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
     RUN_ARG: -s
-    OSPL_INFOFILE: /tmp/ospl-info-mtdome.log
-    OSPL_ERRORFILE: /tmp/ospl-error-mtdome.log
-  osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl

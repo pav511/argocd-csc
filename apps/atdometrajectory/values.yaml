@@ -1,2 +1,6 @@
 csc:
   namespace: auxtel
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-atdometrajectory.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atdometrajectory.log
+  osplVersion: V6.10.4

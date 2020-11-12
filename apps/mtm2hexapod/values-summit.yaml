@@ -1,8 +1,13 @@
-csc: 
+csc:
   image:
-    repository: lsstts/hexapod
-    tag: v0.4.0_b42
+    repository: ts-dockerhub.lsst.org/hexapod
+    tag: c0015
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: m2
+    LSST_DDS_PARTITION_PREFIX: summit
+  shmemDir: /run/ospl
+ingress:
+  use: true
+  hostname: mtm2hexapod.cp.lsst.org
+  port: 8000

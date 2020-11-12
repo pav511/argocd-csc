@@ -3,10 +3,7 @@ csc:
     repository: ts-dockerhub.lsst.org/ptkernel
     tag: c0015
     pullPolicy: Always
+    nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    TELESCOPE: AT
-    OSPL_INFOFILE: /tmp/ospl-info-atptg.log
-    OSPL_ERRORFILE: /tmp/ospl-error-atptg.log
-  osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl

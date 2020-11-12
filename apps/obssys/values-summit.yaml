@@ -1,0 +1,7 @@
+env: summit
+cscs:
+  - atqueue
+  - mtqueue
+  - watcher
+  - atscheduler
+  - mtscheduler

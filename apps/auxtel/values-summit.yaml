@@ -1,0 +1,9 @@
+env: summit
+cscs:
+  - ataos
+  - atdome
+  - atdometrajectory
+  - athexapod
+  - atptg
+  - atspectrograph
+  - atheaderservice

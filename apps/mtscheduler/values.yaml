@@ -1,5 +1,7 @@
 csc:
+  namespace: obssys
   env:
     INDEX: 1
-
-  namespace: obssys
+    OSPL_INFOFILE: /tmp/ospl-info-mtscheduler.log
+    OSPL_ERRORFILE: /tmp/ospl-error-mtscheduler.log
+  osplVersion: V6.10.4

@@ -6,7 +6,7 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    OSPL_INFOFILE: /tmp/ospl-info-mtm2hexapod.log
-    OSPL_ERRORFILE: /tmp/ospl-error-mtm2hexapod.log
-  osplVersion: V6.10.4
+    RUN_ARG: -s 2
   shmemDir: /scratch.local/ospl
+ingress:
+  use: false

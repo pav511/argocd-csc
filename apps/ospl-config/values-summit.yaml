@@ -1,2 +1,9 @@
 ospl-config:
   domainId: 0
+  namespaces:
+    - auxtel
+    - eas
+    - maintel
+    - obssys
+    - kafka-producers
+    - ospl-daemon

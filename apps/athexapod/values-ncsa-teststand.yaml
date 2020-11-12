@@ -6,7 +6,4 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    OSPL_INFOFILE: /tmp/ospl-info-athexapod.log
-    OSPL_ERRORFILE: /tmp/ospl-error-athexapod.log
-  osplVersion: V6.10.4
   shmemDir: /scratch.local/ospl

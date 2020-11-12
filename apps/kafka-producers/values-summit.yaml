@@ -6,10 +6,17 @@ kafka-producers:
     nexus3: nexus3-docker
   env:
     lsstDdsPartitionPrefix: summit
-    brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
-    brokerPort: 9092
-    registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
+    brokerIp: kafka-0-summit-efd.lsst.codes
+    brokerPort: 31090
+    registryAddr: https://schema-registry-summit-efd.lsst.codes:8081
     partitions: 1
     replication: 3
     waitAck: 1
     logLevel: 20
+  shmemDir: /run/ospl
+  producers:
+    mtmount: null
+    m2:
+      cscs: >-
+        Hexapod
+        MTM2

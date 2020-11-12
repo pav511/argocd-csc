@@ -1,2 +1,6 @@
 csc:
   namespace: auxtel
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-atmcs.log
+    OSPL_ERRORFILE: /tmp/ospl-error-atmcs.log
+  osplVersion: V6.10.4

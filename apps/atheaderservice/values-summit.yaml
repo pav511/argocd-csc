@@ -1,25 +1,20 @@
-csc: 
+csc:
   image:
-    repository: lsstts/at_headerservice
-    tag: v1.4.0_salobj_v5.4.0_idl_v1.1.2_xml_v4.7.0
+    repository: ts-dockerhub.lsst.org/headerservice
+    tag: ts-v2.5.1_salobj_v6.0.3_idl_v2.1.0_xml_v6.2.1
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: lsatmcs
-
-  entrypoint: |
-    #!/usr/bin/env bash
-
-    source ~/miniconda3/bin/activate
-
-    source $OSPL_HOME/release.com
-
-    source /home/saluser/.bashrc
-
-    source $CONDA_PREFIX/HeaderService/setpath.sh $CONDA_PREFIX/HeaderService
-
-    echo "# Starting ATHeaderService CSC"
-
-    ATHS_salobj -c $HEADERSERVICE_DIR/etc/conf/atTelemetry.yaml --send_efd_message
-
-    echo "# ATHeaderService exited."
+    LSST_DDS_PARTITION_PREFIX: summit
+    IP_HEADERSERVICE: atheaderservice.cp.lsst.org
+    URL_SPEC: --url_format http://{ip_address}/{filename_HDR}
+  mountpoint:
+    - name: www
+      path: /home/saluser/www
+      accessMode: ReadWriteOnce
+      claimSize: 50Gi
+  shmemDir: /run/ospl
+ingress:
+  use: true
+  hostname: atheaderservice.cp.lsst.org
+  port: 8000

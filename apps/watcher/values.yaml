@@ -1,2 +1,6 @@
 csc:
   namespace: obssys
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-watcher.log
+    OSPL_ERRORFILE: /tmp/ospl-error-watcher.log
+  osplVersion: V6.10.4
