@@ -6,6 +6,7 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
+    RUN_ARG: 1
   shmemDir: /run/ospl
 ingress:
   use: true
