@@ -5,5 +5,5 @@ csc:
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
-    LSST_DDS_PARTITION_PREFIX: base
+    LSST_DDS_PARTITION_PREFIX: summit
   shmemDir: /run/ospl
