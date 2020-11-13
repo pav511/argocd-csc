@@ -8,6 +8,6 @@ csc:
     LSST_DDS_PARTITION_PREFIX: summit
   shmemDir: /run/ospl
 ingress:
-  use: true
+  use: false
   hostname: mtmount.cp.lsst.org
   port: 8000
