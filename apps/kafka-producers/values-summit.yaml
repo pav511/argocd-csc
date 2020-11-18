@@ -14,9 +14,3 @@ kafka-producers:
     waitAck: 1
     logLevel: 20
   shmemDir: /run/ospl
-  producers:
-    mtmount: null
-    m2:
-      cscs: >-
-        Hexapod
-        MTM2
