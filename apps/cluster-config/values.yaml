@@ -1,6 +1,7 @@
 cluster-config:
   namespaces:
     - auxtel
+    - eas
     - maintel
     - obssys
     - kafka-producers

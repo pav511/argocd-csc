@@ -1,0 +1,4 @@
+env: ncsa-teststand
+cscs:
+  - dsm1
+  - dsm2

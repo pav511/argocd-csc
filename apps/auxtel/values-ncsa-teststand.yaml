@@ -4,8 +4,6 @@ cscs:
   - atdome
   - atdometrajectory
   - athexapod
-  - atmcs
-  - atpneumatics
   - atptg
   - hexapodsim
   - atspectrograph
