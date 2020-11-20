@@ -1,1 +1,4 @@
+apiVersion: v1
+description: Chart for the hexapod simulator that supports the ATHexapod
 name: hexapodsim
+version: 0.1.0
