@@ -7,3 +7,4 @@ spec:
 indexed:
   dimm: 4
   weatherstation: 14
+  dsm: 3

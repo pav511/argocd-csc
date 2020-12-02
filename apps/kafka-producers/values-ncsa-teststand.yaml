@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0015
+    tag: c0016
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -15,7 +15,15 @@ kafka-producers:
     logLevel: 20
   shmemDir: /scratch.local/ospl
   producers:
-    eas: null
+    eas:
+      cscs: >-
+        DSM
+    maintel:
+      cscs: >-
+        MTAOS
+        MTDome
+        MTDomeTrajectory
+        MTPtg
     m1m3:
       cscs: --file m1m3.yaml
       env:
@@ -23,3 +31,7 @@ kafka-producers:
     m2:
       env:
         partitions: 3
+      cscs: >-
+        MTHexapod
+        MTM2
+        MTRotator
