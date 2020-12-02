@@ -17,3 +17,4 @@ csc:
 ingress:
   use: true
   hostname: wangulen.ls.lsst.org
+  port: 8000
