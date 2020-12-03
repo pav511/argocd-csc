@@ -6,7 +6,7 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    RUN_ARG: -s
+    RUN_ARG: --simulate
   shmemDir: /scratch.local/ospl
 ingress:
   use: false
