@@ -1,3 +1,4 @@
 ospl-config:
   domainId: 0
+  waterMarksWhcAdaptive: false
   durabilityServiceTracingEnabled: true
