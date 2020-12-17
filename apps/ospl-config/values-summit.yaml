@@ -1,3 +1,4 @@
 ospl-config:
   domainId: 0
   durabilityServiceTracingEnabled: true
+  durabilityServiceTracingLogfile: durability.log

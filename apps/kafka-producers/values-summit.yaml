@@ -13,4 +13,6 @@ kafka-producers:
     replication: 3
     waitAck: 1
     logLevel: 20
+    extras:
+      LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
   shmemDir: /run/ospl
