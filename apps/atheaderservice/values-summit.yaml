@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/headerservice
-    tag: ts-v2.5.3_salobj_v6.0.3_idl_v2.1.0_xml_v6.2.1
+    tag: ts-v2.5.3.1_salobj_v6.0.3_idl_v2.1.0_xml_v6.2.1
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
