@@ -1,7 +1,7 @@
 ospl-daemon:
   image:
     repository: ts-dockerhub.lsst.org/ospl-daemon
-    tag: c0016
+    tag: c0017
     pullPolicy: Always
     nexus3: nexus3-docker
   env:

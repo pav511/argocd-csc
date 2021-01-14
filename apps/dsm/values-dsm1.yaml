@@ -1,4 +1,4 @@
 csc:
   env:
     CSC_INDEX: 1
-    RUN_ARG: --simulate 1
+    RUN_ARG: --simulate 1 --state enabled
