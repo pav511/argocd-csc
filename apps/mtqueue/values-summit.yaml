@@ -7,3 +7,14 @@ csc:
   env:
     LSST_DDS_PARTITION_PREFIX: summit
   shmemDir: /run/ospl
+  nfsMountpoint:
+    - name: auxtel-data
+      containerPath: /readonly/lsstdata/auxtel
+      readOnly: true
+      server: atarchiver.cp.lsst.org
+      serverPath: /lsstdata
+    - name: comcam-data
+      containerPath: /readonly/lsstdata/comcam
+      readOnly: true
+      server: comcam-arctl01.cp.lsst.org
+      serverPath: /lsstdata
