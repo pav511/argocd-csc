@@ -8,3 +8,9 @@ csc:
     LSST_DDS_PARTITION_PREFIX: ncsa
     RUN_ARG: --simulate
   shmemDir: /scratch.local/ospl
+  nfsMountpoint:
+    - name: lsstdata
+      containerPath: /lsstdata/offline/teststand
+      readOnly: true
+      server: lsst-nfs.ncsa.illinois.edu
+      serverPath: /offline/teststand
