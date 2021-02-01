@@ -1,8 +1,0 @@
-csc: 
-  image:
-    repository: ts-dockerhub.lsst.org/ptkernel
-    tag: DM-22702_b42
-    pullPolicy: Always
-
-  env:
-    LSST_DDS_DOMAIN: sandboxtest

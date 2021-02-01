@@ -1,8 +1,0 @@
-csc: 
-  image:
-    repository: lsstts/ts_athexapod
-    tag: v0.3.0_b42
-    pullPolicy: Always
-
-  env:
-    LSST_DDS_DOMAIN: sandboxtest

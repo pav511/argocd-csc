@@ -19,13 +19,12 @@ kafka-producers:
     maintel:
       cscs: >-
         MTAOS
-        Dome
+        MTDome
         MTDomeTrajectory
         MTPtg
     mtmount:
       cscs: >-
         MTMount
-        NewMTMount
     comcam:
       cscs: >-
         CCArchiver
@@ -35,7 +34,7 @@ kafka-producers:
       cscs: >-
         DIMM
         DSM
-        Environment
+        WeatherStation
     latiss:
       cscs: >-
         ATArchiver
@@ -47,9 +46,9 @@ kafka-producers:
         --file m1m3.yaml
     m2:
       cscs: >-
-        Hexapod
+        MTHexapod
         MTM2
-        Rotator
+        MTRotator
     obssys:
       cscs: >-
         GenericCamera
