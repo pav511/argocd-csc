@@ -17,5 +17,5 @@ csc:
   - name: project-shared
     containerPath: /project
     readOnly: false
-    server: lsst-nfs.ncsa.illinois.edu
+    server: lsst-l1-cl-arctl.ncsa.illinois.edu
     serverPath: /project
