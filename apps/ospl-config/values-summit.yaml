@@ -1,4 +1,5 @@
 ospl-config:
   domainId: 0
+  durabilityServiceAlignmentComboPeriodInitial: "5.0"
   durabilityServiceTracingEnabled: true
   durabilityServiceTracingLogfile: durability.log
