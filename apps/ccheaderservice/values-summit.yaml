@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/headerservice
-    tag: ts-v2.5.3.1_salobj_v6.0.3_idl_v2.1.0_xml_v6.2.1
+    tag: ts-v2.7.0_salobj_v6.2.0_idl_v2.3.0_xml_v7.1.0
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -9,10 +9,10 @@ csc:
     IP_HEADERSERVICE: ccheaderservice.cp.lsst.org
     URL_SPEC: --url_format http://{ip_address}/{filename_HDR}
   mountpoint:
-    - name: www
-      path: /home/saluser/www
-      accessMode: ReadWriteOnce
-      claimSize: 50Gi
+  - name: www
+    path: /home/saluser/www
+    accessMode: ReadWriteOnce
+    claimSize: 50Gi
   shmemDir: /run/ospl
 ingress:
   use: true

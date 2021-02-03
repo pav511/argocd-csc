@@ -1,8 +1,0 @@
-csc:
-  image:
-    repository: lsstts/ataos
-    tag: v1.5.0_b42
-    pullPolicy: Always
-
-  env:
-    LSST_DDS_DOMAIN: sandboxtest

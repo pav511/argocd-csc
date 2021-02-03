@@ -20,23 +20,9 @@ kafka-producers:
     eas:
       cscs: >-
         DSM
-    maintel:
-      cscs: >-
-        MTAOS
-        MTDome
-        MTDomeTrajectory
-        MTPtg
-    mtmount:
-      cscs: >-
-        MTMount
     m1m3:
-      cscs: --file m1m3.yaml
       env:
         partitions: 3
     m2:
       env:
         partitions: 3
-      cscs: >-
-        MTHexapod
-        MTM2
-        MTRotator
