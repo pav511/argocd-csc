@@ -9,11 +9,11 @@ csc:
     IP_HEADERSERVICE: atheaderservice.cp.lsst.org
     URL_SPEC: --url_format http://{ip_address}/{filename_HDR}
     PORT_SPEC: --port_number 8008
-  mountpoint:
-    - name: www
-      path: /home/saluser/www
-      accessMode: ReadWriteOnce
-      claimSize: 50Gi
+  pvcMountpoint:
+  - name: www
+    path: /home/saluser/www
+    accessMode: ReadWriteOnce
+    claimSize: 50Gi
   shmemDir: /run/ospl
 ingress:
   use: true

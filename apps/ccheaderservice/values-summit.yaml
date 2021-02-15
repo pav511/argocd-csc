@@ -8,11 +8,11 @@ csc:
     LSST_DDS_PARTITION_PREFIX: summit
     IP_HEADERSERVICE: ccheaderservice.cp.lsst.org
     URL_SPEC: --url_format http://{ip_address}/{filename_HDR}
-  mountpoint:
-    - name: www
-      path: /home/saluser/www
-      accessMode: ReadWriteOnce
-      claimSize: 50Gi
+  pvcMountpoint:
+  - name: www
+    path: /home/saluser/www
+    accessMode: ReadWriteOnce
+    claimSize: 50Gi
   shmemDir: /run/ospl
 ingress:
   use: true
