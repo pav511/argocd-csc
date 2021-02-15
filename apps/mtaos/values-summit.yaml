@@ -8,13 +8,13 @@ csc:
     LSST_DDS_PARTITION_PREFIX: summit
   shmemDir: /run/ospl
   nfsMountpoint:
-  - name: comcam-data
-    containerPath: /readonly/lsstdata/comcam
-    readOnly: true
-    server: comcam-arctl01.cp.lsst.org
-    serverPath: /lsstdata
-  - name: project-shared
-    containerPath: /project
-    readOnly: false
-    server: nfs1.cp.lsst.org
-    serverPath: /project
+    - name: comcam-data
+      containerPath: /readonly/lsstdata/comcam
+      readOnly: true
+      server: comcam-arctl01.cp.lsst.org
+      serverPath: /lsstdata
+    - name: project-shared
+      containerPath: /project
+      readOnly: false
+      server: nfs1.cp.lsst.org
+      serverPath: /project
