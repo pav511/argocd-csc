@@ -1,0 +1,7 @@
+love-nginx:
+  image:
+    repository: nginx
+    tag: 1.13.1
+    pullPolicy: IfNotPresent
+  ingress:
+    hostname: lsst-love-nts.ncsa.illinois.edu

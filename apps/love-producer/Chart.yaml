@@ -1,0 +1,7 @@
+name: love-producer
+apiVersion: v2
+version: 0.1.0
+dependencies:
+- name: love-producer
+  version: 0.1.1
+  repository: https://lsst-ts.github.io/charts/
