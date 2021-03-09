@@ -1,9 +1,10 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/watcher
-    tag: c0017
+    tag: c0018
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
+    RUN_ARG: --state enabled --settings ncsa
   shmemDir: /scratch.local/ospl

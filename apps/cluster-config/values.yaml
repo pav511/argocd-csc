@@ -2,6 +2,7 @@ cluster-config:
   namespaces:
     - auxtel
     - eas
+    - love
     - maintel
     - obssys
     - kafka-producers
