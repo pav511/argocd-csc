@@ -6,5 +6,4 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    RUN_ARG: --state enabled --settings ncsa
   shmemDir: /scratch.local/ospl

@@ -6,7 +6,7 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    RUN_ARG: 1 --state enabled
+    RUN_ARG: 1
   shmemDir: /scratch.local/ospl
   nfsMountpoint:
   - name: lsstdata
