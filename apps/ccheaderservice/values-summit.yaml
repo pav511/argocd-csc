@@ -12,7 +12,7 @@ csc:
     - name: AWS_ACCESS_KEY_ID
       secretName: lfa
       secretKey: aws-access-key-id
-    - name: AWS_SECRET_ACCESS
+    - name: AWS_SECRET_ACCESS_KEY
       secretName: lfa
       secretKey: aws-secret-access-key
   pvcMountpoint:
