@@ -1,1 +1,6 @@
 deployEnv: summit
+extraSecrets:
+  - name: lfa
+    namespaces:
+      - auxtel
+      - maintel
