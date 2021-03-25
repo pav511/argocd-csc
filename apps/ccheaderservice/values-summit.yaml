@@ -14,7 +14,7 @@ csc:
       secretKey: aws-access-key-id
     - name: AWS_SECRET_ACCESS
       secretName: lfa
-      secretKey: aws-secret-access
+      secretKey: aws-secret-access-key
   pvcMountpoint:
   - name: www
     path: /home/saluser/www
