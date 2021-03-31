@@ -5,3 +5,14 @@ love-nginx:
     pullPolicy: IfNotPresent
   ingress:
     hostname: lsst-love-nts.ncsa.illinois.edu
+  pvcMountpoint:
+  - name: love-frontend
+    path: /usr/src/love-frontend
+    storageClass: local-path
+    accessMode: ReadWriteMany
+    claimSize: 1Gi
+  - name: love-manager
+    path: /usr/src/love-manager
+    storageClass: local-path
+    accessMode: ReadWriteMany
+    claimSize: 1Gi
