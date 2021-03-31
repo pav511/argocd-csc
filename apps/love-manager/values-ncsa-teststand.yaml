@@ -1,8 +1,7 @@
 love-manager:
   image:
-    repository: ts-dockerhub.lsst.org/love-manager
+    repository: lsstts/love-manager
     tag: c0018.000
-    nexus3: nexus3-docker
     pullPolicy: IfNotPresent
   secret_path: lsst-nts-k8s.ncsa.illinois.edu
   env:
