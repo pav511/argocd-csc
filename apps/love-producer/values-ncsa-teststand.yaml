@@ -10,7 +10,7 @@ love-producer:
   producers:
     ataos: ATAOS:0
     atarchiver: ATArchiver:0
-    # atcamera: ATCamera:0
+    atcamera: ATCamera:0
     # atdome: ATDome:0
     # atdometrajector: ATDomeTrajectory:0
     # atheaderservice: ATHeaderService:0
