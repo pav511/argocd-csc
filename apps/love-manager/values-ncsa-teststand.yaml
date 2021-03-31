@@ -17,7 +17,7 @@ love-manager:
       name: love-manager-database
       path: /var/lib/postgresql/data
       storageClass: local-path
-      accessMode: ReadWriteMany
+      accessMode: ReadWriteOnce
       claimSize: 2Gi
   redis:
     image:
