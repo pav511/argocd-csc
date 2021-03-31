@@ -1,0 +1,40 @@
+love-producer:
+  image:
+    repository: ts-dockerhub.lsst.org/love-producer
+    tag: c0018
+    pullPolicy: Always
+    nexus3: nexus3-docker
+  env:
+    LSST_DDS_PARTITION_PREFIX: ncsa
+  shmemDir: /scratch.local/ospl
+  producers:
+    ataos: ATAOS:0
+    atarchiver: ATArchiver:0
+    # atcamera: ATCamera:0
+    # atdome: ATDome:0
+    # atdometrajector: ATDomeTrajectory:0
+    # atheaderservice: ATHeaderService:0
+    # athexapod: ATHexapod:0
+    # atmcs: ATMCS:0
+    # atpneumatics: ATPneumatics:0
+    # atptg: ATPtg:0
+    # atscheduler: Scheduler:2
+    # atscriptqueue: ScriptQueue:2
+    # atspectrograph: ATSpectrograph:0
+    # ccarchiver: CCArchiver:0
+    # cccamera: CCCamera:0
+    # ccheaderservice: CCHeaderService:0
+    # dsm1: DSM:1
+    # dsm2: DSM:2
+    # mtaos: MTAOS:0
+    # mtcamhexapod: MTHexapod:1
+    # mtdome: MTDome:0
+    # mtdometrajectory: MTDomeTrajectory:0
+    # mtm2: MTM2:0
+    # mtm2hexapod: MTHexapod:2
+    # mtmount: MTMount:0
+    # mtptg: MTPtg:0
+    # mtrotator: MTRotator:0
+    # mtscheduler: Scheduler:1
+    # mtscriptqueue: ScriptQueue:1
+    # watcher: Watcher:0

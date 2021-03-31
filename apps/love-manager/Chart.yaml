@@ -1,0 +1,7 @@
+name: love-manager
+apiVersion: v2
+version: 0.1.0
+dependencies:
+- name: love-manager
+  version: 0.1.3
+  repository: https://lsst-ts.github.io/charts/

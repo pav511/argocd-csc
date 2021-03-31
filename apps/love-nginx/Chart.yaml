@@ -1,0 +1,7 @@
+name: love-nginx
+apiVersion: v2
+version: 0.1.0
+dependencies:
+- name: love-nginx
+  version: 0.1.2
+  repository: https://lsst-ts.github.io/charts/

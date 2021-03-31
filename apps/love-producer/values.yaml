@@ -1,0 +1,6 @@
+love-producer:
+  namespace: love
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-love-producer.log
+    OSPL_ERRORFILE: /tmp/ospl-error-love-producer.log
+  osplVersion: V6.10.4

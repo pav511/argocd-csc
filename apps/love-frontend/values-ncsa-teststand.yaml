@@ -1,0 +1,7 @@
+love-frontend:
+  image:
+    repository: ts-dockerhub.lsst.org/love-frontend
+    tag: c0018.000
+    nexus3: nexus3-docker
+    pullPolicy: IfNotPresent
+  restartPolicy: Never
