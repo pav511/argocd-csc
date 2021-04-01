@@ -6,6 +6,8 @@ love-manager:
   secret_path: lsst-nts-k8s.ncsa.illinois.edu
   env:
     SERVER_URL: lsst-love-nts.ncsa.illinois.edu
+  envSecrets:
+    ADMIN_USER_PASS: manager-admin-user-password
   database:
     image:
       repository: postgres
