@@ -3,7 +3,3 @@ love-frontend:
     repository: lsstts/love-frontend
     tag: c0018.000
     pullPolicy: IfNotPresent
-  restartPolicy: Always
-  pvcMountpoint:
-  - name: love-frontend
-    path: /usr/src/love-frontend
