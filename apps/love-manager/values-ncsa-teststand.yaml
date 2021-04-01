@@ -5,8 +5,7 @@ love-manager:
     pullPolicy: IfNotPresent
   secret_path: lsst-nts-k8s.ncsa.illinois.edu
   env:
-  - var: SERVER_URL
-    value: lsst-love-nts.ncsa.illinois.edu
+    SERVER_URL: lsst-love-nts.ncsa.illinois.edu
   database:
     image:
       repository: postgres
