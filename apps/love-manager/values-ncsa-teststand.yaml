@@ -7,9 +7,6 @@ love-manager:
   env:
     SERVER_URL: lsst-love-nts.ncsa.illinois.edu
   configMount: /usr/src/love/manager/config
-  pvcMountpoint:
-    - name: love-manager
-      path: /usr/src/love/manager
   database:
     image:
       repository: postgres
