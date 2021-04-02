@@ -6,6 +6,7 @@ love-producer:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
+    WEBSOCKET_HOST: love-nginx-service/manager/ws/subscription
   shmemDir: /scratch.local/ospl
   producers:
     ataos: ATAOS:0
