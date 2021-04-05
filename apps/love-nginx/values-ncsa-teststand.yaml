@@ -22,10 +22,10 @@ love-nginx:
           proxy_redirect off;
       }
       location /manager/static {
-          alias /usr/src/love-manager/static;
+          alias /usr/src/love-manager/manager/static;
       }
       location /manager/media {
-          alias /usr/src/love-manager/media;
+          alias /usr/src/love-manager/manager/media;
       }
     }
   pvcMountpoint:
