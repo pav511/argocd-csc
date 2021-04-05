@@ -3,3 +3,6 @@ love-frontend:
     repository: lsstts/love-frontend
     tag: c0018.000
     pullPolicy: IfNotPresent
+  mountpoint:
+    name: love-frontend
+    path: /usr/src
