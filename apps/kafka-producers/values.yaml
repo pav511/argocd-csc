@@ -34,6 +34,7 @@ kafka-producers:
       cscs: >-
         DIMM
         DSM
+        ESS
         WeatherStation
     latiss:
       cscs: >-
