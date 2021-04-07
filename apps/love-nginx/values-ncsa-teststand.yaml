@@ -14,7 +14,7 @@ love-nginx:
       image:
         repository: lsstts/love-manager
         tag: c0018.000
-      command: [ "/bin/sh", "-c", "mkdir -p /usr/src/love-manager/media/thumbnails; mkdir -p /usr/src/love-manager/media/configs; cp -Rv /usr/src/love/manager/static /usr/src/love-manager; ls -lhR /; cp -uv /usr/src/love/manager/ui_framework/fixtures/thumbnails/* /usr/src/love-manager/media/thumbnails; cp -uv /usr/src/love/manager/api/fixtures/configs/* /usr/src/love-manager/media/configs" ]
+      command: [ "/bin/sh", "-c", "mkdir -p /usr/src/love-manager/media/thumbnails; mkdir -p /usr/src/love-manager/media/configs; cp -Rv /usr/src/love/manager/static /usr/src/love-manager; " ]
   staticStore:
     name: love-nginx-static
     storageClass: local-path
