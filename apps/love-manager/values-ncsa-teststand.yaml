@@ -6,7 +6,6 @@ love-manager:
   secret_path: lsst-nts-k8s.ncsa.illinois.edu
   env:
     SERVER_URL: lsst-love-nts.ncsa.illinois.edu
-  configMount: /usr/src/love/manager/config
   database:
     image:
       repository: postgres
