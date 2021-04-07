@@ -6,7 +6,6 @@ spec:
     targetRevision: HEAD
 apps:
   - love-commander
-  - love-frontend
   - love-manager
   - love-nginx
   - love-producer
