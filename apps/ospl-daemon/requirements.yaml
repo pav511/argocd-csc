@@ -1,4 +1,0 @@
-dependencies:
-- name: ospl-daemon
-  version: 0.2.1
-  repository: https://lsst-ts.github.io/charts/

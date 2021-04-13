@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/mtaos
-    tag: c0018
+    tag: c0019
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -18,3 +18,4 @@ csc:
     readOnly: false
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
     serverPath: /project
+  osplVersion: V6.11.0

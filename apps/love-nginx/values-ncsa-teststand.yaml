@@ -9,12 +9,16 @@ love-nginx:
     frontend:
       image:
         repository: lsstts/love-frontend
-        tag: c0018.000
+        tag: c0019
     manager:
       image:
         repository: lsstts/love-manager
-        tag: c0018.000
-      command: [ "/bin/sh", "-c", "mkdir -p /usr/src/love-manager/media/thumbnails; mkdir -p /usr/src/love-manager/media/configs; cp -Rv /usr/src/love/manager/static /usr/src/love-manager; " ]
+        tag: c0019
+      command:
+      - /bin/sh
+      - -c
+      - 'mkdir -p /usr/src/love-manager/media/thumbnails; mkdir -p /usr/src/love-manager/media/configs;
+        cp -Rv /usr/src/love/manager/static /usr/src/love-manager; '
   staticStore:
     name: love-nginx-static
     storageClass: local-path

@@ -1,4 +1,0 @@
-dependencies:
-- name: ospl-config
-  version: 0.5.13
-  repository: https://lsst-ts.github.io/charts/
