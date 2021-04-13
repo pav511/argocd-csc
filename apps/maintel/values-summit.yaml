@@ -5,8 +5,10 @@ cscs:
   - mtmount
   - mtdome
   - mtdometrajectory
+  - mtrotator
   - ccheaderservice
 runAsSim:
   - mtaos
   - mtdome
   - mtmount
+  - mtrotator
