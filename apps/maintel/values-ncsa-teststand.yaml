@@ -8,3 +8,7 @@ cscs:
   - mtrotator
   - mtdome
   - mtdometrajectory
+noSim:
+  - mtaos
+  - mtptg
+  - mtdometrajectory
