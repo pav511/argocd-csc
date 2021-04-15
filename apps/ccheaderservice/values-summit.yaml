@@ -6,8 +6,8 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
-    URL_SPEC: --lfa_mode s3 --s3instance cp
-    S3_ENDPOINT_URL: https://s3.cp.lsst.org/
+    IP_HEADERSERVICE: ccheaderservice.cp.lsst.org
+    URL_SPEC: --url_format http://{ip_address}/{filename_HDR}
   envSecrets:
     - name: AWS_ACCESS_KEY_ID
       secretName: lfa
@@ -22,6 +22,6 @@ csc:
     claimSize: 50Gi
   shmemDir: /run/ospl
 ingress:
-  use: false
+  use: true
   hostname: ccheaderservice.cp.lsst.org
   port: 8000

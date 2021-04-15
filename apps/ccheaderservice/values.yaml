@@ -4,3 +4,4 @@ csc:
     CAMERA: cc
     OSPL_INFOFILE: /tmp/ospl-info-ccheaderservice.log
     OSPL_ERRORFILE: /tmp/ospl-error-ccheaderservice.log
+  osplVersion: V6.10.4
