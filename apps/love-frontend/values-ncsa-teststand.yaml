@@ -1,7 +1,7 @@
 love-frontend:
   image:
     repository: lsstts/love-frontend
-    tag: c0018.000
+    tag: c0019
     pullPolicy: IfNotPresent
   mountpoint:
     name: love-frontend

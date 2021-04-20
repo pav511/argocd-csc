@@ -1,3 +1,7 @@
 name: atqueue
-
-# NOTE: This chart still needs mechanism for mounting volumes??
+apiVersion: v2
+version: 0.1.0
+dependencies:
+- name: csc
+  version: 0.8.0
+  repository: https://lsst-ts.github.io/charts/

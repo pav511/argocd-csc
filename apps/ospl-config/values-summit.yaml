@@ -3,3 +3,5 @@ ospl-config:
   durabilityServiceAlignmentComboPeriodInitial: "5.0"
   durabilityServiceTracingEnabled: true
   durabilityServiceTracingLogfile: durability.log
+  ddsi2ServiceTracingEnabled: true
+  ddsi2TracingLogfile: ddsi2.log

@@ -1,10 +1,11 @@
 ospl-daemon:
   image:
     repository: ts-dockerhub.lsst.org/ospl-daemon
-    tag: c0018
+    tag: c0019
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
     LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
   shmemDir: /scratch.local/ospl
+  osplVersion: V6.11.0
