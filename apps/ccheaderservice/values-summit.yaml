@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/headerservice
-    tag: ts-v2.9.0_salobj_v6.3.0_idl_v3.1.1_xml_v8.0.0
+    tag: ts-v2.9.0_salobj_v6.3.4_idl_v3.1.2_xml_v9.0.0
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -10,18 +10,19 @@ csc:
     IP_HEADERSERVICE: ccheaderservice.cp.lsst.org
     URL_SPEC: --url_format http://{ip_address}/{filename_HDR}
   envSecrets:
-    - name: AWS_ACCESS_KEY_ID
-      secretName: lfa
-      secretKey: aws-access-key-id
-    - name: AWS_SECRET_ACCESS_KEY
-      secretName: lfa
-      secretKey: aws-secret-access-key
+  - name: AWS_ACCESS_KEY_ID
+    secretName: lfa
+    secretKey: aws-access-key-id
+  - name: AWS_SECRET_ACCESS_KEY
+    secretName: lfa
+    secretKey: aws-secret-access-key
   pvcMountpoint:
   - name: www
     path: /home/saluser/www
     accessMode: ReadWriteOnce
     claimSize: 50Gi
   shmemDir: /run/ospl
+  osplVersion: V6.11.0
 ingress:
   use: true
   hostname: ccheaderservice.cp.lsst.org

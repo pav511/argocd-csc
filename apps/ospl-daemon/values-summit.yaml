@@ -1,7 +1,7 @@
 ospl-daemon:
   image:
     repository: ts-dockerhub.lsst.org/ospl-daemon
-    tag: c0018
+    tag: c0019
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -12,3 +12,4 @@ ospl-daemon:
     repository: lsstit/ddsnet4u
     tag: latest
     pullPolicy: Always
+  osplVersion: V6.11.0

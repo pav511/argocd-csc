@@ -8,7 +8,6 @@ cscs:
   - mtrotator
   - ccheaderservice
 runAsSim:
-  - mtaos
   - mtdome
   - mtmount
   - mtrotator
