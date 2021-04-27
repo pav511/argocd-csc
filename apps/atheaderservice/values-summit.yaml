@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/headerservice
-    tag: ts-v2.9.0_salobj_v6.3.0_idl_v3.1.1_xml_v8.0.0
+    tag: ts-v2.9.0_salobj_v6.3.4_idl_v3.1.2_xml_v9.0.0
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -16,6 +16,7 @@ csc:
     accessMode: ReadWriteOnce
     claimSize: 50Gi
   shmemDir: /run/ospl
+  osplVersion: V6.11.0
 ingress:
   use: true
   hostname: atheaderservice.cp.lsst.org

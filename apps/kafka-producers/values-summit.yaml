@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0018
+    tag: c0019
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -16,3 +16,4 @@ kafka-producers:
     extras:
       LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
   shmemDir: /run/ospl
+  osplVersion: V6.11.0

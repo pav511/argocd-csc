@@ -1,12 +1,13 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/weatherstation
-    tag: c0018
+    tag: c0019
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
   shmemDir: /run/ospl
+  osplVersion: V6.11.0
 ingress:
   use: true
   hostname: weatherstation1.cp.lsst.org
