@@ -45,6 +45,9 @@ kafka-producers:
     m1m3:
       cscs: >-
         --file m1m3.yaml
+    vms:
+      cscs: >-
+        MTVMS
     m2:
       cscs: >-
         MTHexapod
