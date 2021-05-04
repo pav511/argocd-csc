@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0019
+    tag: c0020
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -25,4 +25,4 @@ kafka-producers:
     m2:
       env:
         partitions: 3
-  osplVersion: V6.11.0
+  osplVersion: V6.10.4

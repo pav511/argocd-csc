@@ -1,7 +1,7 @@
 love-producer:
   image:
     repository: ts-dockerhub.lsst.org/love-producer
-    tag: c0019
+    tag: c0020
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -12,4 +12,4 @@ love-producer:
     ataos: ATAOS:0
     atarchiver: ATArchiver:0
     atcamera: ATCamera:0
-  osplVersion: V6.11.0
+  osplVersion: V6.10.4
