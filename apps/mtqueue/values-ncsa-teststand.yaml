@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/scriptqueue
-    tag: c0019
+    tag: c0020
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -14,4 +14,4 @@ csc:
     readOnly: true
     server: lsst-nfs.ncsa.illinois.edu
     serverPath: /offline/teststand
-  osplVersion: V6.11.0
+  osplVersion: V6.10.4

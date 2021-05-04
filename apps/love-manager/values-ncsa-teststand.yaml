@@ -1,7 +1,7 @@
 love-manager:
   image:
     repository: lsstts/love-manager
-    tag: c0019
+    tag: c0020
     pullPolicy: IfNotPresent
   secret_path: lsst-nts-k8s.ncsa.illinois.edu
   env:

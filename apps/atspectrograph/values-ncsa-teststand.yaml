@@ -1,11 +1,11 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/atspec
-    tag: c0019
+    tag: c0020
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
     RUN_ARG: --simulate
   shmemDir: /scratch.local/ospl
-  osplVersion: V6.11.0
+  osplVersion: V6.10.4
