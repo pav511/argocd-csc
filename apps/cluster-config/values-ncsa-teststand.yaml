@@ -1,5 +1,6 @@
 deployEnv: ncsa-teststand
 extraSecrets:
   - name: nexus3-docker
+    type: kubernetes.io/dockerconfigjson
     namespaces:
       - uws
