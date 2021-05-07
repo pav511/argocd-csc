@@ -25,4 +25,6 @@ kafka-producers:
     m2:
       env:
         partitions: 3
+    ocps:
+      cscs: OCPS
   osplVersion: V6.10.4
