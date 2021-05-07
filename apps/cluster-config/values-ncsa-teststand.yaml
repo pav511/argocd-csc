@@ -1,1 +1,5 @@
 deployEnv: ncsa-teststand
+extraSecrets:
+  - name: nexus3-docker
+    namespaces:
+      - uws
