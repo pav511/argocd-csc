@@ -1,11 +1,11 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/mtdome
-    tag: c0019
+    tag: c0020
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
     RUN_ARG: --simulate
   shmemDir: /run/ospl
-  osplVersion: V6.11.0
+  osplVersion: V6.10.4
