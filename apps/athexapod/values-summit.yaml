@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/athexapod
-    tag: c0019
+    tag: c0020
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -12,4 +12,4 @@ csc:
     repository: lsstit/ddsnet4u
     tag: latest
     pullPolicy: Always
-  osplVersion: V6.11.0
+  osplVersion: V6.10.4
