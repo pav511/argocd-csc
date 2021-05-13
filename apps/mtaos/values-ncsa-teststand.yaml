@@ -18,14 +18,19 @@ csc:
     readOnly: false
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
     serverPath: /project
-  - name: gen3-nts-data
-    containerPath: /repo/nts
+  - name: gen3-nts-latiss-data
+    containerPath: /repo/LATISS
     readOnly: false
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
-    serverPath: /repo
+    serverPath: /repo/LATISS
+  - name: gen3-nts-comcam-data
+    containerPath: /repo/LSSTComCam
+    readOnly: false
+    server: lsst-l1-cl-arctl.ncsa.illinois.edu
+    serverPath: /repo/LSSTComCam
   - name: gen3-summit-data
-    containerPath: /repo/summit
+    containerPath: /repo/main
     readOnly: false
     server: lsst-nfs.ncsa.illinois.edu
-    serverPath: /user/repo
+    serverPath: /user/repo/main
   osplVersion: V6.10.4
