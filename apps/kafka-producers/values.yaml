@@ -32,6 +32,7 @@ kafka-producers:
         CCHeaderService
     eas:
       cscs: >-
+        AdamSensors
         DIMM
         DSM
         ESS
