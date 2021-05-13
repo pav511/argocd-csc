@@ -1,5 +1,6 @@
 {{- range $csc := .Values.cscs }}
 {{- $isIndexed := false }}
+{{- $csc1 := "" }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -19,16 +20,19 @@ spec:
     server: {{ $.Values.spec.destination.server }}
   project: default
   source:
-    {{- if $.Values.indexed }}
-    {{- range $key, $index := $.Values.indexed }}
+    {{- $cscKey := "" }}
+    {{- range $key := keys $.Values.indexed }}
     {{- if hasPrefix $key $csc }}
     {{- $isIndexed = true }}
-    path: apps/{{ substr 0 ($index | int) $csc }}
+    {{- $cscKey = $key }}
     {{- end }}
     {{- end }}
+    {{- if $isIndexed }}
+    {{- $csc1 = substr 0 (get $.Values.indexed $cscKey | int) $csc }}
     {{- else }}
-    path: apps/{{ $csc }}
+    {{- $csc1 = $csc }}
     {{- end }}
+    path: apps/{{ $csc1 }}
     repoURL: {{ $.Values.spec.source.repoURL }}
     targetRevision: {{ $.Values.spec.source.targetRevision }}
     helm:
