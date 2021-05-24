@@ -7,6 +7,7 @@ ospl-config:
     - obssys
     - kafka-producers
     - ospl-daemon
+    - uws
   networkInterface: net1
   shmemSize: 504857600
   maxSamplesWarnAt: 50000

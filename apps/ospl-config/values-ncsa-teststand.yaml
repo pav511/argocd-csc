@@ -1,13 +1,4 @@
 ospl-config:
-  namespaces:
-    - auxtel
-    - eas
-    - love
-    - maintel
-    - obssys
-    - kafka-producers
-    - ospl-daemon
-    - uws
   domainId: 0
   waterMarksWhcAdaptive: false
   ddsi2TracingEnabled: true
