@@ -12,4 +12,6 @@ love-producer:
     ataos: ATAOS:0
     atarchiver: ATArchiver:0
     atcamera: ATCamera:0
+    atmcs: ATMCS:0
+    atptg: ATPtg:0
   osplVersion: V6.10.4

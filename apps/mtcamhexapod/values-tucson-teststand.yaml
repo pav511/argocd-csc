@@ -1,0 +1,11 @@
+csc:
+  image:
+    repository: ts-dockerhub.lsst.org/mthexapod
+    tag: c0023
+    pullPolicy: Always
+    nexus3: nexus3-docker
+  env:
+    LSST_DDS_PARTITION_PREFIX: tucson
+    RUN_ARG: --simulate 1
+  shmemDir: /run/ospl
+  osplVersion: V6.10.4

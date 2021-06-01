@@ -1,0 +1,20 @@
+env: tucson-teststand
+cscs:
+  - mtaos
+  - mtptg
+  - mtcamhexapod
+  - mtm2hexapod
+  - mtmount
+  - mtrotator
+  - mtdome
+  - mtdometrajectory
+  - mtm2
+  - ccheaderservice
+noSim:
+  - mtaos
+  - mtptg
+  - mtdometrajectory
+  - ccheaderservice
+spec:
+  source:
+    targetRevision: tickets/DM-30329

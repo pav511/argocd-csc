@@ -1,0 +1,10 @@
+env: tucson-teststand
+cscs:
+  - dsm1
+  - dsm2
+  - weatherstation1
+  - dimm1
+  - dimm2
+spec:
+  source:
+    targetRevision: tickets/DM-30329

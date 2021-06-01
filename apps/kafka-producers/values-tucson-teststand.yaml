@@ -1,24 +1,30 @@
 kafka-producers:
   image:
-    repository: lsstts/salkafka
-    tag: v1.1.0_salobj_v5.4.0_xml_v4.7.0
+    repository: ts-dockerhub.lsst.org/salkafka
+    tag: c0023
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    lsstDdsDomain: tucson
-    brokerIp: kafka-0-tucson-teststand-efd.lsst.codes
-    brokerPort: 31090
-    registryAddr: https://schema-registry-tucson-teststand-efd.lsst.codes
+    lsstDdsPartitionPrefix: tucson
+    brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
+    brokerPort: 9092
+    registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
     partitions: 1
     replication: 3
     waitAck: 1
-    logLevel: 10
-
+    logLevel: 20
+    extras:
+      LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
+  shmemDir: /run/ospl
   producers:
-    maintel: null
-    mtmount: null
-    m1m3: null
-    m2: null
     eas:
       cscs: >-
+        DIMM
         DSM
+        WeatherStation
+  osplVersion: V6.10.4
+  startupProbe:
+    use: true
+    failureThreshold: 15
+    initialDelay: 20
+    period: 10

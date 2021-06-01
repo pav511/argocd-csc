@@ -1,4 +1,4 @@
-env: ncsa-teststand
+env: tucson-teststand
 spec:
   source:
     targetRevision: tickets/DM-30329

@@ -1,0 +1,13 @@
+env: tucson-teststand
+cscs:
+  - ataos
+  - atdome
+  - atdometrajectory
+  - atheaderservice
+  - athexapod
+  - atptg
+  - atspectrograph
+  - hexapodsim
+spec:
+  source:
+    targetRevision: tickets/DM-30329

@@ -1,0 +1,10 @@
+csc:
+  image:
+    repository: ts-dockerhub.lsst.org/dmocps
+    tag: c0023
+    pullPolicy: Always
+    nexus3: nexus3-docker
+  env:
+    LSST_DDS_PARTITION_PREFIX: tucson
+  shmemDir: /run/ospl
+  osplVersion: V6.10.4

@@ -1,0 +1,16 @@
+ospl-main-daemon:
+  image:
+    repository: ts-dockerhub.lsst.org/ospl-daemon
+    tag: c0023
+    pullPolicy: Always
+  imagePullSecrets:
+  - name: ospl-daemon-nexus3-docker
+  env:
+    LSST_DDS_PARTITION_PREFIX: tucson
+    LSST_DDS_INTERFACE: net1
+  annotations:
+    k8s.v1.cni.cncf.io/networks: kube-system/misc-dds
+  initContainer:
+    repository: lsstit/ddsnet4u
+    tag: latest
+    pullPolicy: Always
