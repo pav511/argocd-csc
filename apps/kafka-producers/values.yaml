@@ -67,3 +67,8 @@ kafka-producers:
     test:
       cscs: >-
         Test
+# TIAGO: I think eventually we need to fold this CSC with the obssys, but I
+# dont want to do this now with a life system.
+    pmd:
+      cscs: >-
+        PMD
