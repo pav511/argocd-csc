@@ -9,11 +9,11 @@ love-nginx:
     frontend:
       image:
         repository: lsstts/love-frontend
-        tag: c0020
+        tag: c0021
     manager:
       image:
         repository: lsstts/love-manager
-        tag: c0020
+        tag: c0021
       command:
       - /bin/sh
       - -c
