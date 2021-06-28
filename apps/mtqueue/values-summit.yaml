@@ -1,13 +1,23 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/scriptqueue
-    tag: c0020
+    tag: c0021
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
   shmemDir: /run/ospl
   nfsMountpoint:
+  - name: auxtel-gen3-data
+    containerPath: /repo/LATISS
+    readOnly: true
+    server: atarchiver.cp.lsst.org
+    serverPath: /repo/LATISS
+  - name: comcam-gen3-data
+    containerPath: /repo/LSSTComCam
+    readOnly: true
+    server: comcam-arctl01.cp.lsst.org
+    serverPath: /repo/LSSTComCam
   - name: auxtel-data
     containerPath: /readonly/lsstdata/auxtel
     readOnly: true
