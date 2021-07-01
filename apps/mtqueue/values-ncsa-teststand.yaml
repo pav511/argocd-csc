@@ -9,9 +9,14 @@ csc:
     RUN_ARG: 1
   shmemDir: /scratch.local/ospl
   nfsMountpoint:
-  - name: lsstdata
-    containerPath: /lsstdata/offline/teststand
-    readOnly: true
-    server: lsst-nfs.ncsa.illinois.edu
-    serverPath: /offline/teststand
+  - name: auxtel-gen2
+    containerPath: /project/shared/auxTel
+    readOnly: false
+    server: lsst-l1-cl-arctl.ncsa.illinois.edu
+    serverPath: /project/shared/auxTel
+  - name: gen3
+    containerPath: /repo
+    readOnly: false
+    server: lsst-l1-cl-arctl.ncsa.illinois.edu
+    serverPath: /repo
   osplVersion: V6.10.4
