@@ -10,12 +10,12 @@ csc:
   nfsMountpoint:
   - name: auxtel-gen3-data
     containerPath: /repo/LATISS
-    readOnly: true
+    readOnly: false
     server: atarchiver.cp.lsst.org
     serverPath: /repo/LATISS
   - name: comcam-gen3-data
     containerPath: /repo/LSSTComCam
-    readOnly: true
+    readOnly: false
     server: comcam-arctl01.cp.lsst.org
     serverPath: /repo/LSSTComCam
   - name: auxtel-data
