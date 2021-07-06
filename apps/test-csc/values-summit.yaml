@@ -10,7 +10,7 @@ csc:
     OSPL_ERRORFILE: /tmp/ospl-error-test.log
     RUN_ARG: 33
   osplVersion: V6.10.4
-  shmemDir: /scratch.local/ospl
+  shmemDir: /run/ospl
   entrypoint: |
     #!/usr/bin/bash
 
