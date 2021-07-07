@@ -10,6 +10,12 @@ csc:
     URL_SPEC: --lfa_mode s3 --s3instance cp
     S3_ENDPOINT_URL: https://s3.cp.lsst.org/
   envSecrets:
+  - name: AWS_ACCESS_KEY_ID
+    secretName: lfa
+    secretKey: aws-access-key-id
+  - name: AWS_SECRET_ACCESS_KEY
+    secretName: lfa
+    secretKey: aws-secret-access-key
   - name: MYS3_ACCESS_KEY
     secretName: lfa
     secretKey: aws-access-key-id
