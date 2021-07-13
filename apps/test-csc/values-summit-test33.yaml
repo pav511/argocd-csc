@@ -1,0 +1,4 @@
+csc:
+  env:
+    RUN_ARG: 33
+  namespace: auxtel

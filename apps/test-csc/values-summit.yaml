@@ -8,9 +8,14 @@ csc:
     LSST_DDS_PARTITION_PREFIX: summit
     OSPL_INFOFILE: /tmp/ospl-info-test.log
     OSPL_ERRORFILE: /tmp/ospl-error-test.log
-    RUN_ARG: 33
   osplVersion: V6.10.4
   shmemDir: /run/ospl
+  nfsMountpoint:
+  - name: csc-config
+    containerPath: /opt/lsst/software/ts_config_ocs
+    readOnly: true
+    server: nfs1.cp.lsst.org
+    serverPath: /scratch/csc-config/ts_config_ocs
   entrypoint: |
     #!/usr/bin/bash
 
