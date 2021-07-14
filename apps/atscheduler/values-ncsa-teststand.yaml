@@ -8,3 +8,9 @@ csc:
     LSST_DDS_PARTITION_PREFIX: ncsa
   shmemDir: /scratch.local/ospl
   osplVersion: V6.10.4
+  nfsMountpoint:
+  - name: rubin-sim-data
+    containerPath: /home/saluser/rubin_sim_data
+    readOnly: true
+    server: lsst-l1-cl-arctl.ncsa.illinois.edu
+    serverPath: /project/scheduler
