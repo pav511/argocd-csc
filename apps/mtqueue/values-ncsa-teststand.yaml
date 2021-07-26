@@ -11,9 +11,19 @@ csc:
   nfsMountpoint:
   - name: auxtel-gen2
     containerPath: /project/shared/auxTel
-    readOnly: false
+    readOnly: true
     server: lsst-l1-cl-arctl.ncsa.illinois.edu
     serverPath: /project/shared/auxTel
+  - name: lsstdata-teststand
+    containerPath: /lsstdata/offline/teststand
+    readOnly: false
+    server: lsst-nfs.ncsa.illinois.edu
+    serverPath: /offline/teststand
+  - name: lsstdata-instrument
+    containerPath: /lsstdata/offline/instrument
+    readOnly: false
+    server: lsst-nfs.ncsa.illinois.edu
+    serverPath: /offline/instrument
   - name: gen3
     containerPath: /repo
     readOnly: false
