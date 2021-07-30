@@ -7,8 +7,8 @@ csc:
   env:
     LSST_DDS_PARTITION_PREFIX: summit
     LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
-    URL_SPEC: --lfa_mode s3 --s3instance cp
-    S3_ENDPOINT_URL: https://s3.cp.lsst.org
+    IP_HEADERSERVICE: ccheaderservice.cp.lsst.org
+    URL_SPEC: --url_format http://{ip_address}/{filename_HDR}
   envSecrets:
   - name: AWS_ACCESS_KEY_ID
     secretName: lfa
@@ -30,6 +30,6 @@ csc:
   shmemDir: /run/ospl
   osplVersion: V6.10.4
 ingress:
-  use: false
+  use: true
   hostname: ccheaderservice.cp.lsst.org
   port: 8000
