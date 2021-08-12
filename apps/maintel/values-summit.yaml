@@ -9,5 +9,4 @@ cscs:
   - ccheaderservice
 runAsSim:
   - mtdome
-  - mtmount
   - mtrotator
