@@ -15,6 +15,7 @@ csc:
     path: /home/saluser/www
     accessMode: ReadWriteOnce
     claimSize: 50Gi
+    storageClass: rook-ceph-block
   shmemDir: /run/ospl
   osplVersion: V6.10.4
 ingress:
