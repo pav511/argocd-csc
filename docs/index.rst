@@ -16,6 +16,8 @@ The following environments are managed by `Argo CD`_ using configuration in this
 The links are links to the `Argo CD`_ dashboards, which require authentication.
 The names are the environment names used internally in this repository to name values files and for other purposes.
 
+.. _CSC-Ops-with-ArgoCD-UI-URLs:
+
 * `tucson-teststand <https://tucson-teststand.lsst.codes/argo-cd>`_
 * `ncsa-teststand <https://lsst-argocd-nts-efd.ncsa.illinois.edu/argo-cd>`_
 * `base-teststand <https://base-lsp.lsst.codes/argo-cd>`_
@@ -72,11 +74,13 @@ All of those applications are managed by the `csc Helm chart <https://github.com
 The LOVE applications (``love-<component>``) are mostly handled by their own charts, but this system isn't yet deployed via `Argo CD`_ yet.
 Once it is, the rest of the components will be documented.
 
+.. _CSC-Ops-with-ArgoCD-Collector-Apps:
+
 Collector Applications
 ----------------------
 
 These applications are what `Argo CD`_ calls an app of apps.
-They are collections of CSC (child) applications that are grouped into a particular namespace.
+They are collections of child applications (CSCs, components or both) that are grouped into a particular namespace.
 All collector applications, except ``love``, support running simulators for a CSC.
 The ``summit`` environment is expected to run in real mode, but can be made to use a simulator by specifying CSCs in the ``runAsSim`` key.
 All other sites assume that the CSCs will run in simulation mode except those specified in the ``noSim`` key.

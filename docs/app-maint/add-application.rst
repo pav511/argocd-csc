@@ -2,16 +2,20 @@
 Add Application
 ###############
 
-Add a directory to ``/apps`` named for the application. Then add a ``Chart.yaml`` file and point the dependancy chart to the appropriate one for the new application.
-Add ``values-<environment>.yaml`` files for each environment in which that application will be deployed.
-If the application needs to be integrated with a collector application, add the application name to the list in the appropriate environment files in the collector.
+The following is the procedure to add a new application to the system.
 
-The application needs to be created at the sites the environment files point too.
-If the application is part of a collector application, then once the change with the application is committed and pushed to GitHub, syncing the collector application will create the application.
-After the application is created, it can then be synced via methods described in the previous section.
+#. Add a directory to ``/apps`` named for the application.
+    a. For example, ``/apps/my_new_application`` for an application named ``my_new_application``.
+#. Add a ``Chart.yaml`` file and point the dependency chart to the appropriate one for the new application.
+#. Add ``values-<environment>.yaml`` files for each environment in which that application will be deployed.
+    a. For example, add ``values-summit.yaml`` for the summit environment.
+#. If the application needs to be integrated with a :ref:`collector application <CSC-Ops-with-ArgoCD-Collector-Apps>`, add the application name to the list in the appropriate environment file in the collector.
+
+If the application is part of a :ref:`collector application <CSC-Ops-with-ArgoCD-Collector-Apps>`, then once the change with the application is committed and pushed to GitHub, syncing the collector application will create the application.
+After the application is created, it can then be synced via methods described in :ref:`CSC-Ops-with-ArgoCD-Upgrade-Application`.
+
 An application that is not part of a collector application must be created manually.
-The `Argo CD`_ command-line is the preferred mechanism for this.
-The application can be created by the following logging into the appropriate environment `Argo CD`_ instance:
+To create an application using the command-line, log into the appropriate `Argo CD`_ environment and run the following command:
 
 .. prompt:: bash
 

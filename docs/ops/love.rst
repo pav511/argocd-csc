@@ -14,7 +14,7 @@ love
 
 .. rubric:: Overview
 
-This collector application handles the CSCs associated with the LSST Observers Visualization Environment (LOVE).
+This collector application handles the components associated with the LSST Observers Visualization Environment (LOVE).
 The list of applications does not usually vary by ``environment``.
 It is possible a new service is introduced at a test stand, but eventually that service will be placed at all sites.
 This application uses an internal chart that lives in ``apps/love/templates`` and creates the `Argo CD`_ specifications for the child applications.

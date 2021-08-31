@@ -1,3 +1,5 @@
+.. _CSC-Ops-with-ArgoCD-Upgrade-Application:
+
 ###################
 Upgrade Application
 ###################
@@ -13,16 +15,55 @@ The upgrade could be just a new container image, but it could also cover new con
     a. **NOTE**: Any changes to general configuration (``values.yaml`` or indexed YAML files) will be seen by all sites, so be careful with this.
 #. At the site, send the CSC to *OFFLINE* before the upgrade.
     a. If the CSC is a multi-index component, make sure to send all indices *OFFLINE*.
-#. Log into the site specific `Argo CD`_ UI and find the application within the UI.
-#. Find the CSC within the UI and bring up the detailed view by clicking on the application in the UI.
+#. Log into the :ref:`site specific <CSC-Ops-with-ArgoCD-UI-URLs>` `Argo CD`_ UI and find the application within the UI.
+
+.. figure:: ../_static/argocd_ui.png
+     :name: argocd-ui
+
+     Use the :guilabel:`Search applications...` box at the top of the UI or use the page list to find the application.
+
+.. figure:: ../_static/find_app.png
+     :name: find-app
+
+     Finding an application by the :guilabel:`Search applications...` box.
+
+5. Bring up the detailed view by clicking on the application in the UI.
 #. The pod should show :guilabel:`completed` status unless the CSC is an *OFFLINE* state entrypoint variant. In that case it will continue to say :guilabel:`running`.
-#. Delete the job (**NOT** the application) by clicking on the three vertical dots and selecting, :guilabel:`Delete`. **DO NOT** use the :guilabel:`Delete` button on the top bar as this will delete the application.
+
+.. figure:: ../_static/app_in_completed_state.png
+     :name: completed-app
+
+     Pod status of a *STANDBY*-entry CSC after being sent *OFFLINE*.
+
+7. Delete the job (**NOT** the application) by clicking on the three vertical dots and selecting, :guilabel:`Delete`. **DO NOT** use the :guilabel:`Delete` button on the top bar as this will delete the application.
     a. You will have to type in the name of the application to perform the delete.
     #. For most applications the foreground delete is OK to select.
-#. Once the job is deleted and shows :guilabel:`Out of Sync`, it is ready to be synced again.
+
+.. figure:: ../_static/delete_api.png
+     :name: delete-app
+
+     Deleting application via the three vertical dots on the job box.
+
+.. figure:: ../_static/delete_dialog.png
+     :name: delete-dialog
+
+     Deletion dialog showing the need to type the application name in order to activate the :guilabel:`OK` button.
+
+8. Once the job is deleted and shows :guilabel:`Out of Sync`, it is ready to be synced again.
     a. If a configuration change was made, make sure to check the commit message in the :guilabel:`Current Sync Status` box to ensure that it matches the expected configuration commit.
     #. If it doesn't, click the :guilabel:`Refresh` button or reload the page to force an update.
-#. To do this, either click the :guilabel:`Sync` button on the top menu bar or click the three vertical dots on the job and select :guilabel:`Sync`.
+
+.. figure:: ../_static/app_ready_for_sync.png
+     :name: app-ready-for-sync
+
+     Application status after deletion but before syncing.
+
+9. To do this, either click the :guilabel:`Sync` button on the top menu bar or click the three vertical dots on the job and select :guilabel:`Sync`.
+
+.. figure:: ../_static/app_sync.png
+     :name: app-sync
+
+     Dialog showing the synchronization options. Complete the process by clicking the :guilabel:`Synchronize` button.
 
 Producers
 ---------

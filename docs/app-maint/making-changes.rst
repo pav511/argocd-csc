@@ -9,7 +9,7 @@ An example is shown below.
 
 .. code-block:: bash
 
-  git ci -m "Summit: Update command-line for DIMMs.""
+  git ci -m "Summit: Update command-line for DIMMs."
 
 For larger work, branches and pull requests must be used to effect the changes.
 Before merging the pull request, all the commits must be squashed into a single one with a commit message formatted like above.
