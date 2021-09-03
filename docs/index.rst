@@ -10,7 +10,7 @@ More information on the charts used for control system deployment can be found i
 The `Argo CD`_ configuration and this documentation are stored in the `argocd-csc <https://github.com/lsst-ts/argocd-csc>`_ repository in GitHub_.
 
 This deployment mechanism leverages many technologies provided by Data Management's `SQuaRE <https://github.com/lsst-sqre>`_ group.
-This documentation bears heavy resemblance to theirs as many of the concepts and applications of methodologies are similar is not the same.
+This documentation bears heavy resemblance to theirs as many of the concepts and applications of methodologies are similar if not the same.
 
 The following environments are managed by `Argo CD`_ using configuration in this repository.
 The links are links to the `Argo CD`_ dashboards, which require authentication.
