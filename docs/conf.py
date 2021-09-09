@@ -127,6 +127,8 @@ html_static_path = []
 html_show_sourcelink = False
 
 linkcheck_ignore = [
+    r"https://github.com/lsst-ts/argocd-csc/tree/master/services",
+    r"https://github.com/lsst-ts/argocd-csc/tree/master/services/rubintv-broadcaster",
     r"https://github.com/lsst-ts/argocd-csc/tree/master/docs",
     r"https://github.com/lsst-ts/argocd-csc/tree/master/apps/dmocps",
     r"https://lsst-argocd-nts-efd.ncsa.illinois.edu/argo-cd",

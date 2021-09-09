@@ -1,0 +1,9 @@
+rubintv-broadcaster:
+  namespace: rubintv-broadcaster
+  scripts:
+    - runImExaminer.py
+    - runIsrRunner.py
+    - runMonitor.py
+    - runMountTorquePlotter.py
+    - runSpecExaminer.py
+  credentialFile: google_write_creds

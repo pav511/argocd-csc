@@ -1,0 +1,8 @@
+apiVersion: v2
+description: Parent application to bootstrap RubinTV broadcaster services deployment
+name: rubintv-broadcaster
+version: 0.1.0
+dependencies:
+- name: rubintv-broadcaster
+  version: 0.1.3
+  repository: https://lsst-ts.github.io/charts/
