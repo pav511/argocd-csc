@@ -10,3 +10,4 @@ cscs:
 runAsSim:
   - mtdome
   - mtrotator
+  - mtmount
