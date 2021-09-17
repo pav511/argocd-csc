@@ -1,1 +1,8 @@
-deployEnv: base-teststand
+cluster-config:
+  vaultPathPrefix: secret/k8s_operator/base-lsp.lsst.codes
+  secrets:
+    - name: nexus3-docker
+      key: ts/software/nexus3-docker
+      type: kubernetes.io/dockerconfigjson
+      namespaces:
+        - namespaces
