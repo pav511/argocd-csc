@@ -4,3 +4,6 @@ spec:
   source:
     repoURL: https://github.com/lsst-ts/argocd-csc
     targetRevision: HEAD
+noSim:
+  - atocps
+  - ccocps
