@@ -1,7 +1,7 @@
 love-frontend:
   image:
-    repository: lsstts/love-frontend
-    tag: c0021
+    repository: ts-dockerhub.lsst.org/love-frontend
+    tag: c0022
     pullPolicy: IfNotPresent
   mountpoint:
     name: love-frontend

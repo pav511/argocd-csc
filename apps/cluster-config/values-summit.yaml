@@ -1,10 +1,14 @@
-deployEnv: summit
-extraSecrets:
-  - name: lfa
-    namespaces:
-      - auxtel
-      - maintel
-  - name: nexus3-docker
-    type: kubernetes.io/dockerconfigjson
-    namespaces:
-      - uws
+cluster-config:
+  vaultPathPrefix: secret/k8s_operator/summit-lsp.lsst.codes
+  secrets:
+    - name: nexus3-docker
+      key: ts/software/nexus3-docker
+      type: kubernetes.io/dockerconfigjson
+      namespaces:
+        - namespaces
+        - uws
+    - name: lfa
+      key: ts/software/lfa
+      namespaces:
+        - auxtel
+        - maintel

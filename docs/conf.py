@@ -128,6 +128,7 @@ html_show_sourcelink = False
 
 linkcheck_ignore = [
     r"https://github.com/lsst-ts/argocd-csc/tree/master/docs",
+    r"https://github.com/lsst-ts/argocd-csc/tree/master/apps/dmocps",
     r"https://lsst-argocd-nts-efd.ncsa.illinois.edu/argo-cd",
     r"https://base-lsp.lsst.codes/argo-cd",
     r"https://tucson-teststand.lsst.codes/argo-cd",

@@ -89,6 +89,7 @@ All other sites assume that the CSCs will run in simulation mode except those sp
    :maxdepth: 2
 
    ops/auxtel
+   ops/dmocps
    ops/eas
    ops/love
    ops/maintel

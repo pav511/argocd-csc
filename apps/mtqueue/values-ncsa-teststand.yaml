@@ -1,12 +1,12 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/scriptqueue
-    tag: c0021
+    tag: c0022
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    RUN_ARG: 1
+    RUN_ARG: 1 --state enabled
   shmemDir: /scratch.local/ospl
   nfsMountpoint:
   - name: auxtel-gen2
