@@ -1,10 +1,11 @@
 csc:
   image:
-    repository: ts-dockerhub.lsst.org/atdome
+    repository: ts-dockerhub.lsst.org/hvac
     tag: c0022
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
+    RUN_ARG: --state enabled
   shmemDir: /run/ospl
   osplVersion: V6.10.4

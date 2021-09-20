@@ -1,16 +1,22 @@
 {{- range $csc := .Values.cscs }}
 {{- $isIndexed := false }}
+{{- $cscn := "" }}
+{{- if hasKey $.Values.renameMap $csc }}
+{{- $cscn = get $.Values.renameMap $csc }}
+{{- else }}
+{{- $cscn = $csc }}
+{{- end }}
 {{- $csc1 := "" }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   {{- if eq $.Values.env "summit" }}
-  name: {{ $csc }}
+  name: {{ $cscn }}
   {{- else if and $.Values.noSim (has $csc $.Values.noSim) }}
-  name: {{ $csc }}
+  name: {{ $cscn }}
   {{- else }}
-  name: {{ $csc }}-sim
+  name: {{ $cscn }}-sim
   {{- end }}
   finalizers:
   - resources-finalizer.argocd.argoproj.io

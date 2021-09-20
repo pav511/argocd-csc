@@ -28,3 +28,11 @@ Below is an example of how to specify the offset for a CSC.
     dimm: 4
     weatherstation: 14
     dsm: 3
+
+Rather than use release names built like ``<lowecase csc name><index>`` (e.g., ``dsm1``), one can provide a mapping to use different release names:
+
+.. code:: yaml
+
+  renameMap:
+    ess1: comcam-ess01
+    ess101: mtdome-ess01

@@ -1,14 +1,14 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/headerservice
-    tag: ts-v2.9.1_salobj_v6.4.1_idl_v3.1.3_xml_v9.1.1_c0021
+    tag: ts-v2.9.2_salobj_v6.6.2_idl_v3.3.0_xml_v10.0.0_c0022
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
     LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
-    IP_HEADERSERVICE: ccheaderservice.cp.lsst.org
-    URL_SPEC: --url_format http://{ip_address}/{filename_HDR}
+    URL_SPEC: --lfa_mode s3 --s3instance cp
+    S3_ENDPOINT_URL: https://s3.cp.lsst.org
   envSecrets:
   - name: AWS_ACCESS_KEY_ID
     secretName: lfa
@@ -22,15 +22,7 @@ csc:
   - name: MYS3_SECRET_KEY
     secretName: lfa
     secretKey: aws-secret-access-key
-  pvcMountpoint:
-  - name: www
-    path: /home/saluser/www
-    accessMode: ReadWriteOnce
-    claimSize: 50Gi
-    storageClass: rook-ceph-block
   shmemDir: /run/ospl
   osplVersion: V6.10.4
 ingress:
-  use: true
-  hostname: ccheaderservice.cp.lsst.org
-  port: 8000
+  use: false

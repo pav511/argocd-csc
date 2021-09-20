@@ -3,3 +3,14 @@ cscs:
   - dimm1
   - dimm2
   - adamsensors
+  - hvac
+  - ess101
+  - ess102
+  - ess103
+  - ess201
+renameMap:
+  ess1: comcam-ess01
+  ess101: mtdome-ess01
+  ess102: mtdome-ess02
+  ess103: mtdome-ess03
+  ess201: auxtel-ess01
