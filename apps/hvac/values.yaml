@@ -1,0 +1,6 @@
+csc:
+  namespace: eas
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-hvac.log
+    OSPL_ERRORFILE: /tmp/ospl-error-hvac.log
+  osplVersion: V6.10.4

@@ -1,6 +1,6 @@
 csc:
   image:
-    repository: ts-dockerhub.lsst.org/atdome
+    repository: ts-dockerhub.lsst.org/ess
     tag: c0022
     pullPolicy: Always
     nexus3: nexus3-docker

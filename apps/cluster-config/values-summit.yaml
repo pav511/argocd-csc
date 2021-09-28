@@ -12,3 +12,4 @@ cluster-config:
       namespaces:
         - auxtel
         - maintel
+        - obssys

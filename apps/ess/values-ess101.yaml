@@ -1,0 +1,5 @@
+csc:
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-mtdome-ess01.log
+    OSPL_ERRORFILE: /tmp/ospl-error-mtdome-ess01.log
+    RUN_ARG: 101 --state enabled --settings mtdome_ess01
