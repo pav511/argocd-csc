@@ -2,4 +2,4 @@ csc:
   env:
     OSPL_INFOFILE: /tmp/ospl-info-auxtel-ess01.log
     OSPL_ERRORFILE: /tmp/ospl-error-auxtel-ess01.log
-    RUN_ARG: 201 --state enabled --settings auxtel_ess01
+    RUN_ARG: 201
