@@ -4,8 +4,10 @@ Add Application
 
 The following is the procedure to add a new application to the system.
 
-#. Add a directory to ``/apps`` named for the application.
+#. Add a directory to ``/apps`` or ``/services`` named for the application.
     a. For example, ``/apps/my_new_application`` for an application named ``my_new_application``.
+    b. The ``/apps`` directory is used for control system components.
+    c. The ``/services`` directory is used for applications supporting observatory operations.
 #. Add a ``Chart.yaml`` file and point the dependency chart to the appropriate one for the new application.
 #. Add ``values-<environment>.yaml`` files for each environment in which that application will be deployed.
     a. For example, add ``values-summit.yaml`` for the summit environment.
@@ -19,7 +21,8 @@ To create an application using the command-line, log into the appropriate `Argo 
 
 .. prompt:: bash
 
-  argocd app create <app deploy name> --dest-namespace argocd --dest-server https://kubernetes.default.svc --repo https://github.com/lsst-ts/argocd-csc.git --revision HEAD --path apps/<app name> --values values-<environment>.yaml
+  argocd app create <app deploy name> --dest-namespace argocd --dest-server https://kubernetes.default.svc --repo https://github.com/lsst-ts/argocd-csc.git --revision HEAD --path <app subdir>/<app name> --values values-<environment>.yaml
 
 The ``<app deploy name>`` and ``<app name>`` directory don't have to match but should be the same for most instances.
 The main variation is CSCs that are run in simulation mode are identified with ``-sim`` at the end of the application deployment name, but the application directory is the name of the CSC.
+The ``<app subdir>`` is either ``apps`` or ``services`` depending on the application being created.

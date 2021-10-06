@@ -66,6 +66,7 @@ Applications
    ops/kafka-producers
    ops/hexapodsim
    ops/test-csc
+   ops/rubintv-broadcaster
    ops/atheaderservice
    ops/ccheaderservice
 

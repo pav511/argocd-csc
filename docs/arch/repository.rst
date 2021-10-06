@@ -5,10 +5,11 @@ Repository Structure
 Layout
 ======
 
-The repository consists of the `apps <https://github.com/lsst-ts/argocd-csc/tree/master/apps>`_ and `docs <https://github.com/lsst-ts/argocd-csc/tree/master/docs>`_ directories.
+The repository consists of the `apps <https://github.com/lsst-ts/argocd-csc/tree/master/apps>`_, `docs <https://github.com/lsst-ts/argocd-csc/tree/master/docs>`_ and `services <https://github.com/lsst-ts/argocd-csc/tree/master/services>`_ directories.
 The ``apps`` directory contains the specifications of what is deployed to the `Kubernetes`_ system for each control system application.
 Each application is contained within its own directory.
 Some of the directores handle `Kubernetes`_  cluster setup that is leveraged by the deployed applications.
+The ``services`` directory contains the application specifications for items assisting in the operations of observatory functions.
 Within each application, there may be configuration that applies to all sites.
 This is provided in the ``values.yaml`` file within each application directory.
 The site specific configuration is controlled by ``values-<environment>.yaml`` files where ``environment`` is the given short-hand for a deployment target.

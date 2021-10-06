@@ -1,0 +1,36 @@
+rubintv-broadcaster:
+  image:
+    repository: ts-dockerhub.lsst.org/rubintv-broadcaster
+    tag: c0022
+    pullPolicy: Always
+  vaultPrefixPath: secret/k8s_operator/summit-lsp.lsst.codes
+  pullSecretsPath: ts/software/nexus3-docker
+  credentialSecretsPath: rubintv-broadcaster
+  imagePullSecrets:
+  - name: rubintv-broadcaster-pull-secret
+  nfsMountpoint:
+  - name: auxtel-gen3-data
+    containerPath: /repo/LATISS
+    readOnly: false
+    server: atarchiver.cp.lsst.org
+    serverPath: /repo/LATISS
+  - name: comcam-gen3-data
+    containerPath: /repo/LSSTComCam
+    readOnly: false
+    server: comcam-arctl01.cp.lsst.org
+    serverPath: /repo/LSSTComCam
+  - name: auxtel-data
+    containerPath: /readonly/lsstdata/auxtel
+    readOnly: true
+    server: atarchiver.cp.lsst.org
+    serverPath: /lsstdata
+  - name: comcam-data
+    containerPath: /readonly/lsstdata/comcam
+    readOnly: true
+    server: comcam-arctl01.cp.lsst.org
+    serverPath: /lsstdata
+  - name: project-shared
+    containerPath: /project
+    readOnly: false
+    server: nfs1.cp.lsst.org
+    serverPath: /project
