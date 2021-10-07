@@ -34,4 +34,9 @@ csc:
     readOnly: false
     server: nfs1.cp.lsst.org
     serverPath: /project
+  - name: auxtel-gen3-data-temp
+    containerPath: /data/lsstdata/base/auxtel
+    readOnly: true
+    server: atarchiver.cp.lsst.org
+    serverPath: /lsstdata/base/auxtel
   osplVersion: V6.10.4
