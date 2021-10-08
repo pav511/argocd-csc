@@ -6,7 +6,7 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: ncsa
-    S3_ENDPOINT_URL: https://s3.cp.lsst.org
+    S3_ENDPOINT_URL: http://lsst-l1-cl-header.ncsa.illinois.edu:9000
   envSecrets:
   - name: AWS_ACCESS_KEY_ID
     secretName: lfa
