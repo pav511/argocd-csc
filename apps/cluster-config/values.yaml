@@ -5,6 +5,6 @@ cluster-config:
     - love
     - maintel
     - obssys
-    - test
     - kafka-producers
     - ospl-daemon
+    - dds-test
