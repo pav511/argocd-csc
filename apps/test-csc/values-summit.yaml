@@ -1,30 +1,10 @@
 csc:
   image:
-    repository: ts-dockerhub.lsst.org/deploy-env
+    repository: ts-dockerhub.lsst.org/test
     tag: c0022
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
-    OSPL_INFOFILE: /tmp/ospl-info-test.log
-    OSPL_ERRORFILE: /tmp/ospl-error-test.log
   osplVersion: V6.10.4
   shmemDir: /run/ospl
-  nfsMountpoint:
-  - name: csc-config
-    containerPath: /opt/lsst/software/ts_config_ocs
-    readOnly: true
-    server: nfs1.cp.lsst.org
-    serverPath: /scratch/csc-config/ts_config_ocs
-  entrypoint: |
-    #!/usr/bin/bash
-
-    source ${HOME}/.setup_sal_env.sh
-
-    export TS_CONFIG_OCS_DIR=/opt/lsst/software/ts_config_ocs
-
-    run_test_csc.py ${RUN_ARG} &
-
-    pid="$!"
-
-    wait ${pid}
