@@ -8,6 +8,7 @@ ospl-config:
     - kafka-producers
     - ospl-daemon
     - uws
+    - dds-test
   networkInterface: net1
   shmemSize: 504857600
   maxSamplesWarnAt: 50000
