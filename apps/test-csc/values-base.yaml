@@ -1,14 +1,10 @@
 csc: 
   image:
-    repository: lsstts/test_csc
-    tag: salobj_v5.15.0_xml_6.0.0
+    repository: ts-dockerhub.lsst.org/test
+    tag: c0022
     pullPolicy: Always
-
+    nexus3: nexus3-docker
   env:
-    LSST_DDS_DOMAIN: base
-
-  mountpoint:
-    - name: mnt
-      path: /mnt
-      accessMode: ReadWriteOnce
-      claimSize: 100Mi
+    LSST_DDS_PARTITION_PREFIX: base
+  osplVersion: V6.10.4
+  shmemDir: /run/ospl

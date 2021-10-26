@@ -1,2 +1,5 @@
 csc:
-  namespace: obssys
+  namespace: dds-test
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-test.log
+    OSPL_ERRORFILE: /tmp/ospl-error-test.log
