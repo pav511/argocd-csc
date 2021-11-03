@@ -44,3 +44,8 @@ rubintv-broadcaster:
     readOnly: true
     server: comcam-arctl01.cp.lsst.org
     serverPath: /lsstdata/base/comcam
+  - name: user-areas
+    containerPath: /home
+    readOnly: true
+    server: nfs1.cp.lsst.org
+    serverPath: /jhome
