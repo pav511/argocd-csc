@@ -8,6 +8,8 @@ cscs:
   - mtrotator
   - mtm2
   - ccheaderservice
+  - mtcamhexapod
+  - mtm2hexapod
 runAsSim:
   - mtdome
   - mtrotator
