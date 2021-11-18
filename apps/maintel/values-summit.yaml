@@ -12,4 +12,3 @@ cscs:
   - mtm2hexapod
 runAsSim:
   - mtdome
-  - mtrotator
