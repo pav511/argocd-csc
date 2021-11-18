@@ -10,6 +10,6 @@ csc:
   shmemDir: /run/ospl
   osplVersion: V6.10.4
 ingress:
-  use: true
+  use: false
   hostname: mtm2hexapod.cp.lsst.org
   port: 8000
