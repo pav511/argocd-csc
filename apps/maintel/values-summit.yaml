@@ -6,6 +6,7 @@ cscs:
   - mtdome
   - mtdometrajectory
   - mtrotator
+  - mtm2
   - ccheaderservice
 runAsSim:
   - mtdome
