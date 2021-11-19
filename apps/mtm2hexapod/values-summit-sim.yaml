@@ -1,5 +1,5 @@
 csc:
   image:
-    tag: c0022
+    tag: c0022.CUSTOM.IDL.3.4.0
   env:
     RUN_ARG: --simulate 2
