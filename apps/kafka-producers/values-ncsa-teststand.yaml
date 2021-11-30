@@ -18,7 +18,10 @@ kafka-producers:
   shmemDir: /scratch.local/ospl
   producers:
     eas:
-      cscs: DSM
+      cscs: >-
+        DIMM
+        DSM
+        WeatherStation
     m1m3:
       env:
         partitions: 3

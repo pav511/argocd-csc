@@ -2,3 +2,6 @@ env: ncsa-teststand
 cscs:
   - dsm1
   - dsm2
+  - weatherstation1
+  - dimm1
+  - dimm2

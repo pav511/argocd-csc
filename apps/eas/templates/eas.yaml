@@ -11,11 +11,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  {{- $isSim := false }}
   {{- if eq $.Values.env "summit" }}
   name: {{ $cscn }}
   {{- else if and $.Values.noSim (has $csc $.Values.noSim) }}
   name: {{ $cscn }}
   {{- else }}
+  {{- $isSim = true }}
   name: {{ $cscn }}-sim
   {{- end }}
   finalizers:
@@ -45,6 +47,9 @@ spec:
       valueFiles:
         {{- if $isIndexed }}
         - values-{{ $csc }}.yaml
+        {{- end }}
+        {{- if $isSim }}
+        - values-{{ $csc }}-sim.yaml
         {{- end }}
         - values-{{ $.Values.env }}.yaml
 {{ end }}
