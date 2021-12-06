@@ -1,5 +1,5 @@
 csc:
   image:
-    tag: c0022.000
+    tag: c0023
   env:
     RUN_ARG: --simulate

@@ -9,5 +9,3 @@ csc:
     RUN_ARG: --simulate
   shmemDir: /scratch.local/ospl
   osplVersion: V6.10.4
-ingress:
-  use: false
