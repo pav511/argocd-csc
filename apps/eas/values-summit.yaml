@@ -4,6 +4,7 @@ cscs:
   - dimm2
   - adamsensors
   - hvac
+  - ess1
   - ess101
   - ess102
   - ess103

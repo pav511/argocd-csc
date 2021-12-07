@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/mthexapod
-    tag: c0022.CUSTOM.IDL.3.4.0
+    tag: c0023
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -9,7 +9,3 @@ csc:
     RUN_ARG: 1
   shmemDir: /run/ospl
   osplVersion: V6.10.4
-ingress:
-  use: false
-  hostname: mtcamhexapod.cp.lsst.org
-  port: 8000

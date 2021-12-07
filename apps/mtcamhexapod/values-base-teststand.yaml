@@ -8,5 +8,3 @@ csc:
     LSST_DDS_PARTITION_PREFIX: base
     RUN_ARG: -s 1
   shmemDir: /run/ospl
-ingress:
-  use: false
