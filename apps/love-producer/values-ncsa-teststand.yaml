@@ -1,7 +1,7 @@
 love-producer:
   image:
     repository: ts-dockerhub.lsst.org/love-producer
-    tag: c0023
+    tag: c0024
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
