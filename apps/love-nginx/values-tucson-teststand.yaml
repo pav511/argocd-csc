@@ -4,18 +4,18 @@ love-nginx:
     tag: 1.13.1
     pullPolicy: IfNotPresent
   ingress:
-    hostname: lsst-love-nts.ncsa.illinois.edu
+    hostname: love.tu.lsst.org
   imagePullSecrets:
   - name: love-nexus3-docker
   initContainers:
     frontend:
       image:
         repository: ts-dockerhub.lsst.org/love-frontend
-        tag: c0024
+        tag: c0023
     manager:
       image:
         repository: ts-dockerhub.lsst.org/love-manager-static
-        tag: c0024
+        tag: c0023
       command:
       - /bin/sh
       - -c
@@ -24,6 +24,6 @@ love-nginx:
         cp -Rv /usr/src/love/manager/media /usr/src/love-manager
   staticStore:
     name: love-nginx-static
-    storageClass: local-path
+    storageClass: rook-ceph-block
     accessMode: ReadWriteOnce
     claimSize: 2Gi

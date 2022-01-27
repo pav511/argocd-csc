@@ -1,0 +1,12 @@
+ospl-main-daemon:
+  namespace: ospl-daemon
+  env:
+    OSPL_URI: file:///opt/lsst/software/stack/miniconda/lib/python3.8/config/ospl-shmem.xml
+    OSPL_INFOFILE: /tmp/ospl-info-daemon.log
+    OSPL_ERRORFILE: /tmp/ospl-error-daemon.log
+    OSPL_MASTER_PRIORITY: 201
+    LSST_DDSI2_SERVICE_TRACING_VERBOSITY: finer
+    LSST_ENABLE_DURABILITY_SERVICE_TRACING: "TRUE"
+    LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
+    LSST_DDS_ALIGNEE: Initial
+    LSST_DDS_ALIGNER: true

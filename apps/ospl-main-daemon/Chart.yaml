@@ -1,7 +1,7 @@
-name: love-manager
+name: ospl-main-daemon
 apiVersion: v2
 version: 0.1.0
 dependencies:
-- name: love-manager
-  version: 0.3.1
+- name: ospl-main-daemon
+  version: 0.1.4
   repository: https://lsst-ts.github.io/charts/

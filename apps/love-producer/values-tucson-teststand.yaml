@@ -1,0 +1,48 @@
+love-producer:
+  image:
+    repository: ts-dockerhub.lsst.org/love-producer
+    tag: c0023
+    pullPolicy: Always
+    nexus3: nexus3-docker
+  env:
+    LSST_DDS_PARTITION_PREFIX: tucson
+    WEBSOCKET_HOST: love-nginx-service/manager/ws/subscription
+  shmemDir: /run/ospl
+  producers:
+    ataos: ATAOS:0
+    atarchiver: ATArchiver:0
+    atcamera: ATCamera:0
+    atdome: ATDome:0
+    atdometrajectory: ATDomeTrajectory:0
+    atheaderservice: ATHeaderService:0
+    athexapod: ATHexapod:0
+    atmcs: ATMCS:0
+    atpneumatics: ATPneumatics:0
+    atocps: OCPS:1
+    atptg: ATPtg:0
+    atscheduler: Scheduler:2
+    atscriptqueue: ScriptQueue:2
+    atspectrograph: ATSpectrograph:0
+    camerahexapod: MTHexapod:1
+    ccarchiver: CCArchiver:0
+    cccamera: CCCamera:0
+    ccheaderservice: CCHeaderService:0
+    ccocps: OCPS:2
+    dimm1: DIMM:1
+    dimm2: DIMM:2
+    dsm1: DSM:1
+    dsm2: DSM:2
+    love: LOVE:0
+    m2hexapod: MTHexapod:2
+    mtaos: MTAOS:0
+    mtdome: MTDome:0
+    mtdometrajectory: MTDomeTrajectory:0
+    mtm2: MTM2:0
+    mtmount: MTMount:0
+    mtptg: MTPtg:0
+    mtrotator: MTRotator:0
+    mtscheduler: Scheduler:1
+    mtscriptqueue: ScriptQueue:1
+    watcher: Watcher:0
+    weatherstation1: WeatherStation:1
+  osplVersion: V6.10.4

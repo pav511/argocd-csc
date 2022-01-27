@@ -1,0 +1,10 @@
+env: tucson-teststand
+cscs:
+  - atqueue
+  - mtqueue
+  - watcher
+  - atscheduler
+  - mtscheduler
+spec:
+  source:
+    targetRevision: tickets/DM-30329

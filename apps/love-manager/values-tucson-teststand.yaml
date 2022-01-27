@@ -1,12 +1,12 @@
 love-manager:
   image:
     repository: ts-dockerhub.lsst.org/love-manager
-    tag: c0024
+    tag: c0023
     pullPolicy: IfNotPresent
     nexus3: nexus3-docker
-  secret_path: lsst-nts-k8s.ncsa.illinois.edu
+  secret_path: tucson-teststand.lsst.codes
   env:
-    SERVER_URL: lsst-love-nts.ncsa.illinois.edu
+    SERVER_URL: love.tu.lsst.org
     REDIS_CONFIG_EXPIRY: 5
     REDIS_CONFIG_CAPACITY: 5000
   autoscaling:
@@ -20,7 +20,7 @@ love-manager:
     storage:
       name: love-manager-database
       path: /var/lib/postgresql
-      storageClass: local-path
+      storageClass: rook-ceph-block
       accessMode: ReadWriteOnce
       claimSize: 2Gi
   redis:
