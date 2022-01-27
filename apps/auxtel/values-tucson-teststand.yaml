@@ -8,6 +8,3 @@ cscs:
   - atptg
   - atspectrograph
   - hexapodsim
-spec:
-  source:
-    targetRevision: tickets/DM-30329

@@ -15,6 +15,3 @@ noSim:
   - mtptg
   - mtdometrajectory
   - ccheaderservice
-spec:
-  source:
-    targetRevision: tickets/DM-30329
