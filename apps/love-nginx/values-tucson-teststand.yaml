@@ -11,17 +11,16 @@ love-nginx:
     frontend:
       image:
         repository: ts-dockerhub.lsst.org/love-frontend
-        tag: c0023
+        tag: c0024
     manager:
       image:
         repository: ts-dockerhub.lsst.org/love-manager-static
-        tag: c0023
+        tag: c0024
       command:
       - /bin/sh
       - -c
-      - >
-        cp -Rv /usr/src/love/manager/static /usr/src/love-manager;
-        cp -Rv /usr/src/love/manager/media /usr/src/love-manager
+      - 'cp -Rv /usr/src/love/manager/static /usr/src/love-manager; cp -Rv /usr/src/love/manager/media
+        /usr/src/love-manager'
   staticStore:
     name: love-nginx-static
     storageClass: rook-ceph-block

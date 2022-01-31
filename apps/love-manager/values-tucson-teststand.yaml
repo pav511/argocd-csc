@@ -1,7 +1,7 @@
 love-manager:
   image:
     repository: ts-dockerhub.lsst.org/love-manager
-    tag: c0023
+    tag: c0024
     pullPolicy: IfNotPresent
     nexus3: nexus3-docker
   secret_path: tucson-teststand.lsst.codes
