@@ -5,6 +5,8 @@ love-nginx:
     pullPolicy: IfNotPresent
   ingress:
     hostname: love.tu.lsst.org
+    annotations:
+      kubernetes.io/ingress.class: nginx
   imagePullSecrets:
   - name: love-nexus3-docker
   initContainers:
