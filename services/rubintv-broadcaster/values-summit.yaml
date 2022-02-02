@@ -1,7 +1,7 @@
 rubintv-broadcaster:
   image:
     repository: ts-dockerhub.lsst.org/rubintv-broadcaster
-    tag: c0023
+    tag: c0024
     pullPolicy: Always
   vaultPrefixPath: secret/k8s_operator/summit-lsp.lsst.codes
   pullSecretsPath: ts/software/nexus3-docker
