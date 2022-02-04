@@ -19,3 +19,8 @@ csc:
     readOnly: true
     server: comcam-archiver.tu.lsst.org
     serverPath: /lsstdata/TTS/comcam
+  - name: scratch
+    containerPath: /scratch
+    readOnly: false
+    server: nfs-scratch.tu.lsst.org
+    serverPath: /scratch
