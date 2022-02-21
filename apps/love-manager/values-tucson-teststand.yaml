@@ -9,9 +9,26 @@ love-manager:
     SERVER_URL: love.tu.lsst.org
     REDIS_CONFIG_EXPIRY: 5
     REDIS_CONFIG_CAPACITY: 5000
+    LOVE_SITE: tucson
+  envSecrets:
+    AUTHLIST_USER_PASS: manager-authlist-user-password
   autoscaling:
-    enabled: false
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 15
     targetCPUUtilizationPercentage: 50
+  resources:
+    requests:
+      cpu: 250m
+      memory: 100Mi
+    limits:
+      cpu: 750m
+      memory: 300Mi
+  readinessProbe:
+    tcpSocket:
+      port: 8000
+    initialDelaySeconds: 20
+    periodSeconds: 10
   database:
     image:
       repository: postgres
@@ -28,3 +45,11 @@ love-manager:
       repository: redis
       tag: 5.0.3
       pullPolicy: IfNotPresent
+  viewBackup:
+    enabled: true
+    image:
+      repository: ts-dockerhub.lsst.org/love-view-backup
+      tag: develop
+      pullPolicy: Always
+      nexus3: nexus3-docker
+    schedule: "0 12 * * *"

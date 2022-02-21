@@ -37,6 +37,7 @@ love-producer:
     mtaos: MTAOS:0
     mtdome: MTDome:0
     mtdometrajectory: MTDomeTrajectory:0
+    mtm1m3: MTM1M3:0
     mtm2: MTM2:0
     mtmount: MTMount:0
     mtptg: MTPtg:0
