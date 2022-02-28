@@ -2,4 +2,4 @@ env: summit
 cscs:
   - electrometer1
 renameMap:
-  electrometer1: comcam-flat-electrometer
+  electrometer1: comcam-electrometer
