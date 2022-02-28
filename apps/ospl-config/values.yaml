@@ -1,6 +1,7 @@
 ospl-config:
   namespaces:
     - auxtel
+    - calsys
     - eas
     - love
     - maintel
