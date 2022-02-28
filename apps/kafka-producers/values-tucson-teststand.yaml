@@ -22,15 +22,6 @@ kafka-producers:
         DIMM
         DSM
         WeatherStation
-    calsys:
-      cscs: >-
-        ATMonochromator
-        ATWhiteLight
-        CBP
-        Electrometer
-        FiberSpectrograph
-        LinearStage
-        TunableLaser
   osplVersion: V6.10.4
   startupProbe:
     use: true

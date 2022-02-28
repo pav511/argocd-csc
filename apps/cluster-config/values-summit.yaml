@@ -11,5 +11,6 @@ cluster-config:
       key: ts/software/lfa
       namespaces:
         - auxtel
+        - calsys
         - maintel
         - obssys
