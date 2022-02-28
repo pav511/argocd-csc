@@ -1,6 +1,7 @@
 cluster-config:
   namespaces:
     - auxtel
+    - calsys
     - eas
     - love
     - maintel

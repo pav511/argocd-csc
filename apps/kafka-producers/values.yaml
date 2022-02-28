@@ -73,3 +73,12 @@ kafka-producers:
     pmd:
       cscs: >-
         PMD
+    calsys:
+      cscs: >-
+        ATMonochromator
+        ATWhiteLight
+        CBP
+        Electrometer
+        FiberSpectrograph
+        LinearStage
+        TunableLaser
