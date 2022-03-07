@@ -1,9 +1,0 @@
-env: ncsa-teststand
-cscs:
-  - ataos
-  - atdome
-  - atdometrajectory
-  - athexapod
-  - atptg
-  - hexapodsim
-  - atspectrograph

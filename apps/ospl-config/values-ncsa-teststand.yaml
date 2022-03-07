@@ -1,7 +1,0 @@
-ospl-config:
-  domainId: 0
-  waterMarksWhcAdaptive: false
-  ddsi2TracingEnabled: true
-  ddsi2TracingLogfile: ddsi2.log
-  durabilityServiceTracingEnabled: true
-  durabilityServiceTracingLogfile: durability.log

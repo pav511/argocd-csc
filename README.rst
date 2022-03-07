@@ -15,6 +15,5 @@ The following environments are managed by Argo CD using configuration in this re
 The names are the environment names used internally in this repository to name values files and for other purposes.)
 
 * `tucson-teststand <https://tucson-teststand.lsst.codes/argo-cd>`_
-* `ncsa-teststand <https://lsst-argocd-nts-efd.ncsa.illinois.edu/argo-cd>`_
 * `base-teststand <https://base-lsp.lsst.codes/argo-cd>`_
 * `summit <https://summit-lsp.lsst.codes/argo-cd>`_
