@@ -19,7 +19,6 @@ The names are the environment names used internally in this repository to name v
 .. _CSC-Ops-with-ArgoCD-UI-URLs:
 
 * `tucson-teststand <https://tucson-teststand.lsst.codes/argo-cd>`_
-* `ncsa-teststand <https://lsst-argocd-nts-efd.ncsa.illinois.edu/argo-cd>`_
 * `base-teststand <https://base-lsp.lsst.codes/argo-cd>`_
 * `summit <https://summit-lsp.lsst.codes/argo-cd>`_
 

@@ -30,7 +30,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "CSC Operations with Argo CD"
-copyright = "2020-2021 Association of Universities for Research in Astronomy (AURA), Inc"
+copyright = "2020-2022 Association of Universities for Research in Astronomy (AURA), Inc"
 author = "Rubin Observatory"
 
 version = "Current"
@@ -131,7 +131,6 @@ linkcheck_ignore = [
     r"https://github.com/lsst-ts/argocd-csc/tree/master/services/rubintv-broadcaster",
     r"https://github.com/lsst-ts/argocd-csc/tree/master/docs",
     r"https://github.com/lsst-ts/argocd-csc/tree/master/apps/dmocps",
-    r"https://lsst-argocd-nts-efd.ncsa.illinois.edu/argo-cd",
     r"https://base-lsp.lsst.codes/argo-cd",
     r"https://tucson-teststand.lsst.codes/argo-cd",
     r"https://summit-lsp.lsst.codes/argo-cd",
