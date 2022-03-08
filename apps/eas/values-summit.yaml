@@ -1,5 +1,6 @@
 env: summit
 cscs:
+  - adamsensors
   - dimm1
   - dimm2
   - hvac
