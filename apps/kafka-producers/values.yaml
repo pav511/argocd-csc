@@ -30,6 +30,7 @@ kafka-producers:
         CCArchiver
         CCCamera
         CCHeaderService
+        CCOODS
     eas:
       cscs: >-
         AdamSensors
@@ -43,6 +44,7 @@ kafka-producers:
         ATArchiver
         ATCamera
         ATHeaderService
+        ATOODS
         ATSpectrograph
     m1m3:
       cscs: >-
