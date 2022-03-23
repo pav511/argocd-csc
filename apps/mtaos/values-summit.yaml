@@ -11,17 +11,17 @@ csc:
   - name: comcam-gen3-data
     containerPath: /repo/LSSTComCam
     readOnly: false
-    server: comcam-arctl01.cp.lsst.org
+    server: comcam-archiver.cp.lsst.org
     serverPath: /repo/LSSTComCam
   - name: comcam-gen3-data-temp
     containerPath: /data/lsstdata/base/comcam
     readOnly: true
-    server: comcam-arctl01.cp.lsst.org
+    server: comcam-archiver.cp.lsst.org
     serverPath: /lsstdata/base/comcam
   - name: comcam-data
     containerPath: /readonly/lsstdata/comcam
     readOnly: true
-    server: comcam-arctl01.cp.lsst.org
+    server: comcam-archiver.cp.lsst.org
     serverPath: /lsstdata
   - name: project-shared
     containerPath: /project
