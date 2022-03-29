@@ -1,7 +1,7 @@
 kafka-producers:
   image:
     repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0024
+    tag: c0025
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -18,10 +18,7 @@ kafka-producers:
   shmemDir: /run/ospl
   producers:
     eas:
-      cscs: >-
-        DIMM
-        DSM
-        WeatherStation
+      cscs: DIMM DSM WeatherStation
   osplVersion: V6.10.4
   startupProbe:
     use: true
