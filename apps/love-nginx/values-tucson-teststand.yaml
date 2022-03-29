@@ -13,11 +13,11 @@ love-nginx:
     frontend:
       image:
         repository: ts-dockerhub.lsst.org/love-frontend
-        tag: c0024
+        tag: c0025
     manager:
       image:
         repository: ts-dockerhub.lsst.org/love-manager-static
-        tag: c0024
+        tag: c0025
       command:
       - /bin/sh
       - -c

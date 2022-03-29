@@ -1,7 +1,7 @@
 love-producer:
   image:
     repository: ts-dockerhub.lsst.org/love-producer
-    tag: c0024
+    tag: c0025
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
@@ -10,7 +10,6 @@ love-producer:
   shmemDir: /run/ospl
   producers:
     ataos: ATAOS:0
-    atarchiver: ATArchiver:0
     atcamera: ATCamera:0
     atdome: ATDome:0
     atdometrajectory: ATDomeTrajectory:0
@@ -19,15 +18,16 @@ love-producer:
     atmcs: ATMCS:0
     atpneumatics: ATPneumatics:0
     atocps: OCPS:1
+    atoods: ATOODS:0
     atptg: ATPtg:0
     atscheduler: Scheduler:2
     atscriptqueue: ScriptQueue:2
     atspectrograph: ATSpectrograph:0
     camerahexapod: MTHexapod:1
-    ccarchiver: CCArchiver:0
     cccamera: CCCamera:0
     ccheaderservice: CCHeaderService:0
     ccocps: OCPS:2
+    ccoods: CCOODS:0
     dimm1: DIMM:1
     dimm2: DIMM:2
     dsm1: DSM:1

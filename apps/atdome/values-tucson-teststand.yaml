@@ -1,11 +1,12 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/atdome
-    tag: c0024
+    tag: c0025
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: tucson
+    LSST_SITE: tucson
     RUN_ARG: --simulate
   shmemDir: /run/ospl
   osplVersion: V6.10.4
