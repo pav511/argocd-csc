@@ -5,7 +5,7 @@ csc:
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
-    RUN_ARG: --state enabled --override tucson
+    RUN_ARG: --state enabled
     LSST_DDS_PARTITION_PREFIX: tucson
     LSST_SITE: tucson
   shmemDir: /run/ospl
