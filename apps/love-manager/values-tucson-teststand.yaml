@@ -23,7 +23,7 @@ love-manager:
       memory: 100Mi
     limits:
       cpu: 750m
-      memory: 300Mi
+      memory: 600Mi
   readinessProbe:
     tcpSocket:
       port: 8000
