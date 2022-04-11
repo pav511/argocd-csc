@@ -4,8 +4,9 @@ spec:
   source:
     repoURL: https://github.com/lsst-ts/argocd-csc
     targetRevision: HEAD
-
-noSim:
-  - mtptg
-  - mtdometrajectory
-  - ccheaderservice
+namespace: maintel
+cscs: []
+indexed:
+  mtaircompressor: 15
+isSim: []
+renameMap: {}
