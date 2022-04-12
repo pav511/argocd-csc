@@ -2,7 +2,7 @@ love-nginx:
   image:
     repository: nginx
     tag: 1.13.1
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
   ingress:
     hostname: love.tu.lsst.org
     annotations:
