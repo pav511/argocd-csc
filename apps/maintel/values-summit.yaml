@@ -10,5 +10,5 @@ cscs:
   - ccheaderservice
   - mtcamhexapod
   - mtm2hexapod
-runAsSim:
+isSim:
   - mtdome

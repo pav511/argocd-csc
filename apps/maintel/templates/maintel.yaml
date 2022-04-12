@@ -1,31 +1,48 @@
 {{- range $csc := .Values.cscs }}
+{{- $cscn := "" }}
+{{- if hasKey $.Values.renameMap $csc }}
+{{- $cscn = get $.Values.renameMap $csc }}
+{{- else }}
+{{- $cscn = $csc }}
+{{- end }}
+{{- $app := "" }}
+{{- $isIndexed := false }}
+{{- $cscKey := "" }}
+{{- range $key := keys $.Values.indexed }}
+{{- if hasPrefix $key $csc }}
+{{- $isIndexed = true }}
+{{- $cscKey = $key }}
+{{- end }}
+{{- end }}
+{{- if $isIndexed }}
+{{- $app = substr 0 (get $.Values.indexed $cscKey | int) $csc }}
+{{- else }}
+{{- $app = $csc }}
+{{- end }}
+{{- if has $csc $.Values.isSim }}
+{{- $cscn = list $cscn "sim" | join "-" }}
+{{- $csc = list $csc "sim" | join "-" }}
+{{- end }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  {{- if eq $.Values.env "summit" }}
-  {{- if and $.Values.runAsSim (has $csc $.Values.runAsSim) }}
-  name: {{ $csc }}-sim
-  {{- else }}
-  name: {{ $csc }}
-  {{- end }}
-  {{- else if and $.Values.noSim (has $csc $.Values.noSim) }}
-  name: {{ $csc }}
-  {{- else }}
-  name: {{ $csc }}-sim
-  {{- end }}
+  name: {{ $cscn }}
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: maintel
+    namespace: {{ $.Values.namespace }}
     server: {{ $.Values.spec.destination.server }}
   project: default
   source:
-    path: apps/{{ $csc }}
+    path: apps/{{ $app }}
     repoURL: {{ $.Values.spec.source.repoURL }}
     targetRevision: {{ $.Values.spec.source.targetRevision }}
     helm:
       valueFiles:
+        {{- if $isIndexed }}
+        - values-{{ $csc }}.yaml
+        {{- end }}
         - values-{{ $.Values.env }}.yaml
 {{ end }}

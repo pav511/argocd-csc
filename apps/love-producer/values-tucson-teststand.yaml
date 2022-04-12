@@ -34,6 +34,8 @@ love-producer:
     dsm2: DSM:2
     love: LOVE:0
     m2hexapod: MTHexapod:2
+    mtaircompressor1: MTAirCompressor:1
+    mtaircompressor2: MTAirCompressor:2
     mtaos: MTAOS:0
     mtdome: MTDome:0
     mtdometrajectory: MTDomeTrajectory:0

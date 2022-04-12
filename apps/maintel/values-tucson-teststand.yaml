@@ -10,8 +10,14 @@ cscs:
   - mtdometrajectory
   - mtm2
   - ccheaderservice
-noSim:
-  - mtaos
-  - mtptg
-  - mtdometrajectory
-  - ccheaderservice
+  - mtaircompressor1
+  - mtaircompressor2
+isSim:
+  - mtcamhexapod
+  - mtm2hexapod
+  - mtmount
+  - mtrotator
+  - mtdome
+  - mtm2
+  - mtaircompressor1
+  - mtaircompressor2
