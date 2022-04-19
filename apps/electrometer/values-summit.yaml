@@ -1,11 +1,12 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/electrometer
-    tag: c0024
+    tag: c0025
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
+    LSST_SITE: summit
     S3_ENDPOINT_URL: https://s3.cp.lsst.org
   envSecrets:
   - name: AWS_ACCESS_KEY_ID

@@ -19,8 +19,6 @@ kafka-producers:
   producers:
     eas:
       cscs: DIMM DSM WeatherStation
-    mtaircompressor:
-      cscs: MTAirCompressor
   osplVersion: V6.10.4
   startupProbe:
     use: true

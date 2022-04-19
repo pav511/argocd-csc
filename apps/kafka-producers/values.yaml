@@ -84,3 +84,5 @@ kafka-producers:
         FiberSpectrograph
         LinearStage
         TunableLaser
+    mtaircompressor:
+      cscs: MTAirCompressor

@@ -1,11 +1,12 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/mtaos
-    tag: c0024
+    tag: c0025
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
+    LSST_SITE: summit
   shmemDir: /run/ospl
   nfsMountpoint:
   - name: comcam-gen3-data
