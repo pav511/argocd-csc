@@ -10,5 +10,7 @@ cscs:
   - ccheaderservice
   - mtcamhexapod
   - mtm2hexapod
+  - mtaircompressor1
+  - mtaircompressor2
 isSim:
   - mtdome

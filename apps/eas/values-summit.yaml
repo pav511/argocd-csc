@@ -1,8 +1,6 @@
 env: summit
 cscs:
-  - adamsensors
   - dimm1
-  - dimm2
   - hvac
   - ess1
   - ess101
@@ -10,7 +8,7 @@ cscs:
   - ess103
   - ess201
 renameMap:
-  ess1: comcam-ess01
+  ess1: camhexrot-ess01
   ess101: mtdome-ess01
   ess102: mtdome-ess02
   ess103: mtdome-ess03

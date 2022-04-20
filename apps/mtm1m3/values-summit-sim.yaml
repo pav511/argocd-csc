@@ -1,11 +1,12 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/mtm1m3_sim
-    tag: c0024
+    tag: c0025
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: summit
+    LSST_SITE: summit
     OSPL_RELEASE: v6.10.4
   shmemDir: /run/ospl
   osplVersion: V6.10.4
