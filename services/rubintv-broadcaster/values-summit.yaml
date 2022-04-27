@@ -3,6 +3,8 @@ rubintv-broadcaster:
     repository: ts-dockerhub.lsst.org/rubintv-broadcaster
     tag: c0025
     pullPolicy: Always
+  env:
+    DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
   vaultPrefixPath: secret/k8s_operator/summit-lsp.lsst.codes
   pullSecretsPath: ts/software/nexus3-docker
   credentialSecretsPath: rubintv-broadcaster
