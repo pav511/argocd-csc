@@ -6,4 +6,5 @@ rubintv-broadcaster:
     - runMonitor.py
     - runMountTorquePlotter.py
     - runSpecExaminer.py
+    - runAllSky.py
   credentialFile: google_write_creds
