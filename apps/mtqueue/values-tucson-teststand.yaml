@@ -5,6 +5,7 @@ csc:
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
+    DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
     LSST_DDS_PARTITION_PREFIX: tucson
     RUN_ARG: 1 --state enabled
   shmemDir: /run/ospl
@@ -30,3 +31,8 @@ csc:
     readOnly: true
     server: comcam-archiver.tu.lsst.org
     serverPath: /lsstdata/TTS/comcam
+  - name: project-shared
+    containerPath: /project
+    readOnly: false
+    server: nfs-project.tu.lsst.org
+    serverPath: /project
