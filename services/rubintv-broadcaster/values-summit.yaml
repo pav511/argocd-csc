@@ -46,8 +46,3 @@ rubintv-broadcaster:
     readOnly: true
     server: comcam-archiver.cp.lsst.org
     serverPath: /lsstdata/base/comcam
-  - name: allsky-data
-    containerPath: /data/allsky
-    server: auxtel-archiver.cp.lsst.org
-    serverPath: /data/allsky
-    readOnly: True
