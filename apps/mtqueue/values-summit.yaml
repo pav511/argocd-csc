@@ -5,6 +5,7 @@ csc:
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
+    DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
     LSST_DDS_PARTITION_PREFIX: summit
     RUN_ARG: 1 --state enabled
   shmemDir: /run/ospl
