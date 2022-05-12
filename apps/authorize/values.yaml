@@ -1,0 +1,6 @@
+csc:
+  namespace: obssys
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-authorize.log
+    OSPL_ERRORFILE: /tmp/ospl-error-authorize.log
+  osplVersion: V6.10.4
