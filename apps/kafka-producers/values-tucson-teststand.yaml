@@ -19,6 +19,8 @@ kafka-producers:
   producers:
     eas:
       cscs: DIMM DSM WeatherStation
+    authorize:
+      cscs: Authorize
   osplVersion: V6.10.4
   startupProbe:
     use: true
