@@ -11,3 +11,4 @@ noSim:
   - atqueue
   - mtqueue
   - watcher
+  - authorize
