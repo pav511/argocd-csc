@@ -8,5 +8,6 @@ csc:
     LSST_DDS_PARTITION_PREFIX: tucson
     LSST_SITE: tucson
     LSST_DDS_ENABLE_AUTHLIST: 1
+    RUN_ARG: --state enabled
   shmemDir: /run/ospl
   osplVersion: V6.10.4
