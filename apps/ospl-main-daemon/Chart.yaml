@@ -1,7 +1,4 @@
 name: ospl-main-daemon
 apiVersion: v2
-version: 0.1.0
-dependencies:
-- name: ospl-main-daemon
-  version: 0.1.4
-  repository: https://lsst-ts.github.io/charts/
+version: 0.1.4
+description: A Helm chart for handling the OSPL main shared memory daemon

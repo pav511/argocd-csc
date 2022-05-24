@@ -1,0 +1,15 @@
+extends: default
+
+ignore: |
+  templates
+  charts
+
+rules:
+  line-length: disable
+  document-start: disable
+  indentation:
+    spaces: consistent
+    indent-sequences: consistent
+  truthy:
+    allowed-values: ['true', 'false']
+    check-keys: true

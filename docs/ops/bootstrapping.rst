@@ -16,5 +16,5 @@ As mentioned before, the CSC deployment relies heavily on services provided by S
     Therefore they were given a route that started with the lower-cased CSC name (``atheaderservice.<site>.lsst.org``) to differentiate the instances.
 #. Choose an environment name for the new deployment
 #. Ensure that all configuration has been committed to site specific ``values-<environment>.yaml`` files and available in the ``argocd-csc`` repository.
-#. Log into the `Argo CD`_ instance from the command-line.
-#. Run the ``create_apps.py`` script from the `argocd-admin <https://github.com/lsst-ts/argocd-admin>`_ repository.
+#. Log into the `Argo CD`_ instance from the command-line using the ``bin/argocd_login.py`` script.
+#. Run the ``bin/create_apps.py`` script.

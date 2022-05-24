@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: {{ include "ospl-daemon.fullname" . }}
+  namespace: {{ .Values.namespace }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  labels:
+    {{- include "ospl-daemon.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "ospl-daemon.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "ospl-daemon.selectorLabels" . | nindent 8 }}
+      {{- with .Values.annotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    spec:
+      containers:
+        - name: {{ include "ospl-daemon.fullname" . }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          stdin: true
+          tty: true
+          {{- if .Values.env }}
+          env:
+          {{- range $env_var, $env_value := .Values.env }}
+            - name: {{ $env_var }}
+              value: {{ $env_value | quote }}
+          {{- end }}
+          {{- end }}
+          volumeMounts:
+            {{- if .Values.useExternalConfig }}
+            - name: osplconfig
+              mountPath: /opt/OpenSpliceDDS/{{ .Values.osplVersion }}/HDE/x86_64.linux/etc/config/ospl.xml
+              subPath: ospl.xml
+            {{- end }}
+            - name: osplshmem
+              mountPath: /tmp
+          {{- with .Values.resources }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
+      {{- if .Values.initContainer }}
+      initContainers:
+        - name: {{ include "ospl-daemon.fullname" . }}-route-fixer
+          image: "{{ .Values.initContainer.repository }}:{{ .Values.initContainer.tag }}"
+          imagePullPolicy: {{ .Values.initContainer.pullPolicy }}
+          securityContext:
+            privileged: true
+      {{- end }}
+      volumes:
+        {{- if .Values.useExternalConfig }}
+        - name: osplconfig
+          configMap:
+            name: {{ .Values.namespace }}-ospl-config
+            items:
+              - key: ospl.xml
+                path: ospl.xml
+        {{- end }}
+        - name: osplshmem
+          hostPath:
+            path: {{ .Values.shmemDir }}
+            type: DirectoryOrCreate
+      {{- if .Values.image.nexus3 }}
+      imagePullSecrets:
+        - name: {{ .Values.namespace }}-{{ .Values.image.nexus3 }}
+      {{- end }}
+      hostIPC: {{ or $.Values.useHostIpc (eq ( $.Values.useHostIpc | toString ) "<nil>" ) }}
+      hostPID: {{ or $.Values.useHostPid (eq ( $.Values.useHostPid | toString ) "<nil>" ) }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

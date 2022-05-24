@@ -1,30 +1,58 @@
-ospl-config:
-  namespaces:
-    - auxtel
-    - calsys
-    - eas
-    - love
-    - maintel
-    - obssys
-    - kafka-producers
-    - ospl-daemon
-    - uws
-    - dds-test
-  networkInterface: net1
-  shmemSize: 504857600
-  maxSamplesWarnAt: 50000
-  schedulingClass: Default
-  schedulingPriority: 0
-  monitorStackSize: 6000000
-  waterMarksWhcHigh: 8MB
-  waterMarksWhcHighInit: 8MB
-  deliveryQueueMaxSamples: 10000
-  squashParticipants: true
-  namespacePolicyAlignee: Lazy
-  domainReportEnabled: false
-  ddsi2TracingEnabled: false
-  ddsi2TracingVerbosity: finer
-  ddsi2TracingLogfile: stdout
-  durabilityServiceTracingEnabled: false
-  durabilityServiceTracingVerbosity: FINER
-  durabilityServiceTracingLogfile: stdout
+# -- List of namespaces where the OSPL configuration will be placed
+namespaces:
+  - auxtel
+  - calsys
+  - eas
+  - love
+  - maintel
+  - obssys
+  - kafka-producers
+  - ospl-daemon
+  - uws
+  - dds-test
+# -- The network interface that DDS will bind too
+networkInterface: net1
+# -- The size (bytes) of the shared memory allocation
+shmemSize: 504857600
+# -- The maximum number of samples that generate a system warning
+maxSamplesWarnAt: 50000
+# -- The scheduling class for the system
+schedulingClass: Default
+# -- The scheduling priority for the system
+schedulingPriority: 0
+# -- The stack size for the monitoring system
+monitorStackSize: 6000000
+# -- Size of the final high watermarks
+waterMarksWhcHigh: 8MB
+# -- Size of the initial high watermarks
+waterMarksWhcHighInit: 8MB
+# -- Enable/disable the adaptive high watermarks
+waterMarksWhcAdaptive: true
+# -- The maximum delivery samples to queue
+deliveryQueueMaxSamples: 10000
+# -- The maximum grace period (seconds) for the discovery time
+dsGracePeriod: 60s
+# -- Enable/disable the squashing of participants
+squashParticipants: true
+# -- Set the namespace alignee policy
+namespacePolicyAlignee: Lazy
+# -- Enable/disable tracing for the domain service
+domainReportEnabled: false
+# -- Enable/disable tracing for the ddsi2 service
+ddsi2TracingEnabled: false
+# -- The verbosity level for the ddsi2 service tracing
+ddsi2TracingVerbosity: finer
+# -- The location to write the ddsi2 service tracing
+ddsi2TracingLogfile: stdout
+# -- The initial discovery period (seconds) for the durability service
+durabilityServiceInitialDiscoveryPeriod: "10.0"
+# -- The alignment combination period (seconds) for the durability service
+durabilityServiceAlignmentComboPeriodInitial: 2.5
+# -- The alignment combination operational period (seconds) for the durability service
+durabilityServiceAlignmentComboPeriodOperational: 0.1
+# -- Enable/disable tracing for the durability service
+durabilityServiceTracingEnabled: false
+# -- The verbosity level for the durability service tracing
+durabilityServiceTracingVerbosity: FINER
+# -- The location to write the durability service tracing
+durabilityServiceTracingLogfile: stdout

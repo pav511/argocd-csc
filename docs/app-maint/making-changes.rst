@@ -15,7 +15,10 @@ For larger work, branches and pull requests must be used to effect the changes.
 Before merging the pull request, all the commits must be squashed into a single one with a commit message formatted like above.
 The site tags used are:
 
-* Summit
-* NTS
-* TTS
-* BTS
+* ``Summit``
+* ``TTS``
+* ``BTS``
+
+If a change applies to all sites, use the tag ``All`` at the commit message start.
+Changes or updates to documentation only, no configuration or chart changes, should be tagged with ``Docs`` at the commit message start.
+Changes or updates to ``bin`` scripts only, no configuration or chart changes, should be tagged with ``Script`` at the commit message start.

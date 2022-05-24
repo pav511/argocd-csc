@@ -1,7 +1,0 @@
-name: love-frontend
-apiVersion: v2
-version: 0.1.0
-dependencies:
-- name: love-frontend
-  version: 0.1.5
-  repository: https://lsst-ts.github.io/charts/

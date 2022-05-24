@@ -1,7 +1,6 @@
-ospl-config:
-  domainId: 0
-  durabilityServiceAlignmentComboPeriodInitial: "5.0"
-  durabilityServiceTracingEnabled: true
-  durabilityServiceTracingLogfile: durability.log
-  ddsi2TracingEnabled: true
-  ddsi2TracingLogfile: ddsi2.log
+domainId: 0
+durabilityServiceAlignmentComboPeriodInitial: "5.0"
+durabilityServiceTracingEnabled: true
+durabilityServiceTracingLogfile: durability.log
+ddsi2TracingEnabled: true
+ddsi2TracingLogfile: ddsi2.log

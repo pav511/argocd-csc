@@ -87,7 +87,10 @@ linkcheck_ignore = [
 
 # -- Options for HTML output ----------------------------------------------
 
-templates_path = ["_templates", lsst_sphinx_bootstrap_theme.get_html_templates_path()]
+templates_path = [
+    "_templates",
+    lsst_sphinx_bootstrap_theme.get_html_templates_path(),
+]
 
 html_theme = "lsst_sphinx_bootstrap_theme"
 html_theme_path = [lsst_sphinx_bootstrap_theme.get_html_theme_path()]
@@ -102,8 +105,8 @@ html_context = {
     "github_user": "lsst-ts",
     "github_repo": "argocd-csc",
     "conf_py_path": "",
-    # TRAVIS_BRANCH is available in CI, but master is a safe default
-    "github_version": "master" + "/",
+    # TRAVIS_BRANCH is available in CI, but main is a safe default
+    "github_version": "main" + "/",
 }
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -127,10 +130,8 @@ html_static_path = []
 html_show_sourcelink = False
 
 linkcheck_ignore = [
-    r"https://github.com/lsst-ts/argocd-csc/tree/master/services",
-    r"https://github.com/lsst-ts/argocd-csc/tree/master/services/rubintv-broadcaster",
-    r"https://github.com/lsst-ts/argocd-csc/tree/master/docs",
-    r"https://github.com/lsst-ts/argocd-csc/tree/master/apps/dmocps",
+    r"https://github.com/lsst-ts/argocd-csc/tree/main/charts",
+    r"https://github.com/lsst-ts/argocd-csc/tree/main/bin",
     r"https://base-lsp.lsst.codes/argo-cd",
     r"https://tucson-teststand.lsst.codes/argo-cd",
     r"https://summit-lsp.lsst.codes/argo-cd",

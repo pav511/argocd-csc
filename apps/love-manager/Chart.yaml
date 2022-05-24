@@ -1,7 +1,4 @@
 name: love-manager
 apiVersion: v2
-version: 0.1.0
-dependencies:
-- name: love-manager
-  version: 0.5.1
-  repository: https://lsst-ts.github.io/charts/
+version: 0.5.1
+description: Helm chart for the LOVE manager service.

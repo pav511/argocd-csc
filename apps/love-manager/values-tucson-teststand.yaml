@@ -1,55 +1,54 @@
-love-manager:
+image:
+  repository: ts-dockerhub.lsst.org/love-manager
+  tag: c0025
+  pullPolicy: Always
+  nexus3: nexus3-docker
+secret_path: tucson-teststand.lsst.codes
+env:
+  SERVER_URL: love.tu.lsst.org
+  REDIS_CONFIG_EXPIRY: 5
+  REDIS_CONFIG_CAPACITY: 5000
+  LOVE_SITE: tucson
+envSecrets:
+  AUTHLIST_USER_PASS: manager-authlist-user-password
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 15
+  targetCPUUtilizationPercentage: 50
+resources:
+  requests:
+    cpu: 250m
+    memory: 100Mi
+  limits:
+    cpu: 750m
+    memory: 600Mi
+readinessProbe:
+  tcpSocket:
+    port: 8000
+  initialDelaySeconds: 20
+  periodSeconds: 10
+database:
   image:
-    repository: ts-dockerhub.lsst.org/love-manager
+    repository: postgres
+    tag: '12.0'
+    pullPolicy: IfNotPresent
+  storage:
+    name: love-manager-database
+    path: /var/lib/postgresql
+    storageClass: rook-ceph-block
+    accessMode: ReadWriteOnce
+    claimSize: 2Gi
+redis:
+  image:
+    repository: redis
+    tag: 5.0.3
+    pullPolicy: IfNotPresent
+viewBackup:
+  enabled: true
+  image:
+    repository: ts-dockerhub.lsst.org/love-view-backup
     tag: c0025
     pullPolicy: Always
     nexus3: nexus3-docker
-  secret_path: tucson-teststand.lsst.codes
-  env:
-    SERVER_URL: love.tu.lsst.org
-    REDIS_CONFIG_EXPIRY: 5
-    REDIS_CONFIG_CAPACITY: 5000
-    LOVE_SITE: tucson
-  envSecrets:
-    AUTHLIST_USER_PASS: manager-authlist-user-password
-  autoscaling:
-    enabled: true
-    minReplicas: 2
-    maxReplicas: 15
-    targetCPUUtilizationPercentage: 50
-  resources:
-    requests:
-      cpu: 250m
-      memory: 100Mi
-    limits:
-      cpu: 750m
-      memory: 600Mi
-  readinessProbe:
-    tcpSocket:
-      port: 8000
-    initialDelaySeconds: 20
-    periodSeconds: 10
-  database:
-    image:
-      repository: postgres
-      tag: '12.0'
-      pullPolicy: IfNotPresent
-    storage:
-      name: love-manager-database
-      path: /var/lib/postgresql
-      storageClass: rook-ceph-block
-      accessMode: ReadWriteOnce
-      claimSize: 2Gi
-  redis:
-    image:
-      repository: redis
-      tag: 5.0.3
-      pullPolicy: IfNotPresent
-  viewBackup:
-    enabled: true
-    image:
-      repository: ts-dockerhub.lsst.org/love-view-backup
-      tag: c0025
-      pullPolicy: Always
-      nexus3: nexus3-docker
-    schedule: 0 12 * * *
+  schedule: 0 12 * * *

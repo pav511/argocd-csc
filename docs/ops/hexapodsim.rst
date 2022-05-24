@@ -6,7 +6,7 @@ hexapodsim
    :widths: 10,40
 
    * - Edit on GitHub
-     - `/apps/hexapodsim <https://github.com/lsst-ts/argocd-csc/tree/master/apps/hexapodsim>`_
+     - `/apps/hexapodsim <https://github.com/lsst-ts/argocd-csc/tree/main/apps/hexapodsim>`_
    * - Type
      - Helm_
    * - Namespace
