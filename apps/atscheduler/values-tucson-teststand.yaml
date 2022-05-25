@@ -26,6 +26,6 @@ csc:
   nfsMountpoint:
   - name: rubin-sim-data
     containerPath: /home/saluser/rubin_sim_data
-    readOnly: true
+    readOnly: false
     server: nfs-scratch.tu.lsst.org
     serverPath: /scratch/scheduler
