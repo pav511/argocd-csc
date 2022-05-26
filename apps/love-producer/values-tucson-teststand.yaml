@@ -23,6 +23,7 @@ love-producer:
     atscheduler: Scheduler:2
     atscriptqueue: ScriptQueue:2
     atspectrograph: ATSpectrograph:0
+    authorize: Authorize:0
     camerahexapod: MTHexapod:1
     cccamera: CCCamera:0
     ccheaderservice: CCHeaderService:0
