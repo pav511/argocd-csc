@@ -1,6 +1,7 @@
 env: summit
 cscs:
   - dimm1
+  - dimm2
   - hvac
   - ess1
   - ess101
