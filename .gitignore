@@ -1,0 +1,6 @@
+/apps/*/charts/*.tgz
+/services/*/charts/*.tgz
+/all-items-expanded/
+.DS_Store
+**/Chart.lock
+__pycache__/

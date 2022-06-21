@@ -6,7 +6,7 @@ love
    :widths: 10,40
 
    * - Edit on GitHub
-     - `/apps/love <https://github.com/lsst-ts/argocd-csc/tree/master/apps/love>`_
+     - `/apps/love <https://github.com/lsst-ts/argocd-csc/tree/main/apps/love>`_
    * - Type
      - Helm_
    * - Namespace

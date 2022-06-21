@@ -1,16 +1,15 @@
-cluster-config:
-  vaultPathPrefix: secret/k8s_operator/tucson-teststand.lsst.codes
-  secrets:
-    - name: nexus3-docker
-      key: pull-secret
-      type: kubernetes.io/dockerconfigjson
-      namespaces:
-        - namespaces
-        - uws
-    - name: lfa
-      key: ts/software/lfa
-      namespaces:
-        - auxtel
-        - love
-        - maintel
-        - obssys
+vaultPathPrefix: secret/k8s_operator/tucson-teststand.lsst.codes
+secrets:
+  - name: nexus3-docker
+    key: pull-secret
+    type: kubernetes.io/dockerconfigjson
+    namespaces:
+      - namespaces
+      - uws
+  - name: lfa
+    key: ts/software/lfa
+    namespaces:
+      - auxtel
+      - love
+      - maintel
+      - obssys

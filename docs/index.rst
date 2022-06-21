@@ -61,18 +61,18 @@ Applications
 
    ops/cluster-config
    ops/ospl-config
+   ops/ospl-main-daemon
    ops/ospl-daemon
    ops/kafka-producers
+   ops/love-producer
+   ops/love-manager
+   ops/love-nginx
+   ops/love-commander
    ops/hexapodsim
    ops/test-csc
    ops/rubintv-broadcaster
-   ops/atheaderservice
-   ops/ccheaderservice
 
-The rest of the CSC applications do not require any extra APIs.
-All of those applications are managed by the `csc Helm chart <https://github.com/lsst-ts/charts/tree/master/charts/csc>`_.
-The LOVE applications (``love-<component>``) are mostly handled by their own charts, but this system isn't yet deployed via `Argo CD`_ yet.
-Once it is, the rest of the components will be documented.
+The rest of the applications, except those listed in :ref:`CSC-Ops-with-ArgoCD-Collector-Apps`, are CSCs and are managed by the `csc Helm chart <https://github.com/lsst-ts/charts/tree/main/charts/csc>`_.
 
 .. _CSC-Ops-with-ArgoCD-Collector-Apps:
 
@@ -82,13 +82,15 @@ Collector Applications
 These applications are what `Argo CD`_ calls an app of apps.
 They are collections of child applications (CSCs, components or both) that are grouped into a particular namespace.
 All collector applications, except ``love``, support running simulators for a CSC.
-The ``summit`` environment is expected to run in real mode, but can be made to use a simulator by specifying CSCs in the ``runAsSim`` key.
-All other sites assume that the CSCs will run in simulation mode except those specified in the ``noSim`` key.
+All simulators are specified by adding the CSC name to the ``isSim`` key.
+The collector applications (except ``love``) also support renaming the default application name by providing a key, value pair via the ``renameMap`` key.
+Further documentation on the options available can be found in the ``README.md`` in each collector application directory.
 
 .. toctree::
    :maxdepth: 2
 
    ops/auxtel
+   ops/calsys
    ops/dmocps
    ops/eas
    ops/love
@@ -102,3 +104,11 @@ Bootstrapping
    :maxdepth: 2
 
    ops/bootstrapping
+
+Administration
+--------------
+
+.. toctree::
+   :maxdepth: 2
+
+   ops/config-deploy-admin

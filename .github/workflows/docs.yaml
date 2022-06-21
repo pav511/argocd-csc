@@ -1,0 +1,57 @@
+name: Docs
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+  push:
+    branches-ignore:
+      # These should always correspond to pull requests, so ignore them for
+      # the push trigger and let them be triggered by the pull_request
+      # trigger, avoiding running the workflow twice.  This is a minor
+      # optimization so there's no need to ensure this is comprehensive.
+      - "dependabot/**"
+      - "renovate/**"
+      - "tickets/**"
+      - "u/**"
+    tags:
+      - "*"
+    paths:
+      - "docs/**"
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: pip install -r docs/requirements.txt
+
+      - name: Check links
+        run: |
+          cd docs
+          make linkcheck
+
+      - name: Build site
+        run: |
+          cd docs
+          make html
+
+      # Only attempt documentation uploads for long-lived branches, tagged
+      # releases, and pull requests from ticket branches.
+      - name: Upload to LSST the Docs
+        if: >-
+          github.event_name != 'pull_request'
+          || startsWith(github.head_ref, 'tickets/')
+        env:
+          LTD_USERNAME: ${{ secrets.LTD_USERNAME }}
+          LTD_PASSWORD: ${{ secrets.LTD_PASSWORD }}
+        run: ltd upload --product argocd-csc --gh --dir docs/_build/html

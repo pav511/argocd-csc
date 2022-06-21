@@ -9,3 +9,9 @@ cscs:
   - atptg
   - hexapodsim
   - atspectrograph
+isSim:
+  - atdome
+  - athexapod
+  - atspectrograph
+renameMap:
+  hexapodsim: hexapod-sim

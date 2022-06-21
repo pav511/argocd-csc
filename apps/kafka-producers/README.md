@@ -1,0 +1,37 @@
+# kafka-producers
+
+A Helm chart for deploying the Kafka producers.
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| affinity | object | `{}` | This specifies the scheduling constraints of the pod |
+| annotations | object | `{}` | This allows the specification of pod annotations |
+| env.brokerIp | string | `"kafka-0-tucson-teststand-efd.lsst.codes"` | The URI for the Kafka broker that received the generated Kafka messages |
+| env.brokerPort | int | `31090` | The port associated with the Kafka broker specified in brokerIp |
+| env.extras | object | `{"OSPL_ERRORFILE":"/tmp/ospl-error-kafka-producers.log","OSPL_INFOFILE":"/tmp/ospl-info-kafka-producers.log"}` | A set of key,value pairs to specify extra environmental variables |
+| env.logLevel | int | `10` | This value determines the logging level for the producers |
+| env.lsstDdsPartitionPrefix | string | `"rubinobs"` | The LSST_DDS_PARTITION_PREFIX name applied to all producer containers |
+| env.partitions | int | `1` | The number of partitions that the producers are supporting |
+| env.registryAddr | string | `"https://schema-registry-tucson-teststand-efd.lsst.codes"` | The URL for the Kafka broker associated schema registry |
+| env.replication | int | `3` | The number of replications available to the producers |
+| env.waitAck | int | `1` | The number of Kafka brokers to wait for an ack from |
+| image.nexus3 | string | `nil` | The tag name for the Nexus3 Docker repository secrets if private images need to be pulled |
+| image.pullPolicy | string | `"IfNotPresent"` | The policy to apply when pulling an image for deployment |
+| image.repository | string | `"lsstts/salkafka"` | The Docker registry name of the container image to use for the producers |
+| image.tag | string | `"v1.1.0_salobj_v5.4.0_xml_v4.7.0"` | The tag of the container image to use for the producers |
+| namespace | string | `"kafka-producers"` | This is the namespace in which the producers will be placed |
+| nodeSelector | object | `{}` | This allows the specification of using specific nodes to run the pod |
+| osplVersion | string | `"V6.10.4"` | This is the version of the OpenSplice library to run. It is used to set the location of the OSPL configuration file |
+| producers | object | `{}` | This section holds the configuration of the individual producers. Each producer is specified by a name (i.e. _auxtel_) which becomes the definition point for the rest of the information. Then name specifed must be used in place of the _name_ attribute. _name.cscs_ (The list of CSCs that the named producer will monitor), _name.image_ (OPTIONAL: This section provides override of the default image section), _name.env_ (OPTIONAL: This section provides override of the default env section) _name.env.extras_ (OPTIONAL: This section provides override of the default env.extras section) |
+| resources | object | `{}` | This allows the specification of resources (CPU, memory) requires to run the container |
+| shmemDir | string | `nil` | This is the path to the Kubernetes local store where the shared memory database will be written |
+| startupProbe.failureThreshold | int | `5` | The number of times the startup probe is allowed to fail before failing the probe |
+| startupProbe.initialDelay | int | `10` | The initial delay in seconds before the first check is made |
+| startupProbe.period | int | `10` | The time in seconds between subsequent checks |
+| startupProbe.use | bool | `false` | This decides whether or not to use the startup probe |
+| tolerations | list | `[]` | This specifies the tolerations of the pod for any system taints |
+| useExternalConfig | bool | `true` | This sets whether to rely on the ConfigMap for OSPL configuration or the internal OSPL configuration |
+| useHostIpc | bool | `nil` | This sets the use of the host inter-process communication system. Defaults to true if not specified |
+| useHostPid | bool | `nil` | This sets the use of the host process ID system. Defaults to true if not specified |

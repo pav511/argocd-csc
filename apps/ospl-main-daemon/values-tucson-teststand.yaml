@@ -1,16 +1,24 @@
-ospl-main-daemon:
-  image:
-    repository: ts-dockerhub.lsst.org/ospl-daemon
-    tag: c0025
-    pullPolicy: Always
-  imagePullSecrets:
-  - name: ospl-daemon-nexus3-docker
-  env:
-    LSST_DDS_PARTITION_PREFIX: tucson
-    LSST_DDS_INTERFACE: net1
-  annotations:
-    k8s.v1.cni.cncf.io/networks: kube-system/misc-dds
-  initContainer:
-    repository: lsstit/ddsnet4u
-    tag: latest
-    pullPolicy: Always
+image:
+  repository: ts-dockerhub.lsst.org/ospl-daemon
+  tag: c0025
+  pullPolicy: Always
+imagePullSecrets:
+- name: ospl-daemon-nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: tucson
+  LSST_DDS_INTERFACE: net1
+  OSPL_URI: file:///opt/lsst/software/stack/miniconda/lib/python3.8/config/ospl-shmem.xml
+  OSPL_INFOFILE: /tmp/ospl-info-daemon.log
+  OSPL_ERRORFILE: /tmp/ospl-error-daemon.log
+  OSPL_MASTER_PRIORITY: 201
+  LSST_DDSI2_SERVICE_TRACING_VERBOSITY: finer
+  LSST_ENABLE_DURABILITY_SERVICE_TRACING: "TRUE"
+  LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
+  LSST_DDS_ALIGNEE: Initial
+  LSST_DDS_ALIGNER: true
+annotations:
+  k8s.v1.cni.cncf.io/networks: kube-system/misc-dds
+initContainer:
+  repository: lsstit/ddsnet4u
+  tag: latest
+  pullPolicy: Always

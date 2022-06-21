@@ -1,21 +1,19 @@
-kafka-producers:
-  image:
-    repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0015
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    lsstDdsPartitionPrefix: base
-    brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
-    brokerPort: 9092
-    registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
-    partitions: 1
-    replication: 3
-    waitAck: 1
-    logLevel: 20
-  shmemDir: /run/ospl
-  producers:
-    latiss:
-      cscs: >-
-        ATSpectrograph
-    eas: null
+image:
+  repository: ts-dockerhub.lsst.org/salkafka
+  tag: c0015
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  lsstDdsPartitionPrefix: base
+  brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
+  brokerPort: 9092
+  registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
+  partitions: 1
+  replication: 3
+  waitAck: 1
+  logLevel: 20
+shmemDir: /run/ospl
+producers:
+  latiss:
+    cscs: >-
+      ATSpectrograph

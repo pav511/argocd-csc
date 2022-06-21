@@ -1,28 +1,100 @@
-kafka-producers:
-  image:
-    repository: ts-dockerhub.lsst.org/salkafka
-    tag: c0025
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    lsstDdsPartitionPrefix: summit
-    brokerIp: kafka-0-summit-efd.lsst.codes
-    brokerPort: 31090
-    registryAddr: https://schema-registry-summit-efd.lsst.codes:30828
-    partitions: 1
-    replication: 3
-    waitAck: 1
-    logLevel: 20
-    extras:
-      LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
-  shmemDir: /run/ospl
-  osplVersion: V6.10.4
-  producers:
-    vms: null
-    m1m3ts:
-      cscs: MTM1M3TS
-  startupProbe:
-    use: true
-    failureThreshold: 15
-    initialDelay: 20
-    period: 10
+image:
+  repository: ts-dockerhub.lsst.org/salkafka
+  tag: c0025
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  lsstDdsPartitionPrefix: summit
+  brokerIp: kafka-0-summit-efd.lsst.codes
+  brokerPort: 31090
+  registryAddr: https://schema-registry-summit-efd.lsst.codes:30828
+  partitions: 1
+  replication: 3
+  waitAck: 1
+  logLevel: 20
+  extras:
+    LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
+shmemDir: /run/ospl
+osplVersion: V6.10.4
+producers:
+  auxtel:
+    cscs: >-
+      ATAOS
+      ATDome
+      ATDomeTrajectory
+      ATHexapod
+      ATPneumatics
+      ATPtg
+      ATMCS
+  maintel:
+    cscs: >-
+      MTAOS
+      MTDome
+      MTDomeTrajectory
+      MTPtg
+  mtmount:
+    cscs: >-
+      MTMount
+  comcam:
+    cscs: >-
+      CCArchiver
+      CCCamera
+      CCHeaderService
+      CCOODS
+  eas:
+    cscs: >-
+      AdamSensors
+      DIMM
+      DSM
+      ESS
+      HVAC
+      WeatherStation
+  latiss:
+    cscs: >-
+      ATArchiver
+      ATCamera
+      ATHeaderService
+      ATOODS
+      ATSpectrograph
+  m1m3:
+    cscs: >-
+      --file m1m3.yaml
+  m2:
+    cscs: >-
+      MTHexapod
+      MTM2
+      MTRotator
+  obssys:
+    cscs: >-
+      GenericCamera
+      Scheduler
+      Script
+      ScriptQueue
+      Watcher
+  ocps:
+    cscs: >-
+      OCPS
+  test:
+    cscs: >-
+      Test
+  pmd:
+    cscs: >-
+      PMD
+  calsys:
+    cscs: >-
+      ATMonochromator
+      ATWhiteLight
+      CBP
+      Electrometer
+      FiberSpectrograph
+      LinearStage
+      TunableLaser
+  mtaircompressor:
+    cscs: MTAirCompressor
+  m1m3ts:
+    cscs: MTM1M3TS
+startupProbe:
+  use: true
+  failureThreshold: 15
+  initialDelay: 20
+  period: 10

@@ -1,0 +1,157 @@
+{{- range $producer, $values := .Values.producers }}
+{{ $appName := printf "%s-%s" $.Release.Name $producer | trunc 63 | trimSuffix "-" }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $appName }}
+  namespace: {{ $.Values.namespace }}
+  labels:
+    helm.sh/chart: {{ include "kafka-producers.chart" $ }}
+    app.kubernetes.io/name: {{ $appName }}
+    app.kubernetes.io/instance: {{ $.Release.Name }}
+  {{- with $.Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ $appName }}
+      app.kubernetes.io/instance: {{ $.Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ $appName }}
+        app.kubernetes.io/instance: {{ $.Release.Name }}
+      {{- with $.Values.annotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    spec:
+      containers:
+        - name: {{ $appName }}
+          {{- if .image }}
+          {{- $image := .image.repository | default $.Values.image.repository }}
+          {{- $tag := .image.tag | default $.Values.image.tag}}
+          image: "{{ $image }}:{{ $tag }}"
+          {{- else }}
+          image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag }}"
+          {{- end }}
+          {{- if .image }}
+          {{- $pullPolicy := .image.pullPolicy | default $.Values.image.pullPolicy }}
+          imagePullPolicy: {{ $pullPolicy }}
+          {{- else }}
+          imagePullPolicy: {{ $.Values.image.pullPolicy }}
+          {{- end }}
+          stdin: true
+          tty: true
+          env:
+            - name: LSST_DDS_PARTITION_PREFIX
+              {{- if .env }}
+              value: {{ .env.lsstDdsPartitionPrefix | default $.Values.env.lsstDdsPartitionPrefix | quote }}
+              {{- else }}
+              value: {{ $.Values.env.lsstDdsPartitionPrefix | quote }}
+              {{- end }}
+            - name: SALKAFKA_SEMAPHORE_SUFFIX
+              value: {{ $producer }}
+            - name: BROKER_IP
+              value: "{{ $.Values.env.brokerIp }}"
+            - name: BROKER_PORT
+              value: "{{ $.Values.env.brokerPort }}"
+            - name: REGISTRY_ADDR
+              value: "{{ $.Values.env.registryAddr }}"
+            - name: PARTITIONS
+              {{- if .env }}
+              value: {{ .env.partitions | default $.Values.env.partitions | quote }}
+              {{- else }}
+              value: {{ $.Values.env.partitions | quote }}
+              {{- end }}
+            - name: REPLICATION
+              {{- if .env }}
+              value: {{ .env.replication | default $.Values.env.replication | quote }}
+              {{- else }}
+              value: {{ $.Values.env.replication | quote }}
+              {{- end }}
+            - name: WAIT_ACK
+              {{- if .env }}
+              value: {{ .env.waitAck | default $.Values.env.waitAck | quote }}
+              {{- else }}
+              value: {{ $.Values.env.waitAck | quote }}
+              {{- end }}
+            - name: LOG_LEVEL
+              {{- if .env }}
+              value: {{ .env.logLevel | default $.Values.env.logLevel | quote }}
+              {{- else }}
+              value: {{ $.Values.env.logLevel | quote }}
+              {{- end }}
+            {{- if $.Values.env.extras }}
+            {{- range $env_var, $env_value := $.Values.env.extras }}
+            - name: {{ $env_var }}
+              value: {{ $env_value | quote }}
+            {{- end }}
+            {{- end }}
+            {{- if .env }}
+            {{- if .env.extras }}
+            {{- range $env_var, $env_value := .env.extras }}
+            - name: {{ $env_var }}
+              value: {{ $env_value | quote }}
+            {{- end }}
+            {{- end }}
+            {{- end }}
+            - name: CSC_LIST
+              value: {{ .cscs | quote }}
+          volumeMounts:
+            {{- if $.Values.useExternalConfig }}
+            - name: osplconfig
+              mountPath: /opt/OpenSpliceDDS/{{ $.Values.osplVersion }}/HDE/x86_64.linux/etc/config/ospl.xml
+              subPath: ospl.xml
+            {{- end }}
+            - name: osplshmem
+              mountPath: /tmp
+          {{- with $.Values.resources }}
+          resources:
+            {{- toYaml $.Values.resources | nindent 12 }}
+          {{- end }}
+          {{- if $.Values.startupProbe.use }}
+          startupProbe:
+            exec:
+              command:
+              - cat
+              - /tmp/SALKAFKA_PRODUCER_RUNNING_{{ upper $producer }}
+            initialDelaySeconds: {{ $.Values.startupProbe.initialDelay }}
+            periodSeconds: {{ $.Values.startupProbe.period }}
+            failureThreshold: {{ $.Values.startupProbe.failureThreshold }}
+          {{- end }}
+      volumes:
+        {{- if $.Values.useExternalConfig }}
+        - name: osplconfig
+          configMap:
+            name: {{ $.Values.namespace }}-ospl-config
+            items:
+              - key: ospl.xml
+                path: ospl.xml
+        {{- end }}
+        - name: osplshmem
+          hostPath:
+            path: {{ $.Values.shmemDir | default "/tmp/openshmem" }}
+      {{- if $.Values.image.nexus3 }}
+      imagePullSecrets:
+        - name: {{ $.Values.namespace }}-{{ $.Values.image.nexus3 }}
+      {{- end }}
+      hostIPC: {{ or $.Values.useHostIpc (eq ( $.Values.useHostIpc | toString ) "<nil>" ) }}
+      hostPID: {{ or $.Values.useHostPid (eq ( $.Values.useHostPid | toString ) "<nil>" ) }}
+      {{- with $.Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml $ | nindent 8 }}
+      {{- end }}
+      {{- with $.Values.affinity }}
+      affinity:
+        {{- toYaml $ | nindent 8 }}
+      {{- end }}
+      {{- with $.Values.tolerations }}
+      tolerations:
+        {{- toYaml $ | nindent 8 }}
+      {{- end }}
+{{ end }}
