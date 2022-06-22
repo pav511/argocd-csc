@@ -12,16 +12,18 @@ initContainers:
   frontend:
     image:
       repository: ts-dockerhub.lsst.org/love-frontend
-      tag: c0025
+      tag: c0026
+      pullPolicy: Always
   manager:
     image:
       repository: ts-dockerhub.lsst.org/love-manager-static
-      tag: c0025
+      tag: c0026
+      pullPolicy: Always
     command:
     - /bin/sh
     - -c
-    - 'cp -Rv /usr/src/love/manager/static /usr/src/love-manager; cp -Rv /usr/src/love/manager/media
-      /usr/src/love-manager'
+    - cp -Rv /usr/src/love/manager/static /usr/src/love-manager; cp -Rv /usr/src/love/manager/media
+      /usr/src/love-manager
 staticStore:
   name: love-nginx-static
   storageClass: rook-ceph-block

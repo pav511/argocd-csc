@@ -22,14 +22,14 @@ spec:
       initContainers:
       - name: love-frontend
         image: "{{ .Values.initContainers.frontend.image.repository }}:{{ .Values.initContainers.frontend.image.tag }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        imagePullPolicy: {{ .Values.initContainers.frontend.image.pullPolicy }}
         command: ["/bin/sh", "-c", "cp -Rv /usr/src/love/ /usr/src/love-frontend"]
         volumeMounts:
           - mountPath: /usr/src
             name: {{ .Values.staticStore.name }}
       - name: love-manager-static
         image: "{{ .Values.initContainers.manager.image.repository }}:{{ .Values.initContainers.manager.image.tag }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        imagePullPolicy: {{ .Values.initContainers.manager.image.pullPolicy }}
         {{- with .Values.initContainers.manager.command }}
         command:
         {{- range $item := $.Values.initContainers.manager.command }}

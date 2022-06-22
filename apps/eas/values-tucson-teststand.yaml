@@ -4,8 +4,10 @@ cscs:
   - dsm2
   - weatherstation1
   - dimm1
+  - dimm2
 isSim:
   - dsm1
   - dsm2
   - weatherstation1
   - dimm1
+  - dimm2
