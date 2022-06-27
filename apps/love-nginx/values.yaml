@@ -60,12 +60,16 @@ initContainers:
       repository: lsstts/love-frontend
       # -- The tag to use for the frontend image
       tag: develop
+      # -- The pull policy to use for the frontend image
+      pullPolicy: IfNotPresent
   manager:
     image:
       # -- The static love-manager content image to use
       repository: lsstts/love-manager
       # -- The tag to use for the love-manager static content image
       tag: develop
+      # -- The pull policy to use for the love-manager static content image
+      pullPolicy: IfNotPresent
     # -- The command to execute for the love-manager static content
     command: ["/bin/sh", "-c", "mkdir -p /usr/src/love-manager/media/thumbnails; mkdir -p /usr/src/love-manager/media/configs; cp -Rv /usr/src/love/manager/static /usr/src/love-manager; cp -uv /usr/src/love/manager/ui_framework/fixtures/thumbnails/* /usr/src/love-manager/media/thumbnails; cp -uv /usr/src/love/manager/api/fixtures/configs/* /usr/src/love-manager/media/configs"]
 staticStore:

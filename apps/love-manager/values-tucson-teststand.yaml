@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/love-manager
-  tag: c0025
+  tag: c0026
   pullPolicy: Always
   nexus3: nexus3-docker
 secret_path: tucson-teststand.lsst.codes
@@ -48,7 +48,7 @@ viewBackup:
   enabled: true
   image:
     repository: ts-dockerhub.lsst.org/love-view-backup
-    tag: c0025
+    tag: c0026
     pullPolicy: Always
     nexus3: nexus3-docker
   schedule: 0 12 * * *

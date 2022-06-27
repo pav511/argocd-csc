@@ -4,6 +4,8 @@
 
 charts:
   - "apps/ospl-config"
+  - "apps/kafka-producers"
+  - "services/rubintv-broadcaster"
 check-version-increment: false
 target-branch: main
 validate-maintainers: false

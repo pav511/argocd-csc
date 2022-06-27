@@ -2,7 +2,7 @@ import argparse
 import os
 import pathlib
 
-import yaml
+from ruamel.yaml import YAML
 
 APPS_DIR = "apps"
 SERVICES_DIR = "services"
@@ -29,6 +29,11 @@ SAME_AS_DEPLOYMENT = [
     "ospl-daemon",
     "ospl-main-daemon",
 ]
+
+EXTRA_IMAGE_TAGS = {
+    "love-nginx": ["initContainers.frontend", "initContainers.manager"],
+    "love-manager": [None, "viewBackup"],
+}
 
 
 def update_tag(values, top_key, update_key, update_value):
@@ -61,6 +66,8 @@ def main(opts):
     else:
         use_dirs = False
 
+    yaml = YAML(typ="rt", pure=True)
+
     print(
         f"Updating {opts.update_key} to {opts.update_value} for {opts.env} environment"
     )
@@ -68,6 +75,8 @@ def main(opts):
     services = pathlib.PosixPath(SERVICES_DIR)
     dirlist = list(apps.iterdir())
     dirlist.extend(list(services.iterdir()))
+    extra_image_tags_keys = list(EXTRA_IMAGE_TAGS.keys())
+
     for appdir in dirlist:
         if use_dirs:
             if appdir.name not in dirs:
@@ -91,24 +100,25 @@ def main(opts):
                 values = None
 
                 with open(appfile) as ifile:
-                    values = yaml.safe_load(ifile)
+                    values = yaml.load(ifile)
 
-                if appdir.name != "love-nginx":
-                    update_tag(
-                        values, top_tag, opts.update_key, opts.update_value
-                    )
+                if opts.update_key == "image.tag":
+                    if appdir.name in extra_image_tags_keys:
+                        extras = EXTRA_IMAGE_TAGS[appdir.name]
+                        for extra in extras:
+                            update_tag(
+                                values,
+                                extra,
+                                opts.update_key,
+                                opts.update_value,
+                            )
+                    else:
+                        update_tag(
+                            values, top_tag, opts.update_key, opts.update_value
+                        )
                 else:
                     update_tag(
-                        values,
-                        "initContainers.frontend",
-                        opts.update_key,
-                        opts.update_value,
-                    )
-                    update_tag(
-                        values,
-                        "initContainers.manager",
-                        opts.update_key,
-                        opts.update_value,
+                        values, top_tag, opts.update_key, opts.update_value
                     )
 
                 if opts.debug and values is not None:
@@ -118,7 +128,7 @@ def main(opts):
                     print(f"Problem reading {appfile}")
                 else:
                     with open(appfile, "w") as ofile:
-                        yaml.dump(values, ofile, sort_keys=False)
+                        yaml.dump(values, ofile)
 
 
 if __name__ == "__main__":

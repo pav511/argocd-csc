@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/mthexapod
-    tag: c0025
+    tag: c0026
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
