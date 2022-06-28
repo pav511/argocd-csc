@@ -1,7 +1,7 @@
 csc:
   image:
     repository: ts-dockerhub.lsst.org/headerservice
-    tag: ts-v3.0.2_c0026
+    tag: ts-v3.0.3_c0026
     pullPolicy: Always
     nexus3: nexus3-docker
   env:
