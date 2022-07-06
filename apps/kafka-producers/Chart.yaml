@@ -1,4 +1,4 @@
 name: kafka-producers
 apiVersion: v2
-version: 0.10.1
+version: 0.11.0
 description: A Helm chart for deploying the Kafka producers.

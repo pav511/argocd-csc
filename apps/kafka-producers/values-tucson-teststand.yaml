@@ -5,15 +5,16 @@ image:
   nexus3: nexus3-docker
 env:
   lsstDdsPartitionPrefix: tucson
-  brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
+  brokerIp: sasquatch-kafka-brokers.sasquatch
   brokerPort: 9092
-  registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
+  registryAddr: http://sasquatch-schema-registry.sasquatch:8081
   partitions: 1
   replication: 3
   waitAck: 1
   logLevel: 20
   extras:
     LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
+    TS_SALKAFKA_USERNAME: ts-salkafka
 shmemDir: /run/ospl
 osplVersion: V6.10.4
 producers:
@@ -90,6 +91,7 @@ producers:
     cscs: DIMM DSM WeatherStation
   authorize:
     cscs: Authorize
+existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true
   failureThreshold: 15

@@ -11,11 +11,11 @@ env:
   # -- The LSST_DDS_PARTITION_PREFIX name applied to all producer containers
   lsstDdsPartitionPrefix: rubinobs
   # -- The URI for the Kafka broker that received the generated Kafka messages
-  brokerIp: kafka-0-tucson-teststand-efd.lsst.codes
+  brokerIp: sasquatch-kafka-brokers.sasquatch
   # -- The port associated with the Kafka broker specified in brokerIp
-  brokerPort: 31090
+  brokerPort: 9092
   # -- The URL for the Kafka broker associated schema registry
-  registryAddr: https://schema-registry-tucson-teststand-efd.lsst.codes
+  registryAddr: http://sasquatch-schema-registry.sasquatch:8081
   # -- The number of Kafka brokers to wait for an ack from
   waitAck: 1
   # -- The number of partitions that the producers are supporting
@@ -48,6 +48,8 @@ shmemDir:
 useHostPid:
 # -- (bool) This sets the use of the host inter-process communication system. Defaults to true if not specified
 useHostIpc:
+# -- This is the secret that contains the ts-salkafka password for authentication with the sasquatch Kafka broker
+existingSecret: kafka-producers-ts-salkafka
 # -- This allows the specification of pod annotations
 annotations: {}
 startupProbe:

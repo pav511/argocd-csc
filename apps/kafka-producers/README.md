@@ -8,15 +8,16 @@ A Helm chart for deploying the Kafka producers.
 |-----|------|---------|-------------|
 | affinity | object | `{}` | This specifies the scheduling constraints of the pod |
 | annotations | object | `{}` | This allows the specification of pod annotations |
-| env.brokerIp | string | `"kafka-0-tucson-teststand-efd.lsst.codes"` | The URI for the Kafka broker that received the generated Kafka messages |
-| env.brokerPort | int | `31090` | The port associated with the Kafka broker specified in brokerIp |
+| env.brokerIp | string | `"sasquatch-kafka-brokers.sasquatch"` | The URI for the Kafka broker that received the generated Kafka messages |
+| env.brokerPort | int | `9092` | The port associated with the Kafka broker specified in brokerIp |
 | env.extras | object | `{"OSPL_ERRORFILE":"/tmp/ospl-error-kafka-producers.log","OSPL_INFOFILE":"/tmp/ospl-info-kafka-producers.log"}` | A set of key,value pairs to specify extra environmental variables |
 | env.logLevel | int | `10` | This value determines the logging level for the producers |
 | env.lsstDdsPartitionPrefix | string | `"rubinobs"` | The LSST_DDS_PARTITION_PREFIX name applied to all producer containers |
 | env.partitions | int | `1` | The number of partitions that the producers are supporting |
-| env.registryAddr | string | `"https://schema-registry-tucson-teststand-efd.lsst.codes"` | The URL for the Kafka broker associated schema registry |
+| env.registryAddr | string | `"http://sasquatch-schema-registry.sasquatch:8081"` | The URL for the Kafka broker associated schema registry |
 | env.replication | int | `3` | The number of replications available to the producers |
 | env.waitAck | int | `1` | The number of Kafka brokers to wait for an ack from |
+| existingSecret | string | `"kafka-producers-ts-salkafka"` | This is the secret that contains the ts-salkafka password for authentication with the sasquatch Kafka broker |
 | image.nexus3 | string | `nil` | The tag name for the Nexus3 Docker repository secrets if private images need to be pulled |
 | image.pullPolicy | string | `"IfNotPresent"` | The policy to apply when pulling an image for deployment |
 | image.repository | string | `"lsstts/salkafka"` | The Docker registry name of the container image to use for the producers |
