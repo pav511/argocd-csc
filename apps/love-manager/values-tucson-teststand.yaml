@@ -14,7 +14,7 @@ envSecrets:
 autoscaling:
   enabled: true
   minReplicas: 2
-  maxReplicas: 15
+  maxReplicas: 25
   targetCPUUtilizationPercentage: 50
 resources:
   requests:
