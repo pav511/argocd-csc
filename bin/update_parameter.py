@@ -28,6 +28,7 @@ SAME_AS_DEPLOYMENT = [
     "love-producer",
     "ospl-daemon",
     "ospl-main-daemon",
+    "rubintv-broadcaster",
 ]
 
 EXTRA_IMAGE_TAGS = {
