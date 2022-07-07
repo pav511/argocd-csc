@@ -8,9 +8,11 @@ cscs:
   - ess102
   - ess103
   - ess201
+  - ess202
 renameMap:
   ess1: camhexrot-ess01
   ess101: mtdome-ess01
   ess102: mtdome-ess02
   ess103: mtdome-ess03
   ess201: auxtel-ess01
+  ess202: auxtel-ess02

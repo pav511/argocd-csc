@@ -1,0 +1,5 @@
+csc:
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-auxtel-ess02.log
+    OSPL_ERRORFILE: /tmp/ospl-error-auxtel-ess02.log
+    RUN_ARG: 202
