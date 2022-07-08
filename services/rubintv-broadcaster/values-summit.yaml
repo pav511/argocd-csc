@@ -12,6 +12,7 @@ scripts:
 - runSpecExaminer.py
 - runAllSky.py
 - runMetadataServer.py
+- runBackgroundService.py
 credentialFile: google_write_creds
 vaultPrefixPath: secret/k8s_operator/summit-lsp.lsst.codes
 pullSecretsPath: ts/software/nexus3-docker
