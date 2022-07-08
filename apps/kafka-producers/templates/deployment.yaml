@@ -86,6 +86,13 @@ spec:
               {{- else }}
               value: {{ $.Values.env.logLevel | quote }}
               {{- end }}
+            {{- if $.Values.existingSecret }}
+            - name: TS_SALKAFKA_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $.Values.existingSecret }}
+                  key: ts-salkafka-password
+            {{- end }}
             {{- if $.Values.env.extras }}
             {{- range $env_var, $env_value := $.Values.env.extras }}
             - name: {{ $env_var }}

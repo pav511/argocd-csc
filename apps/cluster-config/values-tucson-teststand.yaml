@@ -13,3 +13,7 @@ secrets:
       - love
       - maintel
       - obssys
+  - name: ts-salkafka
+    key: ts-salkafka-password
+    namespaces:
+      - kafka-producers
