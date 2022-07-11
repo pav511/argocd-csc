@@ -14,6 +14,6 @@ secrets:
       - maintel
       - obssys
   - name: ts-salkafka
-    key: ts-salkafka-password
+    key: ts/software/ts-salkafka
     namespaces:
       - kafka-producers
