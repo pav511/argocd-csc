@@ -91,6 +91,8 @@ producers:
     cscs: DIMM DSM WeatherStation
   authorize:
     cscs: Authorize
+  mtalignment:
+    cscs: MTAlignment
 existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true

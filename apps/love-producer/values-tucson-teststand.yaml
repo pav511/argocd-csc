@@ -36,6 +36,7 @@ producers:
   m2hexapod: MTHexapod:2
   mtaircompressor1: MTAirCompressor:1
   mtaircompressor2: MTAirCompressor:2
+  mtalignment: MTAlignment:0
   mtaos: MTAOS:0
   mtdome: MTDome:0
   mtdometrajectory: MTDomeTrajectory:0
