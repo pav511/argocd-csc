@@ -25,3 +25,7 @@ csc:
     readOnly: false
     server: nfs-scratch.tu.lsst.org
     serverPath: /scratch
+  entrypoint: |
+    #!/usr/bin/env bash
+
+    sleep 600
