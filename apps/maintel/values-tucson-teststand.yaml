@@ -12,6 +12,7 @@ cscs:
   - ccheaderservice
   - mtaircompressor1
   - mtaircompressor2
+  - mtalignment
 isSim:
   - mtcamhexapod
   - mtm2hexapod
@@ -21,3 +22,4 @@ isSim:
   - mtm2
   - mtaircompressor1
   - mtaircompressor2
+  - mtalignment
