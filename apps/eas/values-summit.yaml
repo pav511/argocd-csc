@@ -10,7 +10,7 @@ cscs:
   - ess201
   - ess202
 renameMap:
-  ess1: camhexrot-ess01
+  ess1: mtcameraassembly-ess01
   ess101: mtdome-ess01
   ess102: mtdome-ess02
   ess103: mtdome-ess03
