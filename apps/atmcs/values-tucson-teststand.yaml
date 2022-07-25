@@ -6,5 +6,6 @@ csc:
     nexus3: nexus3-docker
   env:
     LSST_DDS_PARTITION_PREFIX: tucson
+    LSST_DDS_ENABLE_AUTHLIST: 1
   shmemDir: /run/ospl
   osplVersion: V6.10.4
