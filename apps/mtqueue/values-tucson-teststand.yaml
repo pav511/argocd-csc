@@ -7,7 +7,6 @@ csc:
   env:
     DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
     LSST_DDS_PARTITION_PREFIX: tucson
-    LSST_DDS_ENABLE_AUTHLIST: 1
     RUN_ARG: 1 --state enabled
   shmemDir: /run/ospl
   osplVersion: V6.10.4
