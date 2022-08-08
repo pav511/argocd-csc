@@ -17,6 +17,7 @@ cscs: []
 # -- A dictionary of _name_: _length_ used for getting the correct indexed Helm values file
 indexed:
   electrometer: 12
+  genericcamera: 13
 # -- The list of applications that are run as simulators
 isSim: []
 # -- A dictionary of _app name_: _new name_ used to set the application name to _new name_

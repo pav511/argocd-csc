@@ -1,0 +1,6 @@
+csc:
+  namespace: calsys
+  env:
+    RUN_ARG: 1
+service:
+  type: LoadBalancer
