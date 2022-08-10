@@ -49,7 +49,7 @@ useHostPid:
 # -- (bool) This sets the use of the host inter-process communication system. Defaults to true if not specified
 useHostIpc:
 # -- This is the secret that contains the ts-salkafka password for authentication with the sasquatch Kafka broker
-existingSecret: kafka-producers-ts-salkafka
+existingSecret:
 # -- This allows the specification of pod annotations
 annotations: {}
 startupProbe:

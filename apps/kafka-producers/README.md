@@ -17,7 +17,7 @@ A Helm chart for deploying the Kafka producers.
 | env.registryAddr | string | `"http://sasquatch-schema-registry.sasquatch:8081"` | The URL for the Kafka broker associated schema registry |
 | env.replication | int | `3` | The number of replications available to the producers |
 | env.waitAck | int | `1` | The number of Kafka brokers to wait for an ack from |
-| existingSecret | string | `"kafka-producers-ts-salkafka"` | This is the secret that contains the ts-salkafka password for authentication with the sasquatch Kafka broker |
+| existingSecret | string | `nil` | This is the secret that contains the ts-salkafka password for authentication with the sasquatch Kafka broker |
 | image.nexus3 | string | `nil` | The tag name for the Nexus3 Docker repository secrets if private images need to be pulled |
 | image.pullPolicy | string | `"IfNotPresent"` | The policy to apply when pulling an image for deployment |
 | image.repository | string | `"lsstts/salkafka"` | The Docker registry name of the container image to use for the producers |
