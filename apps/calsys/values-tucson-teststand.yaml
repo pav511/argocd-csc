@@ -3,6 +3,3 @@ cscs:
   - genericcamera1
 renameMap:
   genericcamera1: simulation-gencam
-spec:
-  source:
-    targetRevision: tickets/SITCOM-440
