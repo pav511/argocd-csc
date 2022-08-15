@@ -1,0 +1,8 @@
+csc:
+  env:
+    OSPL_INFOFILE: /tmp/ospl-info-genericcamera.log
+    OSPL_ERRORFILE: /tmp/ospl-error-genericcamera.log
+  osplVersion: V6.10.4
+service:
+  use: true
+  port: 5013

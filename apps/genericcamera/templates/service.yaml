@@ -1,0 +1,15 @@
+{{- if .Values.service.use }}
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    csc: {{ .Release.Name }}
+  name: {{ .Release.Name }}-service
+  namespace: {{ .Values.csc.namespace }}
+spec:
+  ports:
+  - port: {{ .Values.service.port }}
+  selector:
+    csc: {{ .Release.Name }}
+  type: {{ .Values.service.type }}
+{{- end }}

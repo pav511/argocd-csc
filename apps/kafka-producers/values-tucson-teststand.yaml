@@ -93,6 +93,8 @@ producers:
     cscs: Authorize
   mtalignment:
     cscs: MTAlignment
+  genericcamera:
+    cscs: GenericCamera
 existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true

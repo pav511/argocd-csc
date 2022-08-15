@@ -8,7 +8,7 @@ Parent application to bootstrap Calibration Sytems CSC deployment
 |-----|------|---------|-------------|
 | cscs | list | `[]` | The list of applications (CSCs) to deploy via the collector app |
 | env | string | `nil` | The environment (location) to set for the configuration. This picks the Helm values file to use in the deployment. |
-| indexed | object | `{"electrometer":12}` | A dictionary of _name_: _length_ used for getting the correct indexed Helm values file |
+| indexed | object | `{"electrometer":12,"genericcamera":13}` | A dictionary of _name_: _length_ used for getting the correct indexed Helm values file |
 | isSim | list | `[]` | The list of applications that are run as simulators |
 | namespace | string | `"calsys"` | The namespace for the child applications |
 | renameMap | object | `{}` | A dictionary of _app name_: _new name_ used to set the application name to _new name_ |
