@@ -44,8 +44,8 @@ spec:
           configMap:
             name: love-conf
             items:
-              - key: love.json
-                path: love.json
+              - key: default.json
+                path: default.json
       {{- if $.Values.image.nexus3 }}
       imagePullSecrets:
         - name: {{ $.Values.namespace }}-{{ $.Values.image.nexus3 }}
