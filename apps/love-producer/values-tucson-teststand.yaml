@@ -32,6 +32,7 @@ producers:
   dimm2: DIMM:2
   dsm1: DSM:1
   dsm2: DSM:2
+  genericcamera1: GenericCamera:1
   love: LOVE:0
   m2hexapod: MTHexapod:2
   mtaircompressor1: MTAirCompressor:1

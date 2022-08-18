@@ -54,4 +54,8 @@ config: |
     location /manager/media {
         alias /usr/src/love-manager/media;
     }
+    location /simcam {
+        proxy_pass http://simulation-gencam-service.calsys:5013;
+        proxy_redirect off;
+    }
   }
