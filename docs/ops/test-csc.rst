@@ -10,13 +10,13 @@ test-csc
    * - Type
      - Helm_
    * - Namespace
-     - ``any``
+     - ``dds-test``
 
 .. rubric:: Overview
 
 This application allows you to stand up a Test CSC.
-The configuration needs to implement the ``namespace`` key since the Test CSC does not have a logical home in the system provided namespaces.
+The default ``namespace`` for the Test CSC is ``dds-test``, but can be changed by adding that parameter to the appropriate values file.
 The configuration also needs to be passed an index via the ``RUN_ARG`` environment variable.
 There are a couple of index specific values files available in the application.
 The ``values-test42.yaml`` is reserved for SQuaRE use.
-The application is managed by the `csc Helm chart <https://github.com/lsst-ts/charts/tree/main/charts/csc>`_.
+The application is managed by an internal Helm_ chart located in ``charts/csc``.

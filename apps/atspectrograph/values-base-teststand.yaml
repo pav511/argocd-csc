@@ -1,10 +1,12 @@
-csc:
-  image:
-    repository: ts-dockerhub.lsst.org/atspec
-    tag: c0015
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    LSST_DDS_PARTITION_PREFIX: base
-    RUN_ARG: -s
-  shmemDir: /run/ospl
+image:
+  repository: ts-dockerhub.lsst.org/atspec
+  tag: c0015
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: base
+  OSPL_INFOFILE: /tmp/ospl-info-atspectrograph.log
+  OSPL_ERRORFILE: /tmp/ospl-error-atspectrograph.log
+  RUN_ARG: -s
+shmemDir: /run/ospl
+osplVersion: V6.10.4

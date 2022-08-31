@@ -1,11 +1,12 @@
-csc:
-  image:
-    repository: ts-dockerhub.lsst.org/mtmount
-    tag: c0026.002
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    LSST_DDS_PARTITION_PREFIX: summit
-    LSST_SITE: summit
-  shmemDir: /run/ospl
-  osplVersion: V6.10.4
+image:
+  repository: ts-dockerhub.lsst.org/mtmount
+  tag: c0026.002
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: summit
+  LSST_SITE: summit
+  OSPL_INFOFILE: /tmp/ospl-info-mtmount.log
+  OSPL_ERRORFILE: /tmp/ospl-error-mtmount.log
+shmemDir: /run/ospl
+osplVersion: V6.10.4

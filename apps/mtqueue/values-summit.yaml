@@ -1,48 +1,49 @@
-csc:
-  image:
-    repository: ts-dockerhub.lsst.org/scriptqueue
-    tag: c0026
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
-    LSST_DDS_PARTITION_PREFIX: summit
-    RUN_ARG: 1 --state enabled
-  shmemDir: /run/ospl
-  nfsMountpoint:
-  - name: auxtel-gen3-data
-    containerPath: /repo/LATISS
-    readOnly: false
-    server: auxtel-archiver.cp.lsst.org
-    serverPath: /repo/LATISS
-  - name: comcam-gen3-data
-    containerPath: /repo/LSSTComCam
-    readOnly: false
-    server: comcam-archiver.cp.lsst.org
-    serverPath: /repo/LSSTComCam
-  - name: auxtel-data
-    containerPath: /readonly/lsstdata/auxtel
-    readOnly: true
-    server: auxtel-archiver.cp.lsst.org
-    serverPath: /lsstdata
-  - name: comcam-data
-    containerPath: /readonly/lsstdata/comcam
-    readOnly: true
-    server: comcam-archiver.cp.lsst.org
-    serverPath: /lsstdata
-  - name: project-shared
-    containerPath: /project
-    readOnly: false
-    server: nfs1.cp.lsst.org
-    serverPath: /project
-  - name: auxtel-gen3-data-temp
-    containerPath: /data/lsstdata/base/auxtel
-    readOnly: true
-    server: auxtel-archiver.cp.lsst.org
-    serverPath: /lsstdata/base/auxtel
-  - name: comcam-gen3-data-temp
-    containerPath: /data/lsstdata/base/comcam
-    readOnly: true
-    server: comcam-archiver.cp.lsst.org
-    serverPath: /lsstdata/base/comcam
-  osplVersion: V6.10.4
+image:
+  repository: ts-dockerhub.lsst.org/scriptqueue
+  tag: c0026
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
+  LSST_DDS_PARTITION_PREFIX: summit
+  OSPL_INFOFILE: /tmp/ospl-info-mtqueue.log
+  OSPL_ERRORFILE: /tmp/ospl-error-mtqueue.log
+  RUN_ARG: 1 --state enabled
+shmemDir: /run/ospl
+osplVersion: V6.10.4
+nfsMountpoint:
+- name: auxtel-gen3-data
+  containerPath: /repo/LATISS
+  readOnly: false
+  server: auxtel-archiver.cp.lsst.org
+  serverPath: /repo/LATISS
+- name: comcam-gen3-data
+  containerPath: /repo/LSSTComCam
+  readOnly: false
+  server: comcam-archiver.cp.lsst.org
+  serverPath: /repo/LSSTComCam
+- name: auxtel-data
+  containerPath: /readonly/lsstdata/auxtel
+  readOnly: true
+  server: auxtel-archiver.cp.lsst.org
+  serverPath: /lsstdata
+- name: comcam-data
+  containerPath: /readonly/lsstdata/comcam
+  readOnly: true
+  server: comcam-archiver.cp.lsst.org
+  serverPath: /lsstdata
+- name: project-shared
+  containerPath: /project
+  readOnly: false
+  server: nfs1.cp.lsst.org
+  serverPath: /project
+- name: auxtel-gen3-data-temp
+  containerPath: /data/lsstdata/base/auxtel
+  readOnly: true
+  server: auxtel-archiver.cp.lsst.org
+  serverPath: /lsstdata/base/auxtel
+- name: comcam-gen3-data-temp
+  containerPath: /data/lsstdata/base/comcam
+  readOnly: true
+  server: comcam-archiver.cp.lsst.org
+  serverPath: /lsstdata/base/comcam

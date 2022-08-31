@@ -16,4 +16,4 @@ ospl-main-daemon
 
 This application handles instantiating the main (primary) OpenSplice daemon for shared memory mode across the entire control system.
 When starting the Kubernetes_ deployed control system, it is vital that this application is started (synced) first, if it is present,  as it sets the communication pathway for all other components.
-The application is managed by an internal Helm chart located in ``apps/ospl-main-daemon/templates``.
+The application is managed by an internal Helm_ chart located in ``apps/ospl-main-daemon/templates``.

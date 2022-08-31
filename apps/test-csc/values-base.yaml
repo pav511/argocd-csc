@@ -1,10 +1,11 @@
-csc:
-  image:
-    repository: ts-dockerhub.lsst.org/test
-    tag: c0022
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    LSST_DDS_PARTITION_PREFIX: base
-  osplVersion: V6.10.4
-  shmemDir: /run/ospl
+image:
+  repository: ts-dockerhub.lsst.org/test
+  tag: c0022
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: base
+  OSPL_INFOFILE: /tmp/ospl-info-test.log
+  OSPL_ERRORFILE: /tmp/ospl-error-test.log
+shmemDir: /run/ospl
+osplVersion: V6.10.4

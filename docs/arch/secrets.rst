@@ -39,6 +39,9 @@ love
   manager-cmd-user-password
     Password for ``cmd-user``.
 
+  manager-authlist-user-password
+    Password for the ``authlist-user``.
+
   redis-password
     The password for the redis system.
 

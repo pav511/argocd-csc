@@ -19,4 +19,4 @@ The summit environment does not require this application since the real hardware
 Application creation is handled by the ``auxtel`` collector application.
 Once the application is started, it is never shutdown even when there is a cycle upgrade.
 This is due to the fact that the application is not a CSC and does not rely on DDS.
-It uses an internal chart that is kept in ``apps/hexapodsim/templates``.
+It uses an internal Helm_ chart that is kept in ``apps/hexapodsim/templates``.
