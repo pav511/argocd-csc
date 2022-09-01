@@ -1,19 +1,20 @@
 image:
   repository: ts-dockerhub.lsst.org/salkafka
-  tag: c0026.000
+  tag: c0026
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
   lsstDdsPartitionPrefix: summit
-  brokerIp: kafka-0-summit-efd.lsst.codes
-  brokerPort: 31090
-  registryAddr: https://schema-registry-summit-efd.lsst.codes:30828
+  brokerIp: sasquatch-kafka-brokers.sasquatch
+  brokerPort: 9092
+  registryAddr: http://sasquatch-schema-registry.sasquatch:8081
   partitions: 1
   replication: 3
   waitAck: 1
   logLevel: 20
   extras:
     LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
+    TS_SALKAFKA_USERNAME: ts-salkafka
 shmemDir: /run/ospl
 osplVersion: V6.10.4
 producers:
@@ -92,6 +93,7 @@ producers:
     cscs: MTAirCompressor
   m1m3ts:
     cscs: MTM1M3TS
+existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true
   failureThreshold: 15
