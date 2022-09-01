@@ -13,3 +13,7 @@ secrets:
       - calsys
       - maintel
       - obssys
+  - name: ts-salkafka
+    key: ts/software/ts-salkafka
+    namespaces:
+      - kafka-producers
