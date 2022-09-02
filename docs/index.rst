@@ -6,7 +6,7 @@ CSC Operations with Argo CD
 The description of the control system architecture is given in `LSE-150 <https://ls.st/lse-150>`_.
 The `SQuaRE RSP deployment introduction <https://phalanx.lsst.io/introduction.html>`_ has a good brief on the concepts of the deployment mechanism.
 The deployment system uses Helm_ charts to control the delivered content to Kubernetes_.
-More information on the charts used for control system deployment can be found in `TSTN-019 <https://tstn-019.lsst.io/>`_.
+The Helm_ charts are part of the application or linked from a shared directory if more than one application uses the same chart.
 The `Argo CD`_ configuration and this documentation are stored in the `argocd-csc <https://github.com/lsst-ts/argocd-csc>`_ repository in GitHub_.
 
 This deployment mechanism leverages many technologies provided by Data Management's `SQuaRE <https://github.com/lsst-sqre>`_ group.
@@ -72,7 +72,7 @@ Applications
    ops/test-csc
    ops/rubintv-broadcaster
 
-The rest of the applications, except those listed in :ref:`CSC-Ops-with-ArgoCD-Collector-Apps`, are CSCs and are managed by the `csc Helm chart <https://github.com/lsst-ts/charts/tree/main/charts/csc>`_.
+The rest of the applications, except those listed in :ref:`CSC-Ops-with-ArgoCD-Collector-Apps`, are CSCs and are managed by an internal chart located in ``charts/csc``.
 
 .. _CSC-Ops-with-ArgoCD-Collector-Apps:
 

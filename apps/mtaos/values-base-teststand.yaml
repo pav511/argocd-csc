@@ -1,9 +1,11 @@
-csc:
-  image:
-    repository: ts-dockerhub.lsst.org/mtaos_sim
-    tag: c0015
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    LSST_DDS_PARTITION_PREFIX: base
-  shmemDir: /run/ospl
+image:
+  repository: ts-dockerhub.lsst.org/mtaos_sim
+  tag: c0015
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: base
+  OSPL_INFOFILE: /tmp/ospl-info-mtaos.log
+  OSPL_ERRORFILE: /tmp/ospl-error-mtaos.log
+shmemDir: /run/ospl
+osplVersion: V6.10.4

@@ -1,0 +1,9 @@
+{{- if .Values.entrypoint }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-entrypoint
+data:
+  .startup.sh:
+{{ .Values.entrypoint | toYaml | indent 4 }}
+{{- end }}

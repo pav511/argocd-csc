@@ -7,6 +7,8 @@ Some scripts require the ``pyyaml`` package which can be installed using the ``r
 The scripts will be discussed in two sections: those that relate to the administration of the configuration repository and those that relate to the administrations of the deployment.
 The ``helpers.py`` file contains a number of constants and functions used by the scripts in this directory.
 
+.. _Configuration-Helper-Scripts:
+
 Configuration Helper Scripts
 ----------------------------
 

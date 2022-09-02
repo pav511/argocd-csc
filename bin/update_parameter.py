@@ -20,17 +20,6 @@ IGNORE_LIST = [
     "ospl-config",
 ]
 
-SAME_AS_DEPLOYMENT = [
-    "kafka-producers",
-    "love-frontend",
-    "love-manager",
-    "love-nginx",
-    "love-producer",
-    "ospl-daemon",
-    "ospl-main-daemon",
-    "rubintv-broadcaster",
-]
-
 EXTRA_IMAGE_TAGS = {
     "love-nginx": ["initContainers.frontend", "initContainers.manager"],
     "love-manager": [None, "viewBackup"],
@@ -89,10 +78,7 @@ def main(opts):
         if opts.debug:
             print(appdir)
 
-        if appdir.name in SAME_AS_DEPLOYMENT:
-            top_tag = None
-        else:
-            top_tag = "csc"
+        top_tag = None
 
         for appfile in appdir.iterdir():
             if opts.env in appfile.name:

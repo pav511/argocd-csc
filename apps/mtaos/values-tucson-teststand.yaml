@@ -1,27 +1,28 @@
-csc:
-  image:
-    repository: ts-dockerhub.lsst.org/mtaos
-    tag: c0026
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    LSST_DDS_PARTITION_PREFIX: tucson
-    LSST_SITE: tucson
-  shmemDir: /run/ospl
-  osplVersion: V6.10.4
-  nfsMountpoint:
-  - name: comcam-gen3-butler
-    containerPath: /repo/LSSTComCam
-    readOnly: false
-    server: comcam-archiver.tu.lsst.org
-    serverPath: /repo/LSSTComCam
-  - name: comcam-gen3-oods
-    containerPath: /data/lsstdata/TTS/comcam
-    readOnly: true
-    server: comcam-archiver.tu.lsst.org
-    serverPath: /lsstdata/TTS/comcam
-  - name: scratch
-    containerPath: /scratch
-    readOnly: false
-    server: nfs-scratch.tu.lsst.org
-    serverPath: /scratch
+image:
+  repository: ts-dockerhub.lsst.org/mtaos
+  tag: c0026
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: tucson
+  LSST_SITE: tucson
+  OSPL_INFOFILE: /tmp/ospl-info-mtaos.log
+  OSPL_ERRORFILE: /tmp/ospl-error-mtaos.log
+shmemDir: /run/ospl
+osplVersion: V6.10.4
+nfsMountpoint:
+- name: comcam-gen3-butler
+  containerPath: /repo/LSSTComCam
+  readOnly: false
+  server: comcam-archiver.tu.lsst.org
+  serverPath: /repo/LSSTComCam
+- name: comcam-gen3-oods
+  containerPath: /data/lsstdata/TTS/comcam
+  readOnly: true
+  server: comcam-archiver.tu.lsst.org
+  serverPath: /lsstdata/TTS/comcam
+- name: scratch
+  containerPath: /scratch
+  readOnly: false
+  server: nfs-scratch.tu.lsst.org
+  serverPath: /scratch

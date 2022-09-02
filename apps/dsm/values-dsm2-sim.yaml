@@ -1,4 +1,3 @@
-csc:
-  env:
-    CSC_INDEX: 2
-    RUN_ARG: --simulate 2 --state enabled
+env:
+  CSC_INDEX: 2
+  RUN_ARG: --simulate 2 --state enabled

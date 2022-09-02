@@ -16,4 +16,4 @@ love-manager
 
 This application handles the instantiation of the LSST Observers Visualization Environment (LOVE) manager.
 When starting the Kubernetes_ deployed control system, this application is started by the ``love`` collector application and that must be started after the ``ospl-daemon`` application and possibly the ``kafka-producers`` application but before any of the other control system components including those on bare metal.
-The application is managed an internal Helm chart located in ``apps/love-manager/templates``.
+The application is managed an internal Helm_ chart located in ``apps/love-manager/templates``.

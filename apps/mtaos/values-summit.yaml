@@ -1,32 +1,33 @@
-csc:
-  image:
-    repository: ts-dockerhub.lsst.org/mtaos
-    tag: c0026
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    LSST_DDS_PARTITION_PREFIX: summit
-    LSST_SITE: summit
-  shmemDir: /run/ospl
-  nfsMountpoint:
-  - name: comcam-gen3-data
-    containerPath: /repo/LSSTComCam
-    readOnly: false
-    server: comcam-archiver.cp.lsst.org
-    serverPath: /repo/LSSTComCam
-  - name: comcam-gen3-data-temp
-    containerPath: /data/lsstdata/base/comcam
-    readOnly: true
-    server: comcam-archiver.cp.lsst.org
-    serverPath: /lsstdata/base/comcam
-  - name: comcam-data
-    containerPath: /readonly/lsstdata/comcam
-    readOnly: true
-    server: comcam-archiver.cp.lsst.org
-    serverPath: /lsstdata
-  - name: project-shared
-    containerPath: /project
-    readOnly: false
-    server: nfs1.cp.lsst.org
-    serverPath: /project
-  osplVersion: V6.10.4
+image:
+  repository: ts-dockerhub.lsst.org/mtaos
+  tag: c0026
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: summit
+  LSST_SITE: summit
+  OSPL_INFOFILE: /tmp/ospl-info-mtaos.log
+  OSPL_ERRORFILE: /tmp/ospl-error-mtaos.log
+shmemDir: /run/ospl
+nfsMountpoint:
+- name: comcam-gen3-data
+  containerPath: /repo/LSSTComCam
+  readOnly: false
+  server: comcam-archiver.cp.lsst.org
+  serverPath: /repo/LSSTComCam
+- name: comcam-gen3-data-temp
+  containerPath: /data/lsstdata/base/comcam
+  readOnly: true
+  server: comcam-archiver.cp.lsst.org
+  serverPath: /lsstdata/base/comcam
+- name: comcam-data
+  containerPath: /readonly/lsstdata/comcam
+  readOnly: true
+  server: comcam-archiver.cp.lsst.org
+  serverPath: /lsstdata
+- name: project-shared
+  containerPath: /project
+  readOnly: false
+  server: nfs1.cp.lsst.org
+  serverPath: /project
+osplVersion: V6.10.4

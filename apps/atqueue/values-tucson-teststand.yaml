@@ -1,38 +1,39 @@
-csc:
-  image:
-    repository: ts-dockerhub.lsst.org/scriptqueue
-    tag: c0026
-    pullPolicy: Always
-    nexus3: nexus3-docker
-  env:
-    DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
-    LSST_DDS_PARTITION_PREFIX: tucson
-    RUN_ARG: 2 --state enabled
-  shmemDir: /run/ospl
-  osplVersion: V6.10.4
-  nfsMountpoint:
-  - name: auxtel-gen3-butler
-    containerPath: /repo/LATISS
-    readOnly: false
-    server: auxtel-archiver.tu.lsst.org
-    serverPath: /repo/LATISS
-  - name: auxtel-gen3-oods
-    containerPath: /data/lsstdata/TTS/auxtel
-    readOnly: true
-    server: auxtel-archiver.tu.lsst.org
-    serverPath: /lsstdata/TTS/auxtel
-  - name: comcam-gen3-butler
-    containerPath: /repo/LSSTComCam
-    readOnly: false
-    server: comcam-archiver.tu.lsst.org
-    serverPath: /repo/LSSTComCam
-  - name: comcam-gen3-oods
-    containerPath: /data/lsstdata/TTS/comcam
-    readOnly: true
-    server: comcam-archiver.tu.lsst.org
-    serverPath: /lsstdata/TTS/comcam
-  - name: project-shared
-    containerPath: /project
-    readOnly: false
-    server: nfs-project.tu.lsst.org
-    serverPath: /project
+image:
+  repository: ts-dockerhub.lsst.org/scriptqueue
+  tag: c0026
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
+  LSST_DDS_PARTITION_PREFIX: tucson
+  OSPL_INFOFILE: /tmp/ospl-info-atqueue.log
+  OSPL_ERRORFILE: /tmp/ospl-error-atqueue.log
+  RUN_ARG: 2 --state enabled
+shmemDir: /run/ospl
+osplVersion: V6.10.4
+nfsMountpoint:
+- name: auxtel-gen3-butler
+  containerPath: /repo/LATISS
+  readOnly: false
+  server: auxtel-archiver.tu.lsst.org
+  serverPath: /repo/LATISS
+- name: auxtel-gen3-oods
+  containerPath: /data/lsstdata/TTS/auxtel
+  readOnly: true
+  server: auxtel-archiver.tu.lsst.org
+  serverPath: /lsstdata/TTS/auxtel
+- name: comcam-gen3-butler
+  containerPath: /repo/LSSTComCam
+  readOnly: false
+  server: comcam-archiver.tu.lsst.org
+  serverPath: /repo/LSSTComCam
+- name: comcam-gen3-oods
+  containerPath: /data/lsstdata/TTS/comcam
+  readOnly: true
+  server: comcam-archiver.tu.lsst.org
+  serverPath: /lsstdata/TTS/comcam
+- name: project-shared
+  containerPath: /project
+  readOnly: false
+  server: nfs-project.tu.lsst.org
+  serverPath: /project

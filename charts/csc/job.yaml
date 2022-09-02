@@ -1,0 +1,140 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    csc: {{ .Release.Name }}
+  {{- with $.Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  completions: 1
+  template:
+    metadata:
+      labels:
+        csc: {{ .Release.Name }}
+      {{- with $.Values.annotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    spec:
+      containers:
+        - name: {{ .Release.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          stdin: true
+          tty: true
+          {{- if or .Values.env .Values.envSecrets }}
+          env:
+          {{- range $env_var, $env_value := .Values.env }}
+            - name: {{ $env_var }}
+              value: {{ $env_value | quote }}
+          {{- end }}
+          {{- range $env := .Values.envSecrets }}
+            - name: {{ $env.name }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $.Values.namespace }}-{{ $env.secretName }}
+                  key: {{ $env.secretKey }}
+          {{- end }}
+          {{- end }}
+          volumeMounts:
+            {{- if .Values.useExternalConfig }}
+            - name: osplconfig
+              mountPath: /opt/OpenSpliceDDS/{{ $.Values.osplVersion }}/HDE/x86_64.linux/etc/config/ospl.xml
+              subPath: ospl.xml
+            {{- end }}
+          {{- if $.Values.shmemDir }}
+            - name: osplshmem
+              mountPath: /tmp
+          {{- end }}
+          {{- if .Values.entrypoint }}
+            - name: entrypoint
+              mountPath: /home/saluser/.startup.sh
+              subPath: .startup.sh
+          {{- end }}
+          {{- if .Values.pvcMountpoint }}
+          {{- range $values := .Values.pvcMountpoint }}
+            - name: {{ $values.name }}
+              mountPath: {{ $values.path }}
+          {{- end}}
+          {{- end}}
+          {{- if .Values.nfsMountpoint }}
+          {{- range $values := .Values.nfsMountpoint }}
+            - name: {{ $values.name }}
+              mountPath: {{ $values.containerPath }}
+              readOnly: {{ $values.readOnly }}
+          {{- end}}
+          {{- end}}
+          {{- with $.Values.resources }}
+          resources:
+            {{- toYaml $.Values.resources | nindent 12 }}
+          {{- end }}
+      {{- if .Values.initContainer }}
+      initContainers:
+        - name: {{ .Release.Name }}-route-fixer
+          image: "{{ .Values.initContainer.repository }}:{{ .Values.initContainer.tag }}"
+          imagePullPolicy: {{ .Values.initContainer.pullPolicy }}
+          securityContext:
+            privileged: true
+      {{- end }}
+      volumes:
+        {{- if .Values.useExternalConfig }}
+        - name: osplconfig
+          configMap:
+            name: {{ $.Values.namespace }}-ospl-config
+            items:
+              - key: ospl.xml
+                path: ospl.xml
+        {{- end }}
+      {{- if $.Values.shmemDir }}
+        - name: osplshmem
+          hostPath:
+            path: {{ $.Values.shmemDir }}
+      {{- end }}
+      {{- if .Values.entrypoint }}
+        - name: entrypoint
+          configMap:
+            name: {{ .Release.Name }}-entrypoint
+            defaultMode: 0755
+            items:
+              - key: .startup.sh
+                path: .startup.sh
+      {{- end }}
+      {{- if .Values.pvcMountpoint }}
+      {{- range $values := .Values.pvcMountpoint }}
+        - name: {{ $values.name }}
+          persistentVolumeClaim:
+            claimName: {{ $.Release.Name }}-{{ $values.name }}-pvc
+      {{- end }}
+      {{- end }}
+      {{- if .Values.nfsMountpoint }}
+      {{- range $values := .Values.nfsMountpoint }}
+        - name: {{ $values.name }}
+          nfs:
+            path: {{ $values.serverPath }}
+            readOnly: {{ $values.readOnly }}
+            server: {{ $values.server }}
+      {{- end }}
+      {{- end }}
+      restartPolicy: Never
+      {{- if .Values.image.nexus3 }}
+      imagePullSecrets:
+        - name: {{ $.Values.namespace }}-{{ $.Values.image.nexus3 }}
+      {{- end }}
+      hostIPC: {{ or $.Values.useHostIpc (eq ( $.Values.useHostIpc | toString ) "<nil>" ) }}
+      hostPID: {{ or $.Values.useHostPid (eq ( $.Values.useHostPid | toString ) "<nil>" ) }}
+      {{- with $.Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml $ | nindent 8 }}
+      {{- end }}
+      {{- with $.Values.affinity }}
+      affinity:
+        {{- toYaml $ | nindent 8 }}
+      {{- end }}
+      {{- with $.Values.tolerations }}
+      tolerations:
+        {{- toYaml $ | nindent 8 }}
+      {{- end }}

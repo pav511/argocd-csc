@@ -1,3 +1,2 @@
-csc:
-  env:
-    RUN_ARG: 2
+env:
+  RUN_ARG: 2

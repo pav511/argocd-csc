@@ -5,6 +5,28 @@ import yaml
 
 APPS_DIR = "apps"
 
+DIR_MAP = {"csc": "csc", "collector": "csc_collector"}
+
+
+def shared_chart(appdir, shared_dir):
+    """Determine if app directory has templates dir as link.
+
+    Parameters
+    ----------
+    appdir: `str`
+        The application directory to check.
+    shared_dir: `str`
+        The shared directory to make sure the link resolves to.
+
+    Returns
+    -------
+    `bool`: True if the link resolves to the requested shared dir.
+    """
+    template_dir = appdir / "templates"
+    return (
+        template_dir.is_symlink() and template_dir.resolve().name == shared_dir
+    )
+
 
 def main(opts):
     print(
@@ -15,28 +37,13 @@ def main(opts):
     dirlist = list(apps.iterdir())
     for appdir in dirlist:
 
-        if opts.app_type == "collector":
-            template_dir = appdir / "templates"
-            if not (
-                template_dir.is_symlink()
-                and template_dir.resolve().name == "csc_collector"
-            ):
-                continue
+        if not shared_chart(appdir, DIR_MAP[opts.app_type]):
+            continue
 
         chart = appdir / "Chart.yaml"
 
         with chart.open() as ifile:
             values = yaml.safe_load(ifile)
-
-        if opts.app_type == "csc":
-            try:
-                dependencies = values["dependencies"]
-            except KeyError:
-                continue
-            for dependency in dependencies:
-                if dependency["name"] == "csc":
-                    dependency["version"] = opts.chart_version
-        else:
             values["version"] = opts.chart_version
 
         # print(appdir, values)
