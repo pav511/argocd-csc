@@ -2,10 +2,9 @@
 # GitHub Actions.  https://github.com/helm/chart-testing#configuration
 #
 
-charts:
-  - "apps/ospl-config"
-  - "apps/kafka-producers"
-  - "services/rubintv-broadcaster"
+charts-dirs:
+  - "apps"
+  - "services"
 check-version-increment: false
 target-branch: main
 validate-maintainers: false
