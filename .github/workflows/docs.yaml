@@ -20,7 +20,7 @@ on:
       - "docs/**"
 
 jobs:
-  deploy:
+  docs:
 
     runs-on: ubuntu-latest
 
