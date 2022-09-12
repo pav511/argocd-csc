@@ -1,0 +1,4 @@
+apiVersion: v2
+name: schedview
+description: Helm chart for the schedview bokeh app.
+version: 0.1.0
