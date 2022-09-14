@@ -1,0 +1,13 @@
+image:
+  repository: ts-dockerhub.lsst.org/dmocps
+  tag: c0026
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: base
+  LSST_SITE: base
+  OSPL_INFOFILE: /tmp/ospl-info-atocps.log
+  OSPL_ERRORFILE: /tmp/ospl-error-atocps.log
+  RUN_ARG: 1
+shmemDir: /run/ospl
+osplVersion: V6.10.4
