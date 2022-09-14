@@ -1,7 +1,7 @@
 namespace: maintel
 image:
   repository: ts-dockerhub.lsst.org/mtaos_sim
-  tag: c0015
+  tag: c0026
   pullPolicy: Always
   nexus3: nexus3-docker
 env:

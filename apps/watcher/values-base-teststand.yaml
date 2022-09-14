@@ -1,7 +1,7 @@
 namespace: obssys
 image:
   repository: ts-dockerhub.lsst.org/watcher
-  tag: c0015
+  tag: c0026
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
