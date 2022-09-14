@@ -9,6 +9,5 @@ env:
   LSST_SITE: base
   OSPL_INFOFILE: /tmp/ospl-info-mtm2.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtm2.log
-  RUN_ARG: --simulate
 shmemDir: /run/ospl
 osplVersion: V6.10.4
