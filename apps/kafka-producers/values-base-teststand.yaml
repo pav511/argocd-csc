@@ -5,15 +5,99 @@ image:
   nexus3: nexus3-docker
 env:
   lsstDdsPartitionPrefix: base
-  brokerIp: cp-helm-charts-cp-kafka-headless.cp-helm-charts
+  brokerIp: sasquatch-kafka-brokers.sasquatch
   brokerPort: 9092
-  registryAddr: http://cp-helm-charts-cp-schema-registry.cp-helm-charts:8081
+  registryAddr: http://sasquatch-schema-registry.sasquatch:8081
   partitions: 1
   replication: 3
   waitAck: 1
   logLevel: 20
+  extras:
+    LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
+    TS_SALKAFKA_USERNAME: ts-salkafka
 shmemDir: /run/ospl
+osplVersion: V6.10.4
 producers:
+  auxtel:
+    cscs: >-
+      ATAOS
+      ATDome
+      ATDomeTrajectory
+      ATHexapod
+      ATPneumatics
+      ATPtg
+      ATMCS
+  maintel:
+    cscs: >-
+      MTAOS
+      MTDome
+      MTDomeTrajectory
+      MTPtg
+  mtmount:
+    cscs: >-
+      MTMount
+  comcam:
+    cscs: >-
+      CCArchiver
+      CCCamera
+      CCHeaderService
+      CCOODS
   latiss:
     cscs: >-
+      ATArchiver
+      ATCamera
+      ATHeaderService
+      ATOODS
       ATSpectrograph
+  m1m3:
+    cscs: >-
+      --file m1m3.yaml
+  vms:
+    cscs: >-
+      MTVMS
+  m2:
+    cscs: >-
+      MTHexapod
+      MTM2
+      MTRotator
+  obssys:
+    cscs: >-
+      GenericCamera
+      Scheduler
+      Script
+      ScriptQueue
+      Watcher
+  ocps:
+    cscs: >-
+      OCPS
+  test:
+    cscs: >-
+      Test
+  pmd:
+    cscs: >-
+      PMD
+  calsys:
+    cscs: >-
+      ATMonochromator
+      ATWhiteLight
+      CBP
+      Electrometer
+      FiberSpectrograph
+      LinearStage
+      TunableLaser
+  mtaircompressor:
+    cscs: MTAirCompressor
+  eas:
+    cscs: DIMM DSM WeatherStation
+  authorize:
+    cscs: Authorize
+  mtalignment:
+    cscs: MTAlignment
+  genericcamera:
+    cscs: GenericCamera
+existingSecret: kafka-producers-ts-salkafka
+startupProbe:
+  use: true
+  failureThreshold: 15
+  initialDelay: 20
+  period: 10
