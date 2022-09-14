@@ -9,6 +9,6 @@ env:
   LSST_SITE: base
   OSPL_INFOFILE: /tmp/ospl-info-atspectrograph.log
   OSPL_ERRORFILE: /tmp/ospl-error-atspectrograph.log
-  RUN_ARG: -s
+  RUN_ARG: --simulate
 shmemDir: /run/ospl
 osplVersion: V6.10.4
