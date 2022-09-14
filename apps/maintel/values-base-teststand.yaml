@@ -8,5 +8,15 @@ cscs:
   - mtrotator
   - mtdome
   - mtdometrajectory
-  - mtm1m3
   - mtm2
+  - ccheaderservice
+  - mtaircompressor1
+  - mtaircompressor2
+  - mtalignment
+isSim:
+  - mtcamhexapod
+  - mtm2hexapod
+  - mtrotator
+  - mtdome
+  - mtaircompressor1
+  - mtaircompressor2
