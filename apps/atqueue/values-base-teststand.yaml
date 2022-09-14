@@ -5,6 +5,36 @@ image:
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
+  DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
   LSST_DDS_PARTITION_PREFIX: base
+  OSPL_INFOFILE: /tmp/ospl-info-atqueue.log
+  OSPL_ERRORFILE: /tmp/ospl-error-atqueue.log
+  RUN_ARG: 2 --state enabled
 shmemDir: /run/ospl
 osplVersion: V6.10.4
+nfsMountpoint:
+- name: auxtel-gen3-butler
+  containerPath: /repo/LATISS
+  readOnly: false
+  server: auxtel-archiver.ls.lsst.org
+  serverPath: /repo/LATISS
+- name: auxtel-gen3-oods
+  containerPath: /data/lsstdata/BTS/auxtel
+  readOnly: true
+  server: auxtel-archiver.ls.lsst.org
+  serverPath: /lsstdata/BTS/auxtel
+- name: comcam-gen3-butler
+  containerPath: /repo/LSSTComCam
+  readOnly: false
+  server: comcam-archiver.ls.lsst.org
+  serverPath: /repo/LSSTComCam
+- name: comcam-gen3-oods
+  containerPath: /data/lsstdata/BTS/comcam
+  readOnly: true
+  server: comcam-archiver.ls.lsst.org
+  serverPath: /lsstdata/BTS/comcam
+- name: project-shared
+  containerPath: /project
+  readOnly: false
+  server: nfs-project.ls.lsst.org
+  serverPath: /project
