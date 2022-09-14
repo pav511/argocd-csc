@@ -1,0 +1,14 @@
+image:
+  repository: ts-dockerhub.lsst.org/authorize
+  tag: c0026
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: base
+  LSST_SITE: base
+  LSST_DDS_ENABLE_AUTHLIST: 1
+  OSPL_INFOFILE: /tmp/ospl-info-authorize.log
+  OSPL_ERRORFILE: /tmp/ospl-error-authorize.log
+  RUN_ARG: --state enabled
+shmemDir: /run/ospl
+osplVersion: V6.10.4
