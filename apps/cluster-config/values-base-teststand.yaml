@@ -1,7 +1,19 @@
 vaultPathPrefix: secret/k8s_operator/base-lsp.lsst.codes
 secrets:
   - name: nexus3-docker
-    key: ts/software/nexus3-docker
+    key: pull-secret
     type: kubernetes.io/dockerconfigjson
     namespaces:
       - namespaces
+      - uws
+  - name: lfa
+    key: ts/software/lfa
+    namespaces:
+      - auxtel
+      - love
+      - maintel
+      - obssys
+  - name: ts-salkafka
+    key: ts/software/ts-salkafka
+    namespaces:
+      - kafka-producers
