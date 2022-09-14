@@ -6,6 +6,7 @@ image:
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: base
+  LSST_SITE: base
   OSPL_INFOFILE: /tmp/ospl-info-mtrotator.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtrotator.log
   RUN_ARG: -s
