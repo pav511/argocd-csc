@@ -1,0 +1,38 @@
+image:
+  tag: c0026
+  pullPolicy: Always
+  # -- The tag name for the Nexus3 Docker repository secrets if private images need to be pulled
+  nexus3: nexus3-docker
+env:
+  BOKEH_ALLOW_WS_ORIGIN: summit-lsp.lsst.codes
+nfsMountpoint:
+- name: rubin-sim-data
+  containerPath: /home/saluser/rubin_sim_data
+  readOnly: false
+  server: nfs1.cp.lsst.org
+  serverPath: /scratch/scheduler
+vaultPrefixPath: secret/k8s_operator/summit-lsp.lsst.codes
+pullSecretsPath: ts/software/nexus3-docker
+credentialSecretsPath: schedview
+imagePullSecrets:
+- name: schedview-pull-secret
+metadata:
+  name: schedview
+  namespace: schedview
+  labels:
+    app.kubernetes.io/name: schedview
+service:
+  port: 5006
+  path: /schedview
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "1800"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "1800"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "1800"
+  hosts:
+  - host: summit-lsp.lsst.codes
+    paths:
+    - path: /schedview
+      pathType: Prefix
