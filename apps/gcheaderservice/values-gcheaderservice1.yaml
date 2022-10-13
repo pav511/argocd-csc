@@ -1,0 +1,5 @@
+namespace: calsys
+env:
+  CAMERA: gc1
+  OSPL_INFOFILE: /tmp/ospl-info-gcheaderservice1.log
+  OSPL_ERRORFILE: /tmp/ospl-error-gcheaderservice1.log

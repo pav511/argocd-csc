@@ -18,6 +18,7 @@ cscs: []
 indexed:
   electrometer: 12
   genericcamera: 13
+  gcheaderservice: 15
 # -- The list of applications that are run as simulators
 isSim: []
 # -- A dictionary of _app name_: _new name_ used to set the application name to _new name_

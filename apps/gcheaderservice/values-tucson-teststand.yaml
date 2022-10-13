@@ -1,14 +1,14 @@
 image:
-  repository: ts-dockerhub.lsst.org/genericcamera
-  tag: c0026
+  repository: ts-dockerhub.lsst.org/headerservice
+  tag: ts-v3.1.0_c0026
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: tucson
-  LSST_SITE: tucson
+  LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
+  URL_SPEC: --lfa_mode s3 --s3instance tuc
   S3_ENDPOINT_URL: https://s3.tu.lsst.org
-  OSPL_INFOFILE: /tmp/ospl-info-genericcamera.log
-  OSPL_ERRORFILE: /tmp/ospl-error-genericcamera.log
+  TSTAND_HEADERSERVICE: TUCSON
 envSecrets:
 - name: AWS_ACCESS_KEY_ID
   secretName: lfa
@@ -24,6 +24,3 @@ envSecrets:
   secretKey: aws-secret-access-key
 shmemDir: /run/ospl
 osplVersion: V6.10.4
-service:
-  use: true
-  port: 5013
