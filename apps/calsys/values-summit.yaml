@@ -1,5 +1,6 @@
 env: summit
 cscs:
   - electrometer1
+  - atwhitelight
 renameMap:
   electrometer1: comcam-electrometer
