@@ -10,6 +10,7 @@ secrets:
     key: ts/software/lfa
     namespaces:
       - auxtel
+      - calsys
       - love
       - maintel
       - obssys
