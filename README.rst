@@ -3,7 +3,7 @@ argocd-csc
 ##########
 
 This is the Argo CD repository for Commandable SAL Components (CSC) and related operational services.
-This deployment mechanism leverages many services provided by `SQuaRE's Rubin Science Platform deployment <https://phalanx.lsst.io>`_.
+This deployment mechanism leverages many services provided by `Phalanx: Rubin Observatory Kubernetes Application Configurations <https://phalanx.lsst.io>`_.
 
 argocd-csc is developed by the `Vera C. Rubin Observatory <https://www.lsst.org/>`_.
 

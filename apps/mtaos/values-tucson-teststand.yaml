@@ -10,6 +10,9 @@ env:
   OSPL_ERRORFILE: /tmp/ospl-error-mtaos.log
 shmemDir: /run/ospl
 osplVersion: V6.10.4
+butlerSecret:
+  containerPath: /home/saluser/.lsst
+  dbUser: oods
 nfsMountpoint:
 - name: comcam-gen3-butler
   containerPath: /repo/LSSTComCam
