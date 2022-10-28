@@ -8,6 +8,7 @@ A Helm chart for deploying the ATScriptQueue CSC.
 |-----|------|---------|-------------|
 | affinity | object | `{}` | This specifies the scheduling constraints of the pod |
 | annotations | object | `{}` | This allows the specification of pod annotations |
+| butlerSecret | object | `{}` | This key allows for specification of Butler secret information. If this section is used, it must contain the following attributes: _containerPath_ (The directory location for the Butler secret), _dbUser_ (The username for the Butler backend database) |
 | entrypoint | string | `nil` | This key allows specification of a script to override the entrypoint |
 | env | object | `{}` | This section holds a set of key, value pairs for environmental variables (ENV_VAR: value) |
 | envSecrets | list | `[]` | This section holds specifications for secret injection. If this section is used, each object listed must have the following attributes defined: _name_ (The label for the secret), _secretName_ (The name of the vault store reference. Uses the _namespace_ attribute to construct the full name), _secretKey_ (The key in the vault store containing the necessary secret) |

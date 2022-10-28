@@ -4,7 +4,7 @@ CSC Operations with Argo CD
 
 `Argo CD`_ is the mechanism used to control the deployment configuration of some control system components to Kubernetes_.
 The description of the control system architecture is given in `LSE-150 <https://ls.st/lse-150>`_.
-The `SQuaRE RSP deployment introduction <https://phalanx.lsst.io/introduction.html>`_ has a good brief on the concepts of the deployment mechanism.
+The `Overview of the Phalanx platform concepts <https://phalanx.lsst.io/about/introduction.html>`_ has a good brief on the concepts of the deployment mechanism.
 The deployment system uses Helm_ charts to control the delivered content to Kubernetes_.
 The Helm_ charts are part of the application or linked from a shared directory if more than one application uses the same chart.
 The `Argo CD`_ configuration and this documentation are stored in the `argocd-csc <https://github.com/lsst-ts/argocd-csc>`_ repository in GitHub_.
@@ -47,6 +47,18 @@ For the Kubernetes_ systems, the appropriate ``kubeconfig`` file can be obtained
    app-maint/upgrade-application
    app-maint/add-application
    app-maint/making-changes
+
+Shared Helm Charts
+==================
+
+This section covers tracking changes to the two shared charts: ``csc`` and ``csc_collector``.
+The individual applications using these shared charts can point the ``version`` attribute in its `Chart.yaml` file independently of any other application.
+
+.. toctree::
+   :maxdepth: 2
+
+   shared-charts/csc
+   shared-charts/csc-collector
 
 Operations Guide
 ================

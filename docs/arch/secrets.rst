@@ -5,7 +5,7 @@ Secrets
 Vault
 -----
 
-The CSC deployment leverages the `Vault <https://www.hashicorp.com/products/vault>`_ system provided by SQuaRE for `Kubernetes secret management <https://phalanx.lsst.io/arch/secrets.html#vault>`_.
+The CSC deployment leverages the `Vault <https://www.hashicorp.com/products/vault>`_ system provided by SQuaRE for `Kubernetes secret management <https://phalanx.lsst.io/about/secrets.html#vault>`_.
 This deployment uses the ``ts/software`` extension to the nominal vault path for a given site.
 Each secret is maintained by its own collection key and then sub-divisions for individual secrets.
 The current keys and values will be enumerated here.

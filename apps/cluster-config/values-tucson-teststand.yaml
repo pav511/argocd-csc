@@ -18,3 +18,8 @@ secrets:
     key: ts/software/ts-salkafka
     namespaces:
       - kafka-producers
+  - name: butler-secret
+    key: butler-secret
+    namespaces:
+      - maintel
+      - obssys
