@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/love-manager
-  tag: c0026
+  tag: c0027
   pullPolicy: Always
   nexus3: nexus3-docker
 secret_path: tucson-teststand.lsst.codes
@@ -13,18 +13,18 @@ envSecrets:
   AUTHLIST_USER_PASS: manager-authlist-user-password
 configMount: /usr/src/love/manager/media/configs
 config: |
-    {
-      "alarms": {
-        "minSeveritySound": "serious",
-        "minSeverityNotification": "warning"
-      },
-      "camFeeds": {
-        "simcam": "/simcam"
-      },
-      "efd": {
-        "defaultEfdInstance": "tucson_teststand_efd"
-      }
+  {
+    "alarms": {
+      "minSeveritySound": "serious",
+      "minSeverityNotification": "warning"
+    },
+    "camFeeds": {
+      "simcam": "/simcam"
+    },
+    "efd": {
+      "defaultEfdInstance": "tucson_teststand_efd"
     }
+  }
 autoscaling:
   enabled: true
   minReplicas: 2
@@ -62,7 +62,7 @@ viewBackup:
   enabled: true
   image:
     repository: ts-dockerhub.lsst.org/love-view-backup
-    tag: c0026
+    tag: c0027
     pullPolicy: Always
     nexus3: nexus3-docker
   schedule: 0 12 * * *
