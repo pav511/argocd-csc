@@ -1,2 +1,2 @@
 env:
-  RUN_ARG: 1 --simulate
+  RUN_ARG: 1 --simulate --state disabled
