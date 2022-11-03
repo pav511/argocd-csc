@@ -6,7 +6,6 @@ image:
 env:
   LSST_DDS_PARTITION_PREFIX: tucson
   LSST_SITE: tucson
-  RUN_ARG: --state disabled
   OSPL_INFOFILE: /tmp/ospl-info-mtaircompressor.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtaircompressor.log
 shmemDir: /run/ospl
