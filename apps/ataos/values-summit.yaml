@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/ataos
-  tag: c0026
+  tag: c0027
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
