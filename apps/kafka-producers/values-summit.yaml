@@ -93,6 +93,8 @@ producers:
     cscs: MTAirCompressor
   m1m3ts:
     cscs: MTM1M3TS
+  genericcamera:
+    cscs: GCHeaderService GenericCamera
 existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true

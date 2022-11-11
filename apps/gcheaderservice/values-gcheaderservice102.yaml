@@ -1,0 +1,5 @@
+namespace: calsys
+env:
+  CAMERA: gc102
+  OSPL_INFOFILE: /tmp/ospl-info-gcheaderservice102.log
+  OSPL_ERRORFILE: /tmp/ospl-error-gcheaderservice102.log
