@@ -1,11 +1,12 @@
 image:
   repository: ts-dockerhub.lsst.org/hvac
-  tag: c0027
+  tag: c0028
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: summit
   OSPL_INFOFILE: /tmp/ospl-info-hvac.log
   OSPL_ERRORFILE: /tmp/ospl-error-hvac.log
+  RUN_ARG: --state enabled
 shmemDir: /run/ospl
 osplVersion: V6.10.4
