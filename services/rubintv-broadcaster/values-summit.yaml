@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/rubintv-broadcaster
-  tag: c0027
+  tag: c0028
   pullPolicy: Always
 env:
   DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml

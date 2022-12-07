@@ -9,6 +9,7 @@ cscs:
   - ess103
   - ess201
   - ess202
+  - weatherforecast
 renameMap:
   ess1: mtcameraassembly-ess01
   ess101: mtdome-ess01

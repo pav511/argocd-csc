@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/salkafka
-  tag: c0027
+  tag: c0028
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
@@ -48,6 +48,7 @@ producers:
       DSM
       ESS
       HVAC
+      WeatherForecast
       WeatherStation
   latiss:
     cscs: >-
@@ -66,7 +67,6 @@ producers:
       MTRotator
   obssys:
     cscs: >-
-      GenericCamera
       Scheduler
       Script
       ScriptQueue

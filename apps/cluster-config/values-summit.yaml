@@ -22,3 +22,7 @@ secrets:
     namespaces:
       - maintel
       - obssys
+  - name: meteoblue
+    key: ts/software/meteoblue
+    namespaces:
+      - eas
