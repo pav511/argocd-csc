@@ -9,7 +9,7 @@ env:
   brokerPort: 9092
   registryAddr: http://sasquatch-schema-registry.sasquatch:8081
   partitions: 1
-  replication: 3
+  replication: 2
   waitAck: 1
   logLevel: 20
   extras:
