@@ -1,4 +1,4 @@
-namespace: calsys
+namespace: maintel
 env:
   CAMERA: gc103
   OSPL_INFOFILE: /tmp/ospl-info-gcheaderservice103.log
