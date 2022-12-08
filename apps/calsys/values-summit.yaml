@@ -1,6 +1,7 @@
 env: summit
 cscs:
   - electrometer1
+  - electrometer201
   - atwhitelight
   - gcheaderservice1
   - gcheaderservice101
@@ -8,3 +9,4 @@ cscs:
   - gcheaderservice103
 renameMap:
   electrometer1: comcam-electrometer
+  electrometer201: auxtel-electrometer-201
