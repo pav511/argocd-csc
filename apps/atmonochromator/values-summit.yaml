@@ -1,0 +1,12 @@
+image:
+  repository: ts-dockerhub.lsst.org/atmonochromator
+  tag: c0028
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: summit
+  LSST_SITE: summit
+  OSPL_INFOFILE: /tmp/ospl-info-atmonochromator.log
+  OSPL_ERRORFILE: /tmp/ospl-error-atmonochromator.log
+shmemDir: /run/ospl
+osplVersion: V6.10.4

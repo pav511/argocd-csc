@@ -3,6 +3,7 @@ cscs:
   - electrometer1
   - electrometer201
   - atwhitelight
+  - atmonochromator
   - gcheaderservice1
   - gcheaderservice101
   - gcheaderservice102
