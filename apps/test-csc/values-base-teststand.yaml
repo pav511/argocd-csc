@@ -1,7 +1,7 @@
 namespace: dds-test
 image:
   repository: ts-dockerhub.lsst.org/test
-  tag: c0026
+  tag: c0028
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
