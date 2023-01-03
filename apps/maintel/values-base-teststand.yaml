@@ -9,7 +9,6 @@ cscs:
   - mtdome
   - mtdometrajectory
   - mtm2
-  - ccheaderservice
   - mtaircompressor1
   - mtaircompressor2
   - mtalignment
