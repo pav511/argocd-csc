@@ -4,6 +4,10 @@ on:
   pull_request:
     paths:
       - "docs/**"
+      - "apps/*/Chart.yaml"
+      - "apps/*/values.yaml"
+      - "services/*/Chart.yaml"
+      - "services/*/values.yaml"
   push:
     branches-ignore:
       # These should always correspond to pull requests, so ignore them for
@@ -18,6 +22,10 @@ on:
       - "*"
     paths:
       - "docs/**"
+      - "apps/*/Chart.yaml"
+      - "apps/*/values.yaml"
+      - "services/*/Chart.yaml"
+      - "services/*/values.yaml"
 
 jobs:
   docs:
@@ -30,7 +38,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: "3.10"
 
       - name: Install dependencies
         run: pip install -r docs/requirements.txt
