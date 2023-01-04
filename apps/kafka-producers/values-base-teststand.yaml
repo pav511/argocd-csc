@@ -62,7 +62,6 @@ producers:
       MTRotator
   obssys:
     cscs: >-
-      GenericCamera
       Scheduler
       Script
       ScriptQueue
@@ -94,7 +93,7 @@ producers:
   mtalignment:
     cscs: MTAlignment
   genericcamera:
-    cscs: GenericCamera
+    cscs: GCHeaderService GenericCamera
 existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true
