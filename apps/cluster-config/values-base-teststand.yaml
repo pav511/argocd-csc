@@ -10,7 +10,6 @@ secrets:
     key: ts/software/lfa
     namespaces:
       - auxtel
-      - love
       - maintel
       - obssys
   - name: ts-salkafka
