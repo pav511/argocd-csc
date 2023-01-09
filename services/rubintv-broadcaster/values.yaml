@@ -43,6 +43,12 @@ butlerSecret: {}
 # _server_ (The hostname of the NFS server),
 # _serverPath_ (The path exported by the NFS server)
 nfsMountpoint: []
+# -- This section holds the information necessary to claim persistent volumes.
+# If the section is used, each object listed can have the following attributes defined:
+# _name_ (The name ot the persistent volume),
+# _containerPath_ (The path inside the container to mount),
+# _subPath_ (persistent volume subpath, optional)
+pvcMountpoint: []
 # -- The key for the credentials including any sub-paths.
 credentialSecretsPath: ""
 # -- The name of the expected credential file for the broadcasters
