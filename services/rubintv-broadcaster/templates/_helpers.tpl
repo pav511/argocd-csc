@@ -46,6 +46,14 @@ Create script name extension
 {{- end }}
 
 {{/*
+Job name
+*/}}
+{{- define "rubintv-broadcaster.jobName" -}}
+{{ "-" | regexReplaceAll "/" .Values.script | trimPrefix "run" | trimSuffix ".py" | kebabcase }}
+{{- end }}
+
+
+{{/*
 Selector labels
 */}}
 {{- define "rubintv-broadcaster.selectorLabels" -}}
@@ -57,5 +65,5 @@ app.kubernetes.io/instance: {{ include "rubintv-broadcaster.name" . }}
 Deployment name
 */}}
 {{- define "rubintv-broadcaster.deploymentName" -}}
-{{ include "rubintv-broadcaster.fullname" . }}-{{ include "rubintv-broadcaster.scriptName" . }}
+{{ include "rubintv-broadcaster.fullname" . }}-{{ include "rubintv-broadcaster.jobName" . }}
 {{- end }}
