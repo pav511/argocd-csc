@@ -57,7 +57,7 @@ Job name
 Selector labels
 */}}
 {{- define "rubintv-broadcaster.selectorLabels" -}}
-app.kubernetes.io/name: {{ .Release.Name }}-{{ include "rubintv-broadcaster.scriptName" . }}
+app.kubernetes.io/name: {{ .Release.Name }}-{{ include "rubintv-broadcaster.jobName" . }}
 app.kubernetes.io/instance: {{ include "rubintv-broadcaster.name" . }}
 {{- end }}
 
