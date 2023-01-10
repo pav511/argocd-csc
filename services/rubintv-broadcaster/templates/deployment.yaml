@@ -26,7 +26,7 @@ spec:
         {{- toYaml $.Values.imagePullSecrets | nindent 8 }}
       {{- end }}
       containers:
-        - name: {{ include "rubintv-broadcaster.scriptName" $ }}
+        - name: {{ include "rubintv-broadcaster.jobName" $ }}
           image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag }}"
           imagePullPolicy: {{ $.Values.image.pullPolicy }}
           env:
