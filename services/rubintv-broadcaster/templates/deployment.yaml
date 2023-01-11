@@ -50,6 +50,8 @@ spec:
               value: "{{ $.Values.butlerSecret.containerPath }}/postgres-credentials.txt"
             - name: PGUSER
               value: {{ $.Values.butlerSecret.dbUser | quote }}
+            - name: AWS_SHARED_CREDENTIALS_FILE
+              value: "{{ $.Values.butlerSecret.containerPath }}/aws-credentials.ini"
           {{- end }}
           envFrom:
             - configMapRef:
