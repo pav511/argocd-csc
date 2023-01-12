@@ -76,6 +76,15 @@ spec:
               {{- end }}
           {{- end }}
           {{- end }}
+          {{- if $.Values.pvcMountpointClaim }}
+          {{- range $values := $.Values.pvcMountpointClaim }}
+            - name: {{ $values.name }}
+              mountPath: {{ $values.containerPath }}
+              {{- if ($values.subPath) }}
+              subPath: {{ $values.subPath }}
+              {{- end }}
+          {{- end }}
+          {{- end }}
           {{- if $.Values.butlerSecret }}
             - name: {{ $.Release.Name }}-butler-secret
               mountPath: {{ $.Values.butlerSecret.containerPath }}
@@ -117,6 +126,13 @@ spec:
       {{- end }}
       {{- if $.Values.pvcMountpoint }}
       {{- range $values := $.Values.pvcMountpoint }}
+        - name: {{ $values.name }}
+          persistentVolumeClaim:
+            claimName: {{ $values.name }}
+      {{- end }}
+      {{- end }}
+      {{- if $.Values.pvcMountpointClaim }}
+      {{- range $values := $.Values.pvcMountpointClaim }}
         - name: {{ $values.name }}
           persistentVolumeClaim:
             claimName: {{ $values.name }}
