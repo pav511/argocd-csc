@@ -23,7 +23,7 @@ A Helm chart for deploying the RubinTV broadcaster services.
 | nodeSelector | object | `{}` | This allows the specification of using specific nodes to run the pod. |
 | podAnnotations | object | `{}` | This allows the specification of pod annotations. |
 | pullSecretsPath | string | `""` |  |
-| pvcMountpoint | list | `[]` | This section holds information about volume claims. If the section is used, each object listed can have the following attributes defined: _name_ (The name ot the persistent volume), _containerPath_ (The path inside the container to mount), _subPath_ (persistent volume subpath, optional) |
+| pvcMountpoint | list | `[]` | This section holds information about existing volume claims. If the section is used, each object listed can have the following attributes defined: _name_ (The name ot the persistent volume), _containerPath_ (The path inside the container to mount), _subPath_ (persistent volume subpath, optional) |
 | pvcMountpointClaim | list | `[]` | This section holds the information necessary to claim persistent volumes. If the section is used, each object listed can have the following attributes defined: _name_ (The name ot the persistent volume), _containerPath_ (The path inside the container to mount), _subPath_ (persistent volume subpath, optional) |
 | resources | object | `{}` | This allows the specification of resources (CPU, memory) requires to run the container. |
 | rubinTvSecretsPath | string | `""` |  |

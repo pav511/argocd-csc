@@ -49,9 +49,14 @@ pvcMountpoint:
   subPath: repo
 - name: sdf-group-rubin
   containerPath: /sdf/group/rubin
-- name: fs-ddn-sdf-group-rubin
-  containerPath: /fs/ddn/sdf/group/rubin
-- name: fs-ddn-sdf-group-lsst
-  containerPath: /fs/ddn/sdf/group/lsst
 - name: sdf-scratch
   containerPath: /scratch
+pvcMountpointClaim:
+- name: fs-ddn-sdf-group-rubin
+  containerPath: /fs/ddn/sdf/group/rubin
+  claimSize: 1Gi
+  accessMode: ReadWriteMany
+- name: fs-ddn-sdf-group-lsst
+  containerPath: /fs/ddn/sdf/group/lsst
+  claimSize: 1Gi
+  accessMode: ReadWriteMany

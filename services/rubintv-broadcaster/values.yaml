@@ -43,7 +43,7 @@ butlerSecret: {}
 # _server_ (The hostname of the NFS server),
 # _serverPath_ (The path exported by the NFS server)
 nfsMountpoint: []
-# -- This section holds information about volume claims.
+# -- This section holds information about existing volume claims.
 # If the section is used, each object listed can have the following attributes defined:
 # _name_ (The name ot the persistent volume),
 # _containerPath_ (The path inside the container to mount),
