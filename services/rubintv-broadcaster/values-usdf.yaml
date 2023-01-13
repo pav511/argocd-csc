@@ -60,3 +60,7 @@ pvcMountpointClaim:
   containerPath: /fs/ddn/sdf/group/lsst
   claimSize: 1Gi
   accessMode: ReadWriteMany
+securityContext:
+  uid: 15517
+  gid: 4085
+  fid: 4085
