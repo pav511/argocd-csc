@@ -28,5 +28,6 @@ A Helm chart for deploying the RubinTV broadcaster services.
 | resources | object | `{}` | This allows the specification of resources (CPU, memory) requires to run the container. |
 | rubinTvSecretsPath | string | `""` |  |
 | scripts | list | `[]` | List of the script to run for the broadcaster. |
+| securityContext | object | `{}` | This section allows for specification of security context information. If the section is used, at least one of the following attributes must be specified. _uid_ (User id to run application as), _gid_ (Group id of the user that runs the application), _fid_ (File system context user id), |
 | tolerations | list | `[]` | This specifies the tolerations of the pod for any system taints. |
 | vaultPrefixPath | string | `""` | The Vault prefix path |
