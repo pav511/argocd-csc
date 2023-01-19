@@ -9,5 +9,10 @@ env:
   OSPL_INFOFILE: /tmp/ospl-info-authorize.log
   OSPL_ERRORFILE: /tmp/ospl-error-authorize.log
   RUN_ARG: --state enabled
+  AUTHLIST_USER_NAME: authlist_user
+envSecrets:
+- name: AUTHLIST_USER_PASS
+  secretName: love
+  secretKey: authlist-user-pass
 shmemDir: /run/ospl
 osplVersion: V6.10.4
