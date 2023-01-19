@@ -50,19 +50,19 @@ envSecrets:
   # -- The LOVE manager secret secret key name
   SECRET_KEY: manager-secret-key
   # -- The LOVE manager process connection password secret key name
-  PROCESS_CONNECTION_PASS: manager-process-connection-password
+  PROCESS_CONNECTION_PASS: process-connection-pass
   # -- The LOVE manager admin user password secret key name
-  ADMIN_USER_PASS: manager-admin-user-password
+  ADMIN_USER_PASS: admin-user-pass
   # -- The LOVE manager user user password secret key name
-  USER_USER_PASS: manager-user-user-password
+  USER_USER_PASS: user-user-pass
   # -- The LOVE manager cmd_user user password secret key name
-  CMD_USER_PASS: manager-cmd-user-password
+  CMD_USER_PASS: cmd-user-pass
   # -- The database password secret key name.
   # Must match `database.envSecrets.POSTGRES_PASSWORD`
-  DB_PASS: database-password
+  DB_PASS: db-pass
   # -- The redis password secret key name.
   # Must match `redis.envSecrets.REDIS_PASS`
-  REDIS_PASS: redis-password
+  REDIS_PASS: redis-pass
 # -- The container path to mount the LOVE manager configuration
 configMount: /usr/src/love/manager/config
 # -- The specification of the LOVE manager configuration (JSON)
@@ -136,7 +136,7 @@ database:
     POSTGRES_USER: postgres
   envSecrets:
     # -- The database password secret key name
-    POSTGRES_PASSWORD: database-password
+    POSTGRES_PASSWORD: db-pass
 redis:
   image:
     # -- The redis image to use
@@ -147,7 +147,7 @@ redis:
     pullPolicy: IfNotPresent
   envSecrets:
     # -- The redis password secret key name
-    REDIS_PASS: redis-password
+    REDIS_PASS: redis-pass
   # -- The redis port number
   port: 6379
   # -- Resource specifications for the LOVE redis pods
