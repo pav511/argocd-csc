@@ -17,7 +17,7 @@ Helm chart for the LOVE manager service.
 | database.affinity | object | `{}` | Affinity rules for the LOVE database pods |
 | database.env.POSTGRES_DB | string | `"postgres"` | Define the database type |
 | database.env.POSTGRES_USER | string | `"postgres"` | Define the database user |
-| database.envSecrets.POSTGRES_PASSWORD | string | `"database-password"` | The database password secret key name |
+| database.envSecrets.POSTGRES_PASSWORD | string | `"db-pass"` | The database password secret key name |
 | database.image.pullPolicy | string | `"IfNotPresent"` | The pull policy for the database image |
 | database.image.repository | string | `"postgres"` | The database image to use |
 | database.image.tag | string | `"12.0"` | The tag to use for the database image |
@@ -42,13 +42,13 @@ Helm chart for the LOVE manager service.
 | env.REDIS_HOST | string | `"love-manager-redis-service"` | The name of the redis service |
 | env.SERVER_URL | string | `"love.lsst.local"` | The external URL from the NGINX server for LOVE |
 | envSecretKeyName | string | `"love"` | The top-level secret key name that houses the rest of the secrets |
-| envSecrets.ADMIN_USER_PASS | string | `"manager-admin-user-password"` | The LOVE manager admin user password secret key name |
-| envSecrets.CMD_USER_PASS | string | `"manager-cmd-user-password"` | The LOVE manager cmd_user user password secret key name |
-| envSecrets.DB_PASS | string | `"database-password"` | The database password secret key name. Must match `database.envSecrets.POSTGRES_PASSWORD` |
-| envSecrets.PROCESS_CONNECTION_PASS | string | `"manager-process-connection-password"` | The LOVE manager process connection password secret key name |
-| envSecrets.REDIS_PASS | string | `"redis-password"` | The redis password secret key name. Must match `redis.envSecrets.REDIS_PASS` |
+| envSecrets.ADMIN_USER_PASS | string | `"admin-user-pass"` | The LOVE manager admin user password secret key name |
+| envSecrets.CMD_USER_PASS | string | `"cmd-user-pass"` | The LOVE manager cmd_user user password secret key name |
+| envSecrets.DB_PASS | string | `"db-pass"` | The database password secret key name. Must match `database.envSecrets.POSTGRES_PASSWORD` |
+| envSecrets.PROCESS_CONNECTION_PASS | string | `"process-connection-pass"` | The LOVE manager process connection password secret key name |
+| envSecrets.REDIS_PASS | string | `"redis-pass"` | The redis password secret key name. Must match `redis.envSecrets.REDIS_PASS` |
 | envSecrets.SECRET_KEY | string | `"manager-secret-key"` | The LOVE manager secret secret key name |
-| envSecrets.USER_USER_PASS | string | `"manager-user-user-password"` | The LOVE manager user user password secret key name |
+| envSecrets.USER_USER_PASS | string | `"user-user-pass"` | The LOVE manager user user password secret key name |
 | image.nexus3 | string | `""` | The tag name for the Nexus3 Docker repository secrets if private images need to be pulled |
 | image.pullPolicy | string | `"IfNotPresent"` | The pull policy on the LOVE manager image |
 | image.repository | string | `"lsstts/love-manager"` | The LOVE manager image to use |
@@ -59,7 +59,7 @@ Helm chart for the LOVE manager service.
 | ports.node | int | `30000` | The port on the node for normal communcations |
 | readinessProbe | object | `{}` | Configuration for the LOVE manager pods readiness probe |
 | redis.affinity | object | `{}` | Affinity rules for the LOVE redis pods |
-| redis.envSecrets.REDIS_PASS | string | `"redis-password"` | The redis password secret key name |
+| redis.envSecrets.REDIS_PASS | string | `"redis-pass"` | The redis password secret key name |
 | redis.image.pullPolicy | string | `"IfNotPresent"` | The pull policy for the redis image |
 | redis.image.repository | string | `"redis"` | The redis image to use |
 | redis.image.tag | string | `"5.0.3"` | The tag to use for the redis image |

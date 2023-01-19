@@ -10,7 +10,7 @@ env:
   REDIS_CONFIG_CAPACITY: 5000
   LOVE_SITE: tucson
 envSecrets:
-  AUTHLIST_USER_PASS: manager-authlist-user-password
+  AUTHLIST_USER_PASS: authlist-user-pass
 configMount: /usr/src/love/manager/media/configs
 config: |
   {
