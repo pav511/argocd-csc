@@ -23,3 +23,7 @@ secrets:
     namespaces:
       - maintel
       - obssys
+  - name: love
+    key: ts/software/love
+    namespaces:
+      - obssys
