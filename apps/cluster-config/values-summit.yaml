@@ -26,3 +26,7 @@ secrets:
     key: ts/software/meteoblue
     namespaces:
       - eas
+  - name: love
+    key: ts/software/love
+    namespaces:
+      - obssys
