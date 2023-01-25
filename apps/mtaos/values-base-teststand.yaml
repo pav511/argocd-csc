@@ -1,6 +1,6 @@
 namespace: maintel
 image:
-  repository: ts-dockerhub.lsst.org/mtaos_sim
+  repository: ts-dockerhub.lsst.org/mtaos
   tag: c0028
   pullPolicy: Always
   nexus3: nexus3-docker
@@ -11,3 +11,12 @@ env:
   OSPL_ERRORFILE: /tmp/ospl-error-mtaos.log
 shmemDir: /run/ospl
 osplVersion: V6.10.4
+butlerSecret:
+  containerPath: /home/saluser/.lsst
+  dbUser: oods
+nfsMountpoint:
+- name: scratch
+  containerPath: /scratch
+  readOnly: false
+  server: nfs-scratch.ls.lsst.org
+  serverPath: /scratch
