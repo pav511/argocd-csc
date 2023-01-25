@@ -23,16 +23,6 @@ nfsMountpoint:
   readOnly: true
   server: auxtel-archiver.ls.lsst.org
   serverPath: /lsstdata/BTS/auxtel
-- name: comcam-gen3-butler
-  containerPath: /repo/LSSTComCam
-  readOnly: false
-  server: comcam-archiver.ls.lsst.org
-  serverPath: /repo/LSSTComCam
-- name: comcam-gen3-oods
-  containerPath: /data/lsstdata/BTS/comcam
-  readOnly: true
-  server: comcam-archiver.ls.lsst.org
-  serverPath: /lsstdata/BTS/comcam
 - name: project-shared
   containerPath: /project
   readOnly: false
