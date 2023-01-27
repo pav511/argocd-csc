@@ -8,6 +8,5 @@ env:
   LSST_SITE: tucson
   OSPL_INFOFILE: /tmp/ospl-info-lasertracker.log
   OSPL_ERRORFILE: /tmp/ospl-error-lasertracker.log
-  RUN_ARG: 1 --simulate 2
 shmemDir: /run/ospl
 osplVersion: V6.10.4
