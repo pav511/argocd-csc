@@ -87,7 +87,7 @@ producers:
   mtaircompressor:
     cscs: MTAirCompressor
   eas:
-    cscs: DIMM DSM WeatherStation
+    cscs: DIMM DSM WeatherForecast WeatherStation
   authorize:
     cscs: Authorize
   mtalignment:

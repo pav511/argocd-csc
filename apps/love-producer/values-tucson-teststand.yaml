@@ -50,5 +50,6 @@ producers:
   mtscheduler: Scheduler:1
   mtscriptqueue: ScriptQueue:1
   watcher: Watcher:0
+  weatherforecast: WeatherForecast:0
   weatherstation1: WeatherStation:1
 osplVersion: V6.10.4
