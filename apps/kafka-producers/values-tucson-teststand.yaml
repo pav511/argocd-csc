@@ -38,13 +38,11 @@ producers:
       MTMount
   comcam:
     cscs: >-
-      CCArchiver
       CCCamera
       CCHeaderService
       CCOODS
   latiss:
     cscs: >-
-      ATArchiver
       ATCamera
       ATHeaderService
       ATOODS
