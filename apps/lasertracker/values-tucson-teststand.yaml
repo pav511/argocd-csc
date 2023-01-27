@@ -1,0 +1,13 @@
+image:
+  repository: ts-dockerhub.lsst.org/lasertracker
+  tag: c0029
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: tucson
+  LSST_SITE: tucson
+  OSPL_INFOFILE: /tmp/ospl-info-lasertracker.log
+  OSPL_ERRORFILE: /tmp/ospl-error-lasertracker.log
+  RUN_ARG: 1 --simulate 2
+shmemDir: /run/ospl
+osplVersion: V6.10.4

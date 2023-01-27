@@ -34,11 +34,11 @@ producers:
   dsm2: DSM:2
   gcheaderservice1: GCHeaderService:1
   genericcamera1: GenericCamera:1
+  lasertracker1: LaserTracker:1
   love: LOVE:0
   m2hexapod: MTHexapod:2
   mtaircompressor1: MTAirCompressor:1
   mtaircompressor2: MTAirCompressor:2
-  mtalignment: MTAlignment:0
   mtaos: MTAOS:0
   mtdome: MTDome:0
   mtdometrajectory: MTDomeTrajectory:0

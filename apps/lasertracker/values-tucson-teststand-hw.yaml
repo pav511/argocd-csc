@@ -1,5 +1,5 @@
 image:
-  repository: ts-dockerhub.lsst.org/mtalignment
+  repository: ts-dockerhub.lsst.org/lasertracker
   tag: c0029
   pullPolicy: Always
   nexus3: nexus3-docker
@@ -8,5 +8,6 @@ env:
   LSST_SITE: tucson
   OSPL_INFOFILE: /tmp/ospl-info-mtalignment.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtalignment.log
+  RUN_ARG: 1
 shmemDir: /run/ospl
 osplVersion: V6.10.4
