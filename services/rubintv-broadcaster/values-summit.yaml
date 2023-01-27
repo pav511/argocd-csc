@@ -18,6 +18,7 @@ scripts:
 - summit/misc/runAllSky.py
 - summit/misc/runMisc.py
 - summit/misc/runStarTracker.py
+- summit/misc/runStarTrackerFast.py
 - summit/misc/runStarTrackerMetadata.py
 - summit/misc/runStarTrackerWide.py
 credentialFile: google_write_creds
