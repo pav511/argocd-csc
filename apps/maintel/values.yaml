@@ -18,6 +18,7 @@ cscs: []
 indexed:
   mtaircompressor: 15
   gcheaderservice: 15
+  lasertracker: 12
 # -- The list of applications that are run as simulators
 isSim: []
 # -- A dictionary of _app name_: _new name_ used to set the application name to _new name_
