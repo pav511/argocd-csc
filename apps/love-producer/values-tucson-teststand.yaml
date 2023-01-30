@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/love-producer
-  tag: c0028
+  tag: c0029
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
@@ -34,11 +34,11 @@ producers:
   dsm2: DSM:2
   gcheaderservice1: GCHeaderService:1
   genericcamera1: GenericCamera:1
+  lasertracker1: LaserTracker:1
   love: LOVE:0
   m2hexapod: MTHexapod:2
   mtaircompressor1: MTAirCompressor:1
   mtaircompressor2: MTAirCompressor:2
-  mtalignment: MTAlignment:0
   mtaos: MTAOS:0
   mtdome: MTDome:0
   mtdometrajectory: MTDomeTrajectory:0
@@ -50,5 +50,6 @@ producers:
   mtscheduler: Scheduler:1
   mtscriptqueue: ScriptQueue:1
   watcher: Watcher:0
+  weatherforecast: WeatherForecast:0
   weatherstation1: WeatherStation:1
 osplVersion: V6.10.4

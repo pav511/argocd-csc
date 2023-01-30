@@ -1,6 +1,6 @@
-# mtalignment
+# lasertracker
 
-A Helm chart for deploying the MTAlignment CSC.
+A Helm chart for deploying the LaserTracker CSC.
 
 ## Values
 
