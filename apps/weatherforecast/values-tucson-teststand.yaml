@@ -6,6 +6,7 @@ image:
 env:
   LSST_DDS_PARTITION_PREFIX: tucson
   LSST_SITE: tucson
+  RUN_ARG: --state enabled
   OSPL_INFOFILE: /tmp/ospl-info-weatherforecast.log
   OSPL_ERRORFILE: /tmp/ospl-error-weatherforecast.log
 envSecrets:
