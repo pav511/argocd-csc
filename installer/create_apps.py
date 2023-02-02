@@ -66,6 +66,14 @@ def create_command(app, top_dir, conf):
     else:
         app_dir = app
 
+    if app != "uws":
+        dir_for_app = pathlib.Path("../") / top_dir / app_dir
+        if not dir_for_app.exists():
+            print(
+                f"Directory for application not found! ({str(dir_for_app)})."
+            )
+            return None
+
     cmd = [
         "argocd",
         "app",
@@ -142,6 +150,8 @@ def run_command(command, no_run):
     no_run : `bool`
         Flag for deciding if to run the command.
     """
+    if command is None:
+        return
     print(f"{' '.join(command)}")
     if not no_run:
         output = run_cmd(command)
