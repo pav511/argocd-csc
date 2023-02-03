@@ -77,3 +77,8 @@ nfsMountpoint:
   readOnly: true
   server: auxtel-archiver.cp.lsst.org
   serverPath: /allsky
+- name: scratch-shared
+  containerPath: /scratch
+  readOnly: false
+  server: nfs1.cp.lsst.org
+  serverPath: /scratch/rubintv
