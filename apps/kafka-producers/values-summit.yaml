@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/salkafka
-  tag: c0028
+  tag: c0029
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
@@ -38,7 +38,6 @@ producers:
       MTMount
   comcam:
     cscs: >-
-      CCArchiver
       CCCamera
       CCHeaderService
       CCOODS
@@ -52,7 +51,6 @@ producers:
       WeatherStation
   latiss:
     cscs: >-
-      ATArchiver
       ATCamera
       ATHeaderService
       ATOODS

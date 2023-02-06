@@ -1,5 +1,5 @@
 image:
-  tag: c0028
+  tag: c0029
   pullPolicy: Always
   # -- The tag name for the Nexus3 Docker repository secrets if private images need to be pulled
   nexus3: nexus3-docker
@@ -12,7 +12,7 @@ nfsMountpoint:
   server: nfs1.cp.lsst.org
   serverPath: /scratch/scheduler
 vaultPrefixPath: secret/k8s_operator/summit-lsp.lsst.codes
-pullSecretsPath: ts/software/nexus3-docker
+pullSecretsPath: pull-secret
 credentialSecretsPath: schedview
 imagePullSecrets:
 - name: schedview-pull-secret

@@ -1,12 +1,14 @@
 image:
   repository: ts-dockerhub.lsst.org/weatherforecast
-  tag: c0028
+  tag: c0029
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: summit
+  LSST_SITE: summit
   OSPL_INFOFILE: /tmp/ospl-info-weatherforecast.log
   OSPL_ERRORFILE: /tmp/ospl-error-weatherforecast.log
+  RUN_ARG: --state enabled
 envSecrets:
 - name: METEOBLUE_API_KEY
   secretName: meteoblue

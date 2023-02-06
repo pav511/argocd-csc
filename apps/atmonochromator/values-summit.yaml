@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/atmonochromator
-  tag: c0028
+  tag: c0029
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
