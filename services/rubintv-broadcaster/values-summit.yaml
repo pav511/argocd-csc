@@ -14,9 +14,11 @@ scripts:
 - summit/auxTel/runMetadataServer.py
 - summit/auxTel/runMonitor.py
 - summit/auxTel/runMountTorquePlotter.py
+- summit/auxTel/runNightReporter.py
 - summit/auxTel/runSpecExaminer.py
 - summit/misc/runAllSky.py
 - summit/misc/runMisc.py
+- summit/misc/runMisc2.py
 - summit/misc/runStarTracker.py
 - summit/misc/runStarTrackerFast.py
 - summit/misc/runStarTrackerMetadata.py
