@@ -10,6 +10,7 @@ cscs:
   - ess201
   - ess202
   - ess203
+  - ess204
   - weatherforecast
 renameMap:
   ess1: mtcameraassembly-ess01
@@ -19,3 +20,4 @@ renameMap:
   ess201: auxtel-ess01
   ess202: auxtel-ess02
   ess203: auxtel-ess03
+  ess204: auxtel-ess04
