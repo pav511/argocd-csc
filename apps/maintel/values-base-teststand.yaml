@@ -11,7 +11,7 @@ cscs:
   - mtm2
   - mtaircompressor1
   - mtaircompressor2
-  - mtalignment
+  - lasertracker1
 isSim:
   - mtcamhexapod
   - mtm2hexapod
@@ -19,3 +19,4 @@ isSim:
   - mtdome
   - mtaircompressor1
   - mtaircompressor2
+  - lasertracker1
