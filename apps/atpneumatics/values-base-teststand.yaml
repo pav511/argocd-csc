@@ -1,7 +1,7 @@
 namespace: auxtel
 image:
   repository: ts-dockerhub.lsst.org/at_pneumatics_sim
-  tag: c0028
+  tag: c0029
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
