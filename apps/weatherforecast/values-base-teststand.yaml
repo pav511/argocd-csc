@@ -6,6 +6,7 @@ image:
 env:
   LSST_DDS_PARTITION_PREFIX: base
   LSST_SITE: base
+  RUN_ARG: --state enabled
   OSPL_INFOFILE: /tmp/ospl-info-weatherforecast.log
   OSPL_ERRORFILE: /tmp/ospl-error-weatherforecast.log
 envSecrets:
