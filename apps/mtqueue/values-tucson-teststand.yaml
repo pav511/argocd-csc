@@ -10,6 +10,10 @@ env:
   OSPL_INFOFILE: /tmp/ospl-info-mtqueue.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtqueue.log
   RUN_ARG: 1 --state enabled
+envSecrets:
+- name: USER_USER_PASS
+  secretName: love
+  secretKey: user-user-pass
 shmemDir: /run/ospl
 osplVersion: V6.10.4
 butlerSecret:
