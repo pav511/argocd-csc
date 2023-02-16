@@ -53,4 +53,9 @@ nfsMountpoint:
   readOnly: true
   server: comcam-archiver.cp.lsst.org
   serverPath: /lsstdata/base/comcam
+- name: obs-env
+  containerPath: /obs-env
+  readOnly: true
+  server: nfs-obsenv.cp.lsst.org
+  serverPath: /obs-env
 osplVersion: V6.10.4
