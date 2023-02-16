@@ -4,6 +4,7 @@ image:
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
+  USER_USERNAME: user
   DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
   LSST_DDS_PARTITION_PREFIX: tucson
   LSST_DDS_ENABLE_AUTHLIST: 1
