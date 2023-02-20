@@ -23,6 +23,10 @@ secrets:
       - auxtel
       - maintel
       - obssys
+  - name: love
+    key: ts/software/love
+    namespaces:
+      - obssys
   - name: meteoblue
     key: ts/software/meteoblue
     namespaces:
