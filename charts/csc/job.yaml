@@ -61,6 +61,11 @@ spec:
               mountPath: /home/saluser/.startup.sh
               subPath: .startup.sh
           {{- end }}
+          {{- if .Values.configfile }}
+            - name: configfile
+              mountPath: {{ .Values.configfile.path }}/{{ .Values.configfile.filename }}
+              subPath: {{ .Values.configfile.filename }}
+          {{- end }}
           {{- if .Values.butlerSecret }}
             - name: {{ .Release.Name }}-butler-secret
               mountPath: {{ .Values.butlerSecret.containerPath }}
@@ -108,6 +113,14 @@ spec:
             - name: {{ .Release.Name }}-butler-secret
               mountPath: /secrets
       {{- end }}
+      {{- if .Values.securityContext }}
+      securityContext:
+        runAsUser: {{ .Values.securityContext.user }}
+        runAsGroup: {{ .Values.securityContext.group }}
+        {{- if .Values.securityContext.fsGroup }}
+        fsGroup: {{ .Values.securityContext.fsGroup }}
+        {{- end}}
+      {{- end }}
       volumes:
         {{- if .Values.useExternalConfig }}
         - name: osplconfig
@@ -130,6 +143,14 @@ spec:
             items:
               - key: .startup.sh
                 path: .startup.sh
+      {{- end }}
+      {{- if .Values.configfile }}
+        - name: configfile
+          configMap:
+            name: {{ .Release.Name }}-configfile
+            items:
+              - key: {{ .Values.configfile.filename }}
+                path: {{ .Values.configfile.filename }}
       {{- end }}
       {{- if .Values.butlerSecret }}
         - name: {{ .Release.Name }}-butler-secret

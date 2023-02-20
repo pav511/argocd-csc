@@ -52,7 +52,7 @@ Shared Helm Charts
 ==================
 
 This section covers tracking changes to the two shared charts: ``csc`` and ``csc_collector``.
-The individual applications using these shared charts can point the ``version`` attribute in its `Chart.yaml` file independently of any other application.
+The individual applications using these shared charts can point the ``version`` attribute in its ``Chart.yaml`` file independently of any other application.
 
 .. toctree::
    :maxdepth: 2
