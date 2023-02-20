@@ -5,6 +5,7 @@ cscs:
   - atdometrajectory
   - atheaderservice
   - athexapod
+  - atoods
   - atptg
   - atspectrograph
   - hexapodsim

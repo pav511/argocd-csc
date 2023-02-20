@@ -10,6 +10,7 @@ cscs:
   - mtdometrajectory
   - mtm2
   - ccheaderservice
+  - ccoods
   - mtaircompressor1
   - mtaircompressor2
   - lasertracker1
