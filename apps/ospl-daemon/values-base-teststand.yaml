@@ -8,9 +8,5 @@ env:
   LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
 annotations:
   k8s.v1.cni.cncf.io/networks: kube-system/misc-dds
-initContainer:
-  repository: lsstit/ddsnet4u
-  tag: latest
-  pullPolicy: Always
 shmemDir: /run/ospl
 osplVersion: V6.10.4
