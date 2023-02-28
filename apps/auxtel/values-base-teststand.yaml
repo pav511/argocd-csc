@@ -14,3 +14,5 @@ isSim:
   - atspectrograph
 renameMap:
   hexapodsim: hexapod-sim
+spec:
+  targetRevision: tickets/DM-36177

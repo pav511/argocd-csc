@@ -12,3 +12,5 @@ isSim:
   - weatherstation1
   - dimm1
   - dimm2
+spec:
+  targetRevision: tickets/DM-36177
