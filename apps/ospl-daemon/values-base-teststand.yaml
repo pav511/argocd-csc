@@ -7,6 +7,6 @@ env:
   LSST_DDS_PARTITION_PREFIX: base
   LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
 annotations:
-  k8s.v1.cni.cncf.io/networks: kube-system/misc-dds
+  k8s.v1.cni.cncf.io/networks: kube-system/dds
 shmemDir: /run/ospl
 osplVersion: V6.10.4
