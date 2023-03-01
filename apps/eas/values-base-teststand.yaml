@@ -13,4 +13,5 @@ isSim:
   - dimm1
   - dimm2
 spec:
-  targetRevision: tickets/DM-36177
+  source:
+    targetRevision: tickets/DM-36177

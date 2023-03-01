@@ -5,4 +5,5 @@ cscs:
 renameMap:
   genericcamera1: simulation-gencam
 spec:
-  targetRevision: tickets/DM-36177
+  source:
+    targetRevision: tickets/DM-36177

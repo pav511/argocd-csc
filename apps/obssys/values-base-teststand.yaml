@@ -7,4 +7,5 @@ cscs:
   - mtscheduler
   - authorize
 spec:
-  targetRevision: tickets/DM-36177
+  source:
+    targetRevision: tickets/DM-36177

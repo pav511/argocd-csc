@@ -15,4 +15,5 @@ isSim:
 renameMap:
   hexapodsim: hexapod-sim
 spec:
-  targetRevision: tickets/DM-36177
+  source:
+    targetRevision: tickets/DM-36177

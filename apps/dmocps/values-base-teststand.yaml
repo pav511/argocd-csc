@@ -2,4 +2,5 @@ env: base-teststand
 cscs:
   - atocps
 spec:
-  targetRevision: tickets/DM-36177
+  source:
+    targetRevision: tickets/DM-36177

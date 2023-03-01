@@ -21,4 +21,5 @@ isSim:
   - mtaircompressor2
   - lasertracker1
 spec:
-  targetRevision: tickets/DM-36177
+  source:
+    targetRevision: tickets/DM-36177
