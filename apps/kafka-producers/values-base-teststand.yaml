@@ -90,8 +90,8 @@ producers:
     cscs: DIMM DSM WeatherStation
   authorize:
     cscs: Authorize
-  mtalignment:
-    cscs: MTAlignment
+  lasertracker:
+    cscs: LaserTracker
   genericcamera:
     cscs: GCHeaderService GenericCamera
 existingSecret: kafka-producers-ts-salkafka
