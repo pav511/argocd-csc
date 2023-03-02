@@ -1,0 +1,17 @@
+namespace: dds-test
+image:
+  repository: ts-dockerhub.lsst.org/integrationtests
+  tag: c0029.005
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: tucson
+  LSST_SITE: tucson
+shmemDir: /run/ospl
+osplVersion: V6.10.4
+nfsMountpoint:
+- name: integrationtests
+  containerPath: /home/saluser/robotframework_EFD/Reports
+  readOnly: false
+  server: nfs-project.tu.lsst.org
+  serverPath: /project/integrationtests

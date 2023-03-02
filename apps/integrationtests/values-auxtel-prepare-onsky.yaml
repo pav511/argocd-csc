@@ -1,0 +1,2 @@
+env:
+  RUN_ARG: -A Test_Report_AuxTel_Prep_Onsky.list
