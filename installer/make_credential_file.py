@@ -10,7 +10,7 @@ def main(opts):
     secret_dir = pathlib.Path("secrets")
     for secret_key in secret_keys:
         secret_file = secret_dir / f"{secret_key}"
-        credential_file = pathlib.Path().cwd() / f".{secret_key}_creds.sh"
+        credential_file = pathlib.Path().cwd() / f".{secret_key}-cred.sh"
 
         with secret_file.open() as sfile:
             data = sfile.read()
