@@ -6,7 +6,7 @@ image:
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: base
-  LSST_SITE: base
+  LSST_SITE: tucson
   OSPL_INFOFILE: /tmp/ospl-info-watcher.log
   OSPL_ERRORFILE: /tmp/ospl-error-watcher.log
 shmemDir: /run/ospl
