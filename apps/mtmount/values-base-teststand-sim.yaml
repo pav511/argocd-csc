@@ -1,0 +1,4 @@
+image:
+  tag: c0029
+env:
+  RUN_ARG: --simulate

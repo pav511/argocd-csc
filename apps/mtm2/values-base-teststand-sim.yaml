@@ -1,0 +1,13 @@
+image:
+  repository: ts-dockerhub.lsst.org/m2
+  tag: c0029
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: base
+  LSST_SITE: tucson
+  OSPL_INFOFILE: /tmp/ospl-info-mtm2.log
+  OSPL_ERRORFILE: /tmp/ospl-error-mtm2.log
+  RUN_ARG: --simulate
+shmemDir: /run/ospl
+osplVersion: V6.10.4
