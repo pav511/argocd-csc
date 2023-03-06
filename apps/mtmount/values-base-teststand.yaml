@@ -10,3 +10,4 @@ env:
   OSPL_INFOFILE: /tmp/ospl-info-mtmount.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtmount.log
 shmemDir: /run/ospl
+osplVersion: V6.10.4
