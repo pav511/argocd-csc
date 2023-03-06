@@ -45,6 +45,9 @@ applications:
   - eas
   - maintel
   - obssys
+  - mtm1m3-sim
+  - mtm2-sim
+  - mtmount-sim
 services:
   summit:
   - uws

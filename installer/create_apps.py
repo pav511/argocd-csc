@@ -63,6 +63,8 @@ def create_command(app, top_dir, conf):
         app_dir = app.replace("csc-", "")
     elif app == "test42":
         app_dir = "test-csc"
+    elif app.endswith("-sim"):
+        app_dir = app.replace("-sim", "")
     else:
         app_dir = app
 
