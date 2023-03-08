@@ -12,8 +12,7 @@ env:
 shmemDir: /run/ospl
 annotations:
   k8s.v1.cni.cncf.io/networks: kube-system/macvlan-conf
-useMulticast: true
-initContainer:
+ddsRouteFixer:
   repository: lsstit/ddsnet4u
   tag: latest
   pullPolicy: Always

@@ -13,8 +13,11 @@ env:
 shmemDir: /run/ospl
 osplVersion: V6.10.4
 butlerSecret:
-  containerPath: /home/saluser/.lsst
+  containerPath: &bS-cP /home/saluser/.lsst
   dbUser: oods
+secretPermFixer:
+- name: butler-secret
+  containerPath: *bS-cP
 nfsMountpoint:
 - name: auxtel-gen3-data
   containerPath: /repo/LATISS

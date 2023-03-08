@@ -24,6 +24,7 @@ entrypoint:
 # _content_ (The YAML content for the configuration file)
 configfile: {}
 # -- This key allows for specification of Butler secret information.
+# **NOTE**: You must fill out a _secretPermFixer_ entry in addition.
 # If this section is used, it must contain the following attributes:
 # _containerPath_ (The directory location for the Butler secret),
 # _dbUser_ (The username for the Butler backend database)
@@ -62,8 +63,6 @@ namespace:
 shmemDir:
 # -- This allows the specification of pod annotations
 annotations: {}
-# -- This sets whether the pod spec needs to use an init container.
-useInitContainer: false
 # -- This section sets the optional use of an init container for multus networking.
 # If this section is used, the following attributes must to be specified:
 # _repository_ (The Docker registry name of the init container image),
@@ -74,7 +73,8 @@ ddsRouteFixer: {}
 # If this section is used, each object listed can have the necessary attributes specified:
 # _name_ (The label used for the init container)
 # _containerPath_ (The path in the container where the secret files will be stored)
-# _specialInstructions_ (This allows for optional instructions to be used when fixing permissions)
+# _secretName_ (OPTIONAL: The secret name if different from _name_)
+# _specialInstructions_ (OPTIONAL: This allows for optional instructions to be used when fixing permissions)
 secretPermFixer: {}
 # -- (bool) This sets the use of the host process ID system. Defaults to true if not specified
 useHostPid:

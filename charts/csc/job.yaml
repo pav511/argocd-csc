@@ -66,9 +66,11 @@ spec:
               mountPath: {{ .Values.configfile.path }}/{{ .Values.configfile.filename }}
               subPath: {{ .Values.configfile.filename }}
           {{- end }}
-          {{- if .Values.butlerSecret }}
-            - name: {{ .Release.Name }}-butler-secret
-              mountPath: {{ .Values.butlerSecret.containerPath }}
+          {{- if .Values.secretPermFixer }}
+          {{- range $values := .Values.secretPermFixer }}
+            - name: {{ $.Release.Name }}-{{ $values.name }}
+              mountPath: {{ $values.containerPath }}
+          {{- end }}
           {{- end }}
           {{- if .Values.pvcMountpoint }}
           {{- range $values := .Values.pvcMountpoint }}
@@ -87,17 +89,18 @@ spec:
           resources:
             {{- toYaml $.Values.resources | nindent 12 }}
           {{- end }}
-      {{- if .Values.initContainer }}
+      {{- if or .Values.ddsRouteFixer .Values.secretPermFixer }}
       initContainers:
+      {{- if .Values.ddsRouteFixer }}
         - name: {{ .Release.Name }}-route-fixer
-          image: "{{ .Values.initContainer.repository }}:{{ .Values.initContainer.tag }}"
-          imagePullPolicy: {{ .Values.initContainer.pullPolicy }}
+          image: "{{ .Values.ddsRouteFixer.repository }}:{{ .Values.ddsRouteFixer.tag }}"
+          imagePullPolicy: {{ .Values.ddsRouteFixer.pullPolicy }}
           securityContext:
             privileged: true
       {{- end }}
-      {{- if .Values.butlerSecret }}
-      initContainers:
-        - name: {{ .Release.Name }}-butler-secret-perm-fixer
+      {{- if .Values.secretPermFixer }}
+      {{- range $values := .Values.secretPermFixer }}
+        - name: {{ $.Release.Name }}-{{ $values.name }}-perm-fixer
           image: "alpine:latest"
           command:
             - "/bin/ash"
@@ -106,12 +109,17 @@ spec:
               cp -RL /secrets-raw/* /secrets
               chown 73006:73006 /secrets/*
               chmod 0600 /secrets/*
+              {{- if $values.specialInstructions }}
+              {{- toYaml $values.specialInstructions | nindent 14 }}
+              {{- end }}
           volumeMounts:
-            - name: {{ .Release.Name }}-raw-butler-secret
+            - name: {{ $.Release.Name }}-raw-{{ $values.name }}
               mountPath: /secrets-raw
               readOnly: true
-            - name: {{ .Release.Name }}-butler-secret
+            - name: {{ $.Release.Name }}-{{ $values.name }}
               mountPath: /secrets
+      {{- end }}
+      {{- end }}
       {{- end }}
       {{- if .Values.securityContext }}
       securityContext:
@@ -152,13 +160,15 @@ spec:
               - key: {{ .Values.configfile.filename }}
                 path: {{ .Values.configfile.filename }}
       {{- end }}
-      {{- if .Values.butlerSecret }}
-        - name: {{ .Release.Name }}-butler-secret
+      {{- if  .Values.secretPermFixer }}
+      {{- range $values := .Values.secretPermFixer }}
+        - name: {{ $.Release.Name }}-{{ $values.name }}
           emptyDir: {}
-        - name: {{ .Release.Name }}-raw-butler-secret
+        - name: {{ $.Release.Name }}-raw-{{ $values.name }}
           secret:
-            secretName: {{ $.Values.namespace }}-butler-secret
+            secretName: {{ $.Values.namespace }}-{{ or $values.secretName $values.name }}
             defaultMode: 0600
+      {{- end }}
       {{- end }}
       {{- if .Values.pvcMountpoint }}
       {{- range $values := .Values.pvcMountpoint }}
