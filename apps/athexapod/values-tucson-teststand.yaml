@@ -1,3 +1,4 @@
+namespace: auxtel
 image:
   repository: ts-dockerhub.lsst.org/athexapod
   tag: c0029

@@ -1,3 +1,4 @@
+namespace: auxtel
 image:
   repository: ts-dockerhub.lsst.org/atmcs_sim
   tag: c0015

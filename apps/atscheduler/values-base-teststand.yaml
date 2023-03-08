@@ -1,3 +1,4 @@
+namespace: obssys
 image:
   repository: ts-dockerhub.lsst.org/scheduler
   tag: c0015

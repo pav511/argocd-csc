@@ -1,3 +1,4 @@
+namespace: obssys
 image:
   repository: ts-dockerhub.lsst.org/scriptqueue
   tag: c0015
