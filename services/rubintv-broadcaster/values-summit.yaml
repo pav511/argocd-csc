@@ -20,8 +20,10 @@ scripts:
 - summit/misc/runMisc.py
 - summit/misc/runMisc2.py
 - summit/misc/runStarTracker.py
+- summit/misc/runStarTrackerCatchup.py
 - summit/misc/runStarTrackerFast.py
 - summit/misc/runStarTrackerMetadata.py
+- summit/misc/runStarTrackerNightReport.py
 - summit/misc/runStarTrackerWide.py
 credentialFile: google_write_creds
 vaultPrefixPath: secret/k8s_operator/summit-lsp.lsst.codes
