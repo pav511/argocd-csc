@@ -1,4 +1,4 @@
 apiVersion: v2
 description: Parent application to bootstrap DM OCPS CSC deployment
 name: dmocps
-version: 0.2.0
+version: 0.3.0

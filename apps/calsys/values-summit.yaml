@@ -1,4 +1,5 @@
 env: summit
+namespace: calsys
 cscs:
   - electrometer1
   - electrometer201

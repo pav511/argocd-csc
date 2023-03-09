@@ -1,4 +1,5 @@
 env: summit
+namespace: obssys
 cscs:
   - atqueue
   - mtqueue
