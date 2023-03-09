@@ -1,4 +1,5 @@
 env: base-teststand
+namespace: obssys
 cscs:
   - atqueue
   - mtqueue

@@ -1,3 +1,4 @@
+namespace: eas
 image:
   repository: ts-dockerhub.lsst.org/dsm
   tag: c0029

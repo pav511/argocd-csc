@@ -1,3 +1,4 @@
+namespace: eas
 image:
   repository: ts-dockerhub.lsst.org/dimm
   tag: c0029

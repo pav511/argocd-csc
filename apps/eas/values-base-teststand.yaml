@@ -1,4 +1,5 @@
 env: base-teststand
+namespace: eas
 cscs:
   - dsm1
   - dsm2
