@@ -1,3 +1,4 @@
+namespace: uws
 image:
   repository: ts-dockerhub.lsst.org/dmocps
   tag: c0029

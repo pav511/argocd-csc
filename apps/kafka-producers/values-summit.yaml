@@ -93,6 +93,8 @@ producers:
     cscs: MTM1M3TS
   genericcamera:
     cscs: GCHeaderService GenericCamera
+  gis:
+    cscs: GIS
 existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true

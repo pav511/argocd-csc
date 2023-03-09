@@ -1,4 +1,4 @@
 apiVersion: v2
 description: Parent application to bootstrap Environmental Awareness Sytems CSC deployment
 name: eas
-version: 0.2.0
+version: 0.3.0

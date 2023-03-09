@@ -1,3 +1,4 @@
+namespace: love
 image:
   repository: ts-dockerhub.lsst.org/love-commander
   tag: c0029

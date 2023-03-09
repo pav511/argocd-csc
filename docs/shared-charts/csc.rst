@@ -2,6 +2,24 @@
 CSC Helm Chart
 ##############
 
+0.12.0
+------
+
+  This version centralizes the ``values.yaml`` into the ``values/csc`` directory and is linked into all CSC applications. This allows for single point editing of the Helm chart configuration attributes. There are two consequences of the centralization. The first is that the ``namespace`` attribute must be added to either the application's site specific values file or an application specific one. The second is that the version in the ``Chart.yaml`` of each CSC application must be updated if the ``values.yaml`` or the associated Helm chart is updated. The only exception would be pure documentation updates to the ``values.yaml``. The ``bin/update_shared_chart_version.py`` script is available to help with this.
+
+  The init container usage has also been revamped. Two attributes, ``ddsRouteFixer`` and ``secretPermFixer`` have been added to handle the configuration. The ``ddsRouteFixer`` replaces the old ``initContainer`` attribute and is being deprecated for futher use. The ``secretPermFixer`` is now used to handle the butler secrets as well as other secrets files, like SSH keys. This changes the configuration methodology for the butler secrets compared to version 0.10.0. The configuration now should look like:
+
+  .. code::
+
+    butlerSecret:
+      containerPath: &bS-cP /home/saluser/.lsst
+      dbUser: oods
+    secretPermFixer:
+    - name: butler-secret
+      containerPath: *bS-cP
+
+  The ``bS-cP`` references allow the path to be specified in one place (``&``)  and reused in the other (``*``).
+
 0.11.0
 ------
 

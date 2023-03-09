@@ -7,15 +7,11 @@
 {{- end }}
 {{- $app := "" }}
 {{- $isIndexed := false }}
-{{- $cscKey := "" }}
-{{- range $key := keys $.Values.indexed }}
-{{- if hasPrefix $key $csc }}
+{{- $checkForIndex := regexFindAll "[0-9]+" $csc -1 }}
+{{- if $checkForIndex }}
 {{- $isIndexed = true }}
-{{- $cscKey = $key }}
-{{- end }}
-{{- end }}
-{{- if $isIndexed }}
-{{- $app = substr 0 (get $.Values.indexed $cscKey | int) $csc }}
+{{- $index := first $checkForIndex }}
+{{- $app = regexReplaceAll $index $csc "" }}
 {{- else }}
 {{- $app = $csc }}
 {{- end }}

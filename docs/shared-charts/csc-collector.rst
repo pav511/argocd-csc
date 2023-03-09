@@ -2,6 +2,13 @@
 CSC-Collector Helm Chart
 ########################
 
+0.3.0
+-----
+
+  This version centralizes the ``values.yaml`` into the ``values/csc_collector`` directory and is linked into the collector applications.
+  This means the ``namespace`` attribute must be added to the site specific values file.
+  It also contains an improvement that removes the need to specify the ``indexed`` attribute any longer.
+
 0.2.0
 -----
 

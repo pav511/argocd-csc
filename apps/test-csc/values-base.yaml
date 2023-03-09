@@ -1,3 +1,4 @@
+namespace: dds-test
 image:
   repository: ts-dockerhub.lsst.org/test
   tag: c0022

@@ -1,4 +1,5 @@
 env: summit
+namespace: auxtel
 cscs:
   - ataos
   - atdome

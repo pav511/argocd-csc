@@ -1,4 +1,5 @@
 env: tucson-teststand
+namespace: eas
 cscs:
   - dsm1
   - dsm2

@@ -1,4 +1,5 @@
 env: summit
+namespace: eas
 cscs:
   - dimm1
   - dimm2

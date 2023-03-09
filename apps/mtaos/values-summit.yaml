@@ -1,3 +1,4 @@
+namespace: maintel
 image:
   repository: ts-dockerhub.lsst.org/mtaos
   tag: c0029
@@ -10,8 +11,11 @@ env:
   OSPL_ERRORFILE: /tmp/ospl-error-mtaos.log
 shmemDir: /run/ospl
 butlerSecret:
-  containerPath: /home/saluser/.lsst
+  containerPath: &bS-cP /home/saluser/.lsst
   dbUser: oods
+secretPermFixer:
+- name: butler-secret
+  containerPath: *bS-cP
 nfsMountpoint:
 - name: comcam-gen3-data
   containerPath: /repo/LSSTComCam
