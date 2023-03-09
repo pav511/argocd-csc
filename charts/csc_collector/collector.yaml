@@ -1,3 +1,4 @@
+{{- $protectedApps := list "mtm2" "mtm1m3" }}
 {{- range $csc := .Values.cscs }}
 {{- $cscn := "" }}
 {{- if hasKey $.Values.renameMap $csc }}
@@ -7,7 +8,10 @@
 {{- end }}
 {{- $app := "" }}
 {{- $isIndexed := false }}
-{{- $checkForIndex := regexFindAll "[0-9]+" $csc -1 }}
+{{- $checkForIndex := list }}
+{{- if not (has $csc $protectedApps) }}
+{{- $checkForIndex = regexFindAll "[0-9]+$" $csc -1 }}
+{{- end }}
 {{- if $checkForIndex }}
 {{- $isIndexed = true }}
 {{- $index := first $checkForIndex }}
