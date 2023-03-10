@@ -12,6 +12,12 @@ env:
   RUN_ARG: 1 --state enabled
 shmemDir: /run/ospl
 osplVersion: V6.10.4
+butlerSecret:
+  containerPath: &bS-cP /home/saluser/.lsst
+  dbUser: oods
+secretPermFixer:
+- name: butler-secret
+  containerPath: *bS-cP
 nfsMountpoint:
 - name: auxtel-gen3-butler
   containerPath: /repo/LATISS
