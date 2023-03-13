@@ -1,4 +1,4 @@
 env:
-  OSPL_INFOFILE: /tmp/ospl-info-camhexrot-ess01.log
-  OSPL_ERRORFILE: /tmp/ospl-error-camhexrot-ess01.log
+  OSPL_INFOFILE: /tmp/ospl-info-sst-ess01.log
+  OSPL_ERRORFILE: /tmp/ospl-error-sst-ess01.log
   RUN_ARG: 1

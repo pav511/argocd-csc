@@ -14,7 +14,7 @@ cscs:
   - ess204
   - weatherforecast
 renameMap:
-  ess1: mtcameraassembly-ess01
+  ess1: sst-ess01
   ess101: mtdome-ess01
   ess102: mtdome-ess02
   ess103: mtdome-ess03
