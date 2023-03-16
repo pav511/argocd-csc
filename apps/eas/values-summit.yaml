@@ -13,6 +13,7 @@ cscs:
   - ess202
   - ess203
   - ess204
+  - ess301
   - weatherforecast
 renameMap:
   ess1: sst-ess01
@@ -24,3 +25,4 @@ renameMap:
   ess202: auxtel-ess02
   ess203: auxtel-ess03
   ess204: auxtel-ess04
+  ess301: calibhill-ess01
