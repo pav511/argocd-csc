@@ -6,7 +6,7 @@ image:
   nexus3: nexus3-docker
 env:
   DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
-  LSST_DDS_PARTITION_PREFIX: tucson
+  LSST_DDS_PARTITION_PREFIX: base
   OSPL_INFOFILE: /tmp/ospl-info-atoods.log
   OSPL_ERRORFILE: /tmp/ospl-error-atoods.log
   CTRL_OODS_CONFIG_FILE: /etc/atoods.yaml
