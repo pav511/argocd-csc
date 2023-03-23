@@ -5,6 +5,7 @@ image:
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
+  RUN_ARG: --state enabled
   LSST_DDS_PARTITION_PREFIX: base
   LSST_SITE: tucson
   OSPL_INFOFILE: /tmp/ospl-info-watcher.log
