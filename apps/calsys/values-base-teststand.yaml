@@ -5,6 +5,3 @@ cscs:
   - gcheaderservice1
 renameMap:
   genericcamera1: simulation-gencam
-spec:
-  source:
-    targetRevision: tickets/DM-36177

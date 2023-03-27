@@ -7,6 +7,3 @@ cscs:
   - atscheduler
   - mtscheduler
   - authorize
-spec:
-  source:
-    targetRevision: tickets/DM-36177
