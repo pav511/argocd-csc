@@ -1,12 +1,21 @@
 env: base-teststand
+namespace: maintel
 cscs:
   - mtaos
   - mtptg
   - mtcamhexapod
   - mtm2hexapod
-  - mtmount
   - mtrotator
   - mtdome
   - mtdometrajectory
-  - mtm1m3
-  - mtm2
+  - mtaircompressor1
+  - mtaircompressor2
+  - lasertracker1
+isSim:
+  - mtcamhexapod
+  - mtm2hexapod
+  - mtrotator
+  - mtdome
+  - mtaircompressor1
+  - mtaircompressor2
+  - lasertracker1

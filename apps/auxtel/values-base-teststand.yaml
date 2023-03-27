@@ -1,11 +1,12 @@
 env: base-teststand
+namespace: auxtel
 cscs:
   - ataos
   - atdome
   - atdometrajectory
+  - atheaderservice
   - athexapod
-  - atmcs
-  - atpneumatics
+  - atoods
   - atptg
   - hexapodsim
   - atspectrograph
@@ -15,3 +16,6 @@ isSim:
   - atspectrograph
 renameMap:
   hexapodsim: hexapod-sim
+spec:
+  source:
+    targetRevision: tickets/DM-36177

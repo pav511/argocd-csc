@@ -1,0 +1,19 @@
+namespace: obssys
+image:
+  repository: ts-dockerhub.lsst.org/authorize
+  tag: c0029
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: base
+  LSST_SITE: base
+  OSPL_INFOFILE: /tmp/ospl-info-authorize.log
+  OSPL_ERRORFILE: /tmp/ospl-error-authorize.log
+  RUN_ARG: --state enabled
+  AUTHLIST_USER_NAME: authlist_user
+envSecrets:
+- name: AUTHLIST_USER_PASS
+  secretName: love
+  secretKey: authlist-user-pass
+shmemDir: /run/ospl
+osplVersion: V6.10.4

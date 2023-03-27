@@ -1,0 +1,4 @@
+env: base-teststand
+namespace: uws
+cscs:
+  - atocps

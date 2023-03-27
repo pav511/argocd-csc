@@ -1,0 +1,12 @@
+namespace: eas
+image:
+  repository: ts-dockerhub.lsst.org/dsm
+  tag: c0029
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: base
+  OSPL_INFOFILE: /tmp/ospl-info-dsm.log
+  OSPL_ERRORFILE: /tmp/ospl-error-dsm.log
+shmemDir: /run/ospl
+osplVersion: V6.10.4

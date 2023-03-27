@@ -1,0 +1,59 @@
+onepassword_uuid: 7io6fthrqnb6rm2ibm2wxf23fy
+applications:
+  summit:
+  - csc-cluster-config
+  - ospl-config
+  - ospl-daemon
+  - kafka-producers
+  - test42
+  - auxtel
+  - calsys
+  - dmocps
+  - eas
+  - maintel
+  - obssys
+  - mtmount-sim
+  - mtrotator-sim
+  - mtm2hexapod-sim
+  - mtcamhaxapod-sim
+  - mtm1m3-sim
+  - mtm2-sim
+  - mtdome-sim
+  tucson-teststand:
+  - csc-cluster-config
+  - ospl-config
+  - ospl-main-daemon
+  - ospl-daemon
+  - kafka-producers
+  - test42
+  - auxtel
+  - calsys
+  - dmocps
+  - eas
+  - love
+  - maintel
+  - obssys
+  base-teststand:
+  - csc-cluster-config
+  - ospl-config
+  - ospl-daemon
+  - kafka-producers
+  - test42
+  - auxtel
+  - calsys
+  - dmocps
+  - eas
+  - maintel
+  - obssys
+  - mtm1m3-sim
+  - mtm2-sim
+  - mtmount-sim
+services:
+  summit:
+  - uws
+  - schedview
+  - rubintv-broadcasters
+  tucson-teststand:
+  - uws
+  base-teststand:
+  - uws

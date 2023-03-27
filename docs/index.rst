@@ -46,6 +46,7 @@ For the Kubernetes_ systems, the appropriate ``kubeconfig`` file can be obtained
 
    app-maint/upgrade-application
    app-maint/add-application
+   app-maint/precommit-and-helm-docs
    app-maint/making-changes
 
 Shared Helm Charts
@@ -116,6 +117,16 @@ Bootstrapping
    :maxdepth: 2
 
    ops/bootstrapping
+
+Secret Management
+-----------------
+
+.. toctree::
+   :maxdepth: 2
+
+   ops/add-a-onepassword-secret
+   ops/update-a-onepassword-secret
+   ops/secrets-for-bare-metal
 
 Administration
 --------------

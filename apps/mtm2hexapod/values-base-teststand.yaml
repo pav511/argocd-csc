@@ -1,13 +1,14 @@
 namespace: maintel
 image:
-  repository: ts-dockerhub.lsst.org/hexapod
-  tag: c0015
+  repository: ts-dockerhub.lsst.org/mthexapod
+  tag: c0029
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: base
+  LSST_SITE: base
   OSPL_INFOFILE: /tmp/ospl-info-mtm2hexapod.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtm2hexapod.log
-  RUN_ARG: -s 2
+  RUN_ARG: --simulate 2
 shmemDir: /run/ospl
 osplVersion: V6.10.4

@@ -1,13 +1,14 @@
 namespace: maintel
 image:
   repository: ts-dockerhub.lsst.org/mtdome
-  tag: c0015
+  tag: c0029
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: base
+  LSST_SITE: base
   OSPL_INFOFILE: /tmp/ospl-info-mtdome.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtdome.log
-  RUN_ARG: -s
+  RUN_ARG: --simulate 1
 shmemDir: /run/ospl
 osplVersion: V6.10.4

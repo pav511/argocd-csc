@@ -41,7 +41,7 @@ release = version
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = "en"
+language = None
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -136,4 +136,11 @@ linkcheck_ignore = [
     r"https://tucson-teststand.lsst.codes/argo-cd",
     r"https://summit-lsp.lsst.codes/argo-cd",
     r"https://ls.st/lse-150",
+    r"https://lsstit.1password.com/",
+    r"https://github.com/norwoodj/helm-docs#installation",
+    # Remove below once merged
+    r"https://github.com/lsst-ts/argocd-csc/tree/main/installer",
+    r"https://github.com/lsst-ts/argocd-csc/blob/main/installer/site-config.yaml",
+    r"https://github.com/lsst-ts/argocd-csc/blob/main/installer/update_secrets.sh",
+    r"https://github.com/lsst-ts/argocd-csc/blob/main/installer/generate_secrets.py",
 ]

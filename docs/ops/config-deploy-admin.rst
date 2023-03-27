@@ -39,9 +39,6 @@ Deployment Helper Scripts
 
 These scripts handle operations on the `Argo CD`_ deployment.
 
-create_apps.py
-  This script is used to create all of the deployment applications when a new cluster is stood up.
-
 argocd_login.py
   This script sets up port forwarding authentication for interactions with the deployment.
   It requires a file with the username and password on separate lines for the site specific `Argo CD`_ login.

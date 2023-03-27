@@ -1,0 +1,7 @@
+env: base-teststand
+namespace: calsys
+cscs:
+  - genericcamera1
+  - gcheaderservice1
+renameMap:
+  genericcamera1: simulation-gencam

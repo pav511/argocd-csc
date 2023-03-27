@@ -13,8 +13,9 @@ An example is shown below.
 
   git ci -m "Summit: Update command-line for DIMMs."
 
-All pull requests should be squashed to a single commit to help with rollback.
+All pull requests must be squashed to a single commit to help with rollback.
 There are linting tests that need to pass, so make sure that they do.
+See :doc:`precommit-and-helm-docs` to install things for handling those checks locally.
 Pull requests will require a reviewer, so create a pull request and drop the URL into the #ts-build Slack channel.
 Someone there will acknowledge they are picking up the pull request and assign it to themselves.
 When the pull request is merged, the corresponding branch will be deleted.
@@ -27,3 +28,4 @@ The site tags used are:
 If a change applies to all sites, use the tag ``All`` at the commit message start.
 Changes or updates to documentation only, no configuration or chart changes, should be tagged with ``Docs`` at the commit message start.
 Changes or updates to ``bin`` scripts only, no configuration or chart changes, should be tagged with ``Script`` at the commit message start.
+Changed or updates to ``installer`` scripts only, no configuration or chart changes, should be tagged with ``Installer`` at the commit message start.

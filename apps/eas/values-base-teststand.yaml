@@ -1,0 +1,15 @@
+env: base-teststand
+namespace: eas
+cscs:
+  - dsm1
+  - dsm2
+  - weatherstation1
+  - dimm1
+  - dimm2
+  - weatherforecast
+isSim:
+  - dsm1
+  - dsm2
+  - weatherstation1
+  - dimm1
+  - dimm2

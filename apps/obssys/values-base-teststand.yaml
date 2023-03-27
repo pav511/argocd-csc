@@ -1,7 +1,9 @@
 env: base-teststand
+namespace: obssys
 cscs:
   - atqueue
   - mtqueue
   - watcher
   - atscheduler
   - mtscheduler
+  - authorize
