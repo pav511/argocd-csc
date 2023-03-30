@@ -7,9 +7,16 @@ cscs:
   - dimm1
   - dimm2
   - weatherforecast
+  - ess301
 isSim:
   - dsm1
   - dsm2
   - weatherstation1
   - dimm1
   - dimm2
+  - ess301
+renameMap:
+  ess301: calibhill-ess01
+spec:
+  source:
+    targetRevision: tickets/DM-36177-2
