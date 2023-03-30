@@ -49,3 +49,8 @@ nfsMountpoint:
   readOnly: false
   server: nfs-project.tu.lsst.org
   serverPath: /project
+- name: obs-env
+  containerPath: /obs-env
+  readOnly: true
+  server: nfs-obsenv.tu.lsst.org
+  serverPath: /obs-env
