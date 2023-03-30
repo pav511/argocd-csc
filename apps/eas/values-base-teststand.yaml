@@ -3,7 +3,6 @@ namespace: eas
 cscs:
   - dsm1
   - dsm2
-  - weatherstation1
   - dimm1
   - dimm2
   - weatherforecast
@@ -20,7 +19,6 @@ cscs:
 isSim:
   - dsm1
   - dsm2
-  - weatherstation1
   - dimm1
   - dimm2
   - ess1
