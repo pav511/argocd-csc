@@ -1,11 +1,10 @@
 env: base-teststand
 namespace: eas
 cscs:
-  - dsm1
-  - dsm2
   - dimm1
   - dimm2
-  - weatherforecast
+  - dsm1
+  - dsm2
   - ess1
   - ess101
   - ess102
@@ -16,11 +15,12 @@ cscs:
   - ess203
   - ess204
   - ess301
+  - weatherforecast
 isSim:
-  - dsm1
-  - dsm2
   - dimm1
   - dimm2
+  - dsm1
+  - dsm2
   - ess1
   - ess101
   - ess102
