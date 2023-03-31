@@ -42,6 +42,3 @@ renameMap:
   ess203: auxtel-ess03
   ess204: auxtel-ess04
   ess301: calibhill-ess01
-spec:
-  source:
-    targetRevision: tickets/DM-36177-2
