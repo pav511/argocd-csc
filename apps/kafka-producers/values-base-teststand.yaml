@@ -80,7 +80,7 @@ producers:
   mtaircompressor:
     cscs: MTAirCompressor
   eas:
-    cscs: DIMM DSM WeatherStation
+    cscs: DIMM DSM ESS WeatherForecast WeatherStation
   authorize:
     cscs: Authorize
   lasertracker:
