@@ -1,0 +1,72 @@
+image:
+  repository: ts-dockerhub.lsst.org/rubintv-broadcaster
+  tag: c0029
+  pullPolicy: Always
+env:
+  DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
+scripts:
+- summit/auxTel/runBackgroundService.py
+- summit/auxTel/runButlerWatcher.py
+- summit/auxTel/runCalibrateCcdRunner.py
+- summit/auxTel/runImExaminer.py
+- summit/auxTel/runIsrRunner.py
+- summit/auxTel/runMetadataCreator.py
+- summit/auxTel/runMetadataServer.py
+- summit/auxTel/runMonitor.py
+- summit/auxTel/runMountTorquePlotter.py
+- summit/auxTel/runNightReporter.py
+- summit/auxTel/runSpecExaminer.py
+- summit/misc/runMisc.py
+- summit/misc/runMisc2.py
+credentialFile: google_write_creds
+vaultPrefixPath: secret/k8s_operator/tucson-teststand.lsst.codes
+pullSecretsPath: pull-secret
+rubinTvSecretsPath: ts/software/rubintv
+credentialSecretsPath: ts/software/rubintv
+butlerSecret:
+  key: butler-secret
+  containerPath: /home/saluser/.lsst
+  dbUser: oods
+imagePullSecrets:
+- name: rubintv-broadcaster-pull-secret
+nfsMountpoint:
+- name: auxtel-gen3-data
+  containerPath: /repo/LATISS
+  readOnly: false
+  server: auxtel-archiver.tu.lsst.org
+  serverPath: /repo/LATISS
+- name: comcam-gen3-data
+  containerPath: /repo/LSSTComCam
+  readOnly: false
+  server: comcam-archiver.tu.lsst.org
+  serverPath: /repo/LSSTComCam
+- name: auxtel-data
+  containerPath: /readonly/lsstdata/auxtel
+  readOnly: true
+  server: auxtel-archiver.tu.lsst.org
+  serverPath: /lsstdata
+- name: comcam-data
+  containerPath: /readonly/lsstdata/comcam
+  readOnly: true
+  server: comcam-archiver.tu.lsst.org
+  serverPath: /lsstdata
+- name: project-shared
+  containerPath: /project
+  readOnly: false
+  server: nfs-project.tu.lsst.org
+  serverPath: /project
+- name: auxtel-gen3-data-temp
+  containerPath: /data/lsstdata/TTS/auxtel
+  readOnly: true
+  server: auxtel-archiver.tu.lsst.org
+  serverPath: /lsstdata/TTS/auxtel
+- name: comcam-gen3-data-temp
+  containerPath: /data/lsstdata/TTS/comcam
+  readOnly: true
+  server: comcam-archiver.tu.lsst.org
+  serverPath: /lsstdata/TTS/comcam
+- name: scratch-shared
+  containerPath: /scratch
+  readOnly: false
+  server: nfs-scratch.tu.lsst.org
+  serverPath: /scratch/rubintv
