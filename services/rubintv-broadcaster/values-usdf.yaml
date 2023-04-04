@@ -12,7 +12,7 @@ env:
   HTTPS_PROXY: http://sdfproxy.sdf.slac.stanford.edu:3128
   SQUID_PROXY: http://sdfproxy.sdf.slac.stanford.edu:3128
   NO_PROXY: .slac.stanford.edu
-  DEPLOY_BRANCH: rubintv-slac
+  DEPLOY_BRANCH: deploy-slac
   S3_ENDPOINT_URL: https://s3dfrgw.slac.stanford.edu
 scripts:
 - runMisc.py
