@@ -17,8 +17,4 @@ env:
   LSST_DDS_ALIGNEE: Initial
   LSST_DDS_ALIGNER: true
 annotations:
-  k8s.v1.cni.cncf.io/networks: kube-system/misc-dds
-initContainer:
-  repository: lsstit/ddsnet4u
-  tag: latest
-  pullPolicy: Always
+  k8s.v1.cni.cncf.io/networks: kube-system/dds
