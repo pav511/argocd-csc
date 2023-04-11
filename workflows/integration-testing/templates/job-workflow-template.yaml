@@ -1,0 +1,79 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: integration-test-job-template
+spec:
+  serviceAccountName: {{ .Values.serviceAccount }}
+  artifactRepositoryRef:
+    configMap: integration-test-controller-configmap
+    key: artifactRepository
+  entrypoint: inttest-template
+  templates:
+  - name: inttest-template
+    inputs:
+      parameters:
+      - name: integrationtest
+        value: "-A Run-Robot.list"
+    outputs:
+      parameters:
+      - name: job-name
+        valueFrom:
+          jsonPath: '{.metadata.name}'
+    resource:
+      action: create
+      successCondition: status.succeeded > 0
+      failureCondition: status.failed > 3
+      manifest: |
+        apiVersion: batch/v1
+        kind: Job
+        metadata:
+          generateName: integration-test-job-
+          namespace: {{ .Values.namespace }}
+          labels:
+            argocd.argoproj.io/instance: integration-testing
+        spec:
+          completions: 1
+          template:
+            spec:
+              containers:
+              - name: test-job
+                image: "ts-dockerhub.lsst.org/integrationtests:{{ .Values.imageTag }}"
+                imagePullPolicy: Always
+                stdin: true
+                tty: true
+                env:
+                - name: LSST_DDS_PARTITION_PREFIX
+                  value: {{ .Values.siteTag | quote }}
+                - name: RUN_ARG
+                  value: {{ printf "'{{inputs.parameters.integrationtest}}'" }}
+                volumeMounts:
+                - name: osplconfig
+                  mountPath: /opt/OpenSpliceDDS/V6.10.4/HDE/x86_64.linux/etc/config/ospl.xml
+                  subPath: ospl.xml
+                - name: osplshmem
+                  mountPath: /tmp
+                - name: testreports
+                  mountPath: {{ .Values.reportLocation }}
+                  readOnly: false
+              securityContext:
+                runAsUser: 73006
+                runAsGroup: 73006
+                fsGroup: 73006
+              volumes:
+              - name: osplconfig
+                configMap:
+                  name: {{ .Values.namespace }}-ospl-config
+                  items:
+                    - key: ospl.xml
+                      path: ospl.xml
+              - name: osplshmem
+                hostPath:
+                  path: /run/ospl
+              - name: testreports
+                persistentVolumeClaim:
+                  claimName: {{ .Values.persistentVolume.claimName }}
+              restartPolicy: Never
+              imagePullSecrets:
+              - name: {{ .Values.namespace }}-nexus3-docker
+              hostIPC: true
+              hostPID: true

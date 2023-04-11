@@ -1,0 +1,21 @@
+# -- Namespace where the Workflow related APIs will be created.
+namespace: dds-test
+# -- The URL for the S3 instance
+s3Endpoint:
+# -- The S3 bucket name to use
+s3Bucket:
+# -- Container location of the RobotFramework reports
+reportLocation: /home/saluser/robotframework_EFD/Reports
+# -- The image tag for the Integration Test runner container
+imageTag:
+# -- The site tag for the resource location
+siteTag:
+# -- Name for the top-level workflow
+workflowName: integration-test-workflow
+# -- This sets the service account name
+serviceAccount: integration-tests
+persistentVolume:
+  # -- PVC name for saving the reports
+  claimName: saved-reports
+  # -- Storage size request for the PVC
+  storage: 1Gi

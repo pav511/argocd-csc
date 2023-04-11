@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ .Values.persistentVolume.claimName }}
+  namespace: {{ .Values.namespace }}
+spec:
+  accessModes: [ "ReadWriteOnce" ]
+  storageClassName: rook-ceph-block
+  resources:
+    requests:
+      storage: {{ .Values.persistentVolume.storage }}
