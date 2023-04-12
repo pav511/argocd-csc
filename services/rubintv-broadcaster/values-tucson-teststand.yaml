@@ -4,6 +4,8 @@ image:
   pullPolicy: Always
 env:
   DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
+  DEPLOY_BRANCH: deploy-tts
+siteTag: tts
 scripts:
 - summit/auxTel/runBackgroundService.py
 - summit/auxTel/runButlerWatcher.py

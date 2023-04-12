@@ -7,6 +7,8 @@ image:
   pullPolicy: IfNotPresent
 # -- This is the namespace where the applications will be deployed.
 namespace: rubintv-broadcaster
+# -- A special tag for letting the scripts know where they are running.
+siteTag: ""
 # -- List of the script to run for the broadcaster.
 scripts: []
 # -- This section holds a set of key, value pairs for environmental variables (ENV_VAR: value).
