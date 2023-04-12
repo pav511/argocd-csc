@@ -95,6 +95,8 @@ producers:
     cscs: GCHeaderService GenericCamera
   gis:
     cscs: GIS
+  mtvms:
+    cscs: MTVMS
 existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true
