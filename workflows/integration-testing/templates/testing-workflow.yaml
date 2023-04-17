@@ -27,7 +27,52 @@ spec:
   - name: run-tests
     dag:
       tasks:
+      - name: cameras-offline
+        templateRef:
+          name: integration-test-job-template
+          template: inttest-template
+        arguments:
+          parameters:
+          - name: integrationtest
+            value: "-A Test_Report_Offline.list"
+      - name: standby
+        depends: cameras-offline
+        templateRef:
+          name: integration-test-job-template
+          template: inttest-template
+        arguments:
+          parameters:
+          - name: integrationtest
+            value: "-A Test_Report_Standby.list"
+      - name: disabled
+        depends: standby
+        templateRef:
+          name: integration-test-job-template
+          template: inttest-template
+        arguments:
+          parameters:
+          - name: integrationtest
+            value: "-A Test_Report_Disabled.list"
+      - name: enabled
+        depends: disabled
+        templateRef:
+          name: integration-test-job-template
+          template: inttest-template
+        arguments:
+          parameters:
+          - name: integrationtest
+            value: "-A Test_Report_Enabled.list"
+      - name: housekeeping
+        depends: enabled
+        templateRef:
+          name: integration-test-job-template
+          template: inttest-template
+        arguments:
+          parameters:
+          - name: integrationtest
+            value: "-A Test_Report_Housekeeping.list"
       - name: auxtel-image-verification
+        depends: housekeeping
         templateRef:
           name: integration-test-job-template
           template: inttest-template
@@ -36,6 +81,7 @@ spec:
           - name: integrationtest
             value: "-A Test_Report_AuxTel_Image_Verification.list"
       - name: comcam-image-verification
+        depends: housekeeping
         templateRef:
           name: integration-test-job-template
           template: inttest-template
