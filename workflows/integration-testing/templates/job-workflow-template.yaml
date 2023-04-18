@@ -14,6 +14,8 @@ spec:
       parameters:
       - name: integrationtest
         value: "-A Run-Robot.list"
+      - name: jobname
+        value: "myjob"
     outputs:
       parameters:
       - name: job-name
@@ -27,7 +29,7 @@ spec:
         apiVersion: batch/v1
         kind: Job
         metadata:
-          generateName: integration-test-job-
+          name: test-{{ printf "{{inputs.parameters.jobname}}" }}
           namespace: {{ .Values.namespace }}
           labels:
             argocd.argoproj.io/instance: integration-testing

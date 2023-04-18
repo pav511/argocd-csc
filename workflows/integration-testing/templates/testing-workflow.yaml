@@ -35,6 +35,8 @@ spec:
           parameters:
           - name: integrationtest
             value: "-A Test_Report_Offline.list"
+          - name: jobname
+            values: cameras-offline
       - name: standby
         depends: cameras-offline
         templateRef:
@@ -44,6 +46,8 @@ spec:
           parameters:
           - name: integrationtest
             value: "-A Test_Report_Standby.list"
+          - name: jobname
+            value: standby
       - name: disabled
         depends: standby
         templateRef:
@@ -53,6 +57,8 @@ spec:
           parameters:
           - name: integrationtest
             value: "-A Test_Report_Disabled.list"
+          - name: jobname
+            value: disabled
       - name: enabled
         depends: disabled
         templateRef:
@@ -62,6 +68,8 @@ spec:
           parameters:
           - name: integrationtest
             value: "-A Test_Report_Enabled.list"
+          - name: jobname
+            value: enabled
       - name: housekeeping
         depends: enabled
         templateRef:
@@ -71,6 +79,8 @@ spec:
           parameters:
           - name: integrationtest
             value: "-A Test_Report_Housekeeping.list"
+          - name: jobname
+            value: housekeeping
       - name: auxtel-image-verification
         depends: housekeeping
         templateRef:
@@ -80,6 +90,8 @@ spec:
           parameters:
           - name: integrationtest
             value: "-A Test_Report_AuxTel_Image_Verification.list"
+          - name: jobname
+            value: auxtel-image-verification
       - name: comcam-image-verification
         depends: housekeeping
         templateRef:
@@ -89,6 +101,8 @@ spec:
           parameters:
           - name: integrationtest
             value: "-A Test_Report_ComCam_Image_Verification.list"
+          - name: jobname
+            value: comcam-image-verification
 
   - name: save-reports
     container:
