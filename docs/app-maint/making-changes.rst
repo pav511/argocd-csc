@@ -29,3 +29,4 @@ If a change applies to all sites, use the tag ``All`` at the commit message star
 Changes or updates to documentation only, no configuration or chart changes, should be tagged with ``Docs`` at the commit message start.
 Changes or updates to ``bin`` scripts only, no configuration or chart changes, should be tagged with ``Script`` at the commit message start.
 Changed or updates to ``installer`` scripts only, no configuration or chart changes, should be tagged with ``Installer`` at the commit message start.
+Changes or updates to the integration tests workflow system should be tagged with ``IntTest`` at the commit message start.
