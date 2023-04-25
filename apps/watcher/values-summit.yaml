@@ -10,5 +10,9 @@ env:
   LSST_SITE: summit
   OSPL_INFOFILE: /tmp/ospl-info-watcher.log
   OSPL_ERRORFILE: /tmp/ospl-error-watcher.log
+envSecrets:
+- name: ESCALATION_KEY
+  secretName: squadcast
+  secretKey: escalation-key
 shmemDir: /run/ospl
 osplVersion: V6.10.4

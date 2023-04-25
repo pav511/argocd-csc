@@ -30,3 +30,7 @@ secrets:
     key: ts/software/gis
     namespaces:
       - obssys
+  - name: squadcast
+    key: ts/software/squadcast
+    namespaces:
+      - obssys
