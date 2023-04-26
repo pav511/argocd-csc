@@ -51,7 +51,23 @@ pvcMountpoint:
   containerPath: /sdf/group/rubin
 - name: sdf-scratch
   containerPath: /scratch
+- name: fs-ddn-sdf-group-rubin
+  containerPath: /fs/ddn/sdf/group/rubin
+- name: fs-ddn-sdf-group-lsst
+  containerPath: /fs/ddn/sdf/group/lsst 
 pvcMountpointClaim:
+- name: sdf-data-rubin
+  containerPath: /sdf/data/rubin
+  claimSize: 1Gi
+  accessMode: ReadWriteMany
+- name: sdf-group-rubin
+  containerPath: /sdf/group/rubin
+  claimSize: 1Gi
+  accessMode: ReadWriteMany
+- name: sdf-scratch
+  containerPath: /sdf/scratch
+  claimSize: 1Gi
+  accessMode: ReadWriteMany
 - name: fs-ddn-sdf-group-rubin
   containerPath: /fs/ddn/sdf/group/rubin
   claimSize: 1Gi
