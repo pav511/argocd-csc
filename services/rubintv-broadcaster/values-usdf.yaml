@@ -1,5 +1,5 @@
 namespace: rubintv-ts8
-fullnameOverride: rubintv-ts8
+fullnameOverride: usdf
 image:
   repository: lsstts/rubintv-broadcaster
   tag: c0028_usdf
