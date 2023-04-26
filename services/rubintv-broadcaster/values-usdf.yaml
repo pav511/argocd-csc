@@ -63,7 +63,7 @@ pvcMountpointClaim:
 - name: pvc-test
   containerPath: /fs/ddn/sdf/group/rubin
   claimSize: 1Gi
-  accessMode:ReadWriteMany
+  accessMode: ReadWriteMany
 securityContext:
   uid: 15517
   gid: 4085
