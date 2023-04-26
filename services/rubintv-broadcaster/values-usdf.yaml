@@ -1,3 +1,5 @@
+namespace: rubintv-ts8
+fullnameOverride: usdf
 image:
   repository: lsstts/rubintv-broadcaster
   tag: c0028_usdf
@@ -47,11 +49,15 @@ pvcMountpoint:
 - name: sdf-data-rubin
   containerPath: /repo
   subPath: repo
+pvcMountpointClaim:
 - name: sdf-group-rubin
   containerPath: /sdf/group/rubin
+  claimSize: 1Gi
+  accessMode: ReadWriteMany
 - name: sdf-scratch
   containerPath: /scratch
-pvcMountpointClaim:
+  claimSize: 1Gi
+  accessMode: ReadWriteMany
 - name: fs-ddn-sdf-group-rubin
   containerPath: /fs/ddn/sdf/group/rubin
   claimSize: 1Gi
