@@ -45,13 +45,10 @@ envSecrets:
   secretKey: astrometry-net-api-key
 imagePullSecrets:
 - name: rubintv-broadcaster-pull-secret
-pvcMountpoint:
-- name: sdf-data-rubin
-  containerPath: /repo
-  subPath: repo
 pvcMountpointClaim:
 - name: sdf-data-rubin
   containerPath: /sdf/data/rubin
+  subPath: repo
   claimSize: 1Gi
   accessMode: ReadWriteMany
 - name: sdf-group-rubin
