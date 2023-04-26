@@ -59,7 +59,7 @@ pvcMountpointClaim:
   claimSize: 1Gi
   accessMode: ReadWriteMany
 - name: sdf-scratch
-  containerPath: /sdf/scratch
+  containerPath: /scratch
   claimSize: 1Gi
   accessMode: ReadWriteMany
 - name: fs-ddn-sdf-group-rubin
