@@ -23,6 +23,11 @@ producers:
   atscriptqueue: ScriptQueue:2
   atspectrograph: ATSpectrograph:0
   authorize: Authorize:0
+  auxteless01: ESS:201
+  auxteless02: ESS:202
+  auxteless03: ESS:203
+  auxteless04: ESS:204
+  calibhilless01: ESS:301
   camerahexapod: MTHexapod:1
   cccamera: CCCamera:0
   ccheaderservice: CCHeaderService:0
@@ -41,6 +46,9 @@ producers:
   mtaircompressor2: MTAirCompressor:2
   mtaos: MTAOS:0
   mtdome: MTDome:0
+  mtdomeess01: ESS:101
+  mtdomeess02: ESS:102
+  mtdomeess03: ESS:103
   mtdometrajectory: MTDomeTrajectory:0
   mtm1m3: MTM1M3:0
   mtm2: MTM2:0
@@ -49,6 +57,9 @@ producers:
   mtrotator: MTRotator:0
   mtscheduler: Scheduler:1
   mtscriptqueue: ScriptQueue:1
+  tmaess01: ESS:1
+  tmaess104: ESS:104
+  tmaess105: ESS:105
   watcher: Watcher:0
   weatherforecast: WeatherForecast:0
 osplVersion: V6.10.4
