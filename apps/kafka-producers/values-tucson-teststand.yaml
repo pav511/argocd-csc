@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/salkafka
-  tag: c0029
+  tag: c0030
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
@@ -85,7 +85,7 @@ producers:
   mtaircompressor:
     cscs: MTAirCompressor
   eas:
-    cscs: DIMM DSM WeatherForecast WeatherStation
+    cscs: DIMM DSM ESS WeatherForecast
   authorize:
     cscs: Authorize
   lasertracker:
