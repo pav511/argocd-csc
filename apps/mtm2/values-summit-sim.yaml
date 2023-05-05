@@ -5,7 +5,7 @@ image:
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: summit
-  LSST_SITE: tucson
+  LSST_SITE: summit
   OSPL_INFOFILE: /tmp/ospl-info-mtm2.log
   OSPL_ERRORFILE: /tmp/ospl-error-mtm2.log
   RUN_ARG: --simulate
