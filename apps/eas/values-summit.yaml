@@ -16,11 +16,11 @@ cscs:
   - ess301
   - weatherforecast
 renameMap:
-  ess1: sst-ess01
+  ess1: tma-ess01
   ess101: mtdome-ess01
   ess102: mtdome-ess02
   ess103: mtdome-ess03
-  ess104: sst-ess104
+  ess104: tma-ess104
   ess201: auxtel-ess01
   ess202: auxtel-ess02
   ess203: auxtel-ess03
