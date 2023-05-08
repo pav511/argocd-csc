@@ -1,14 +1,12 @@
 image:
   repository: ts-dockerhub.lsst.org/ospl-daemon
-  tag: c0029
+  tag: c0030
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
   LSST_DDS_PARTITION_PREFIX: summit
   LSST_DDS_RESPONSIVENESS_TIMEOUT: 15s
 shmemDir: /run/ospl
-initContainer:
-  repository: lsstit/ddsnet4u
-  tag: latest
-  pullPolicy: Always
+annotations:
+  k8s.v1.cni.cncf.io/networks: kube-system/dds
 osplVersion: V6.10.4

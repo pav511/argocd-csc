@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/rubintv-broadcaster
-  tag: c0029
+  tag: c0030
   pullPolicy: Always
 env:
   DAF_BUTLER_REPOSITORY_INDEX: /project/data-repos.yaml
@@ -16,6 +16,18 @@ scripts:
 - summit/auxTel/runMountTorquePlotter.py
 - summit/auxTel/runNightReporter.py
 - summit/auxTel/runSpecExaminer.py
+- summit/comCam/runButlerWatcher.py
+- summit/comCam/runIsrRunner_000.py
+- summit/comCam/runIsrRunner_001.py
+- summit/comCam/runIsrRunner_002.py
+- summit/comCam/runIsrRunner_003.py
+- summit/comCam/runIsrRunner_004.py
+- summit/comCam/runIsrRunner_005.py
+- summit/comCam/runIsrRunner_006.py
+- summit/comCam/runIsrRunner_007.py
+- summit/comCam/runIsrRunner_008.py
+- summit/comCam/runMetadataServer.py
+- summit/comCam/runPlotter.py
 - summit/misc/runAllSky.py
 - summit/misc/runMisc.py
 - summit/misc/runMisc2.py

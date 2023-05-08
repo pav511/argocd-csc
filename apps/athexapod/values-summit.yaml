@@ -1,7 +1,7 @@
 namespace: auxtel
 image:
   repository: ts-dockerhub.lsst.org/athexapod
-  tag: c0029
+  tag: c0030
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
@@ -11,9 +11,5 @@ env:
   OSPL_ERRORFILE: /tmp/ospl-error-athexapod.log
 shmemDir: /run/ospl
 annotations:
-  k8s.v1.cni.cncf.io/networks: kube-system/macvlan-conf
-ddsRouteFixer:
-  repository: lsstit/ddsnet4u
-  tag: latest
-  pullPolicy: Always
+  k8s.v1.cni.cncf.io/networks: kube-system/dds
 osplVersion: V6.10.4
