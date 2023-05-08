@@ -1,0 +1,11 @@
+namespace: auxtel
+image:
+  repository: ts-dockerhub.lsst.org/pmd
+  tag: c0030
+  pullPolicy: Always
+  nexus3: nexus3-docker
+env:
+  LSST_DDS_PARTITION_PREFIX: summit
+  LSST_SITE: summit
+shmemDir: /run/ospl
+osplVersion: V6.10.4
