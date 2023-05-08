@@ -48,7 +48,6 @@ producers:
       ESS
       HVAC
       WeatherForecast
-      WeatherStation
   latiss:
     cscs: >-
       ATCamera
