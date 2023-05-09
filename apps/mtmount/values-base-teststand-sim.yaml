@@ -2,4 +2,3 @@ image:
   tag: c0030
 env:
   RUN_ARG: --simulate
-  LSST_SITE: tucson
