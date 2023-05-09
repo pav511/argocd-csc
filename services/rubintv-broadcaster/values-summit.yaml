@@ -92,7 +92,7 @@ nfsMountpoint:
   containerPath: /data/allsky
   readOnly: true
   server: auxtel-archiver.cp.lsst.org
-  serverPath: /allsky
+  serverPath: /data/allsky
 - name: scratch-shared
   containerPath: /scratch
   readOnly: false
