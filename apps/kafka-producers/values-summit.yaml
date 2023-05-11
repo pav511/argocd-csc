@@ -1,6 +1,6 @@
 image:
   repository: ts-dockerhub.lsst.org/salkafka
-  tag: c0029
+  tag: c0030
   pullPolicy: Always
   nexus3: nexus3-docker
 env:
@@ -48,7 +48,6 @@ producers:
       ESS
       HVAC
       WeatherForecast
-      WeatherStation
   latiss:
     cscs: >-
       ATCamera
