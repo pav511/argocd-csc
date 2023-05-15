@@ -59,6 +59,24 @@ Selector labels
 {{- define "rubintv-broadcaster.selectorLabels" -}}
 app.kubernetes.io/name: {{ .Release.Name }}-{{ include "rubintv-broadcaster.jobName" . }}
 app.kubernetes.io/instance: {{ include "rubintv-broadcaster.name" . }}
+{{- $values := regexSplit "/" .Values.script -1 }}
+{{- if eq 1 (len $values) }}
+all: misc
+{{- else }}
+{{- $all_label := lower (index $values 1) }}
+{{- $script := index $values 2 }}
+{{- if contains "Isr" $script }}
+isr: {{ $all_label }}
+{{- end }}
+all: {{ $all_label }}
+{{- if has $all_label (list "auxtel" "comcam") }}
+camera: {{ $all_label }}
+{{- else }}
+{{- if contains "StarTracker" $script }}
+camera: startracker
+{{- end }}
+{{- end }}
+{{- end }}
 {{- end }}
 
 {{/*
