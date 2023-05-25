@@ -62,3 +62,10 @@ securityContext:
   uid: 15517
   gid: 4085
   fid: 4085
+resources:
+  requests:
+    cpu: 1.0
+    memory: "1G"
+  limits:
+    cpu: 1.0
+    memory: "2G"
