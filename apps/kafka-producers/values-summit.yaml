@@ -96,6 +96,8 @@ producers:
     cscs: GIS
   mtvms:
     cscs: MTVMS
+  lasertracker:
+    cscs: LaserTracker
 existingSecret: kafka-producers-ts-salkafka
 startupProbe:
   use: true
