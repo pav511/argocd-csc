@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: Restart-Test-Workflow
+  name: restart-test-workflow
   labels:
     workflows.argoproj.io/type: "integration-test"
     argocd.argoproj.io/instance: integration-testing
@@ -115,7 +115,7 @@ spec:
           - name: jobname
             value: comcam-image-verification
       - name: love-stress-test
-        depends: comcam-calibrations && enable-atcs
+        depends: auxtel-image-verification && comcam-image-verification
         templateRef:
           name: integration-test-job-template
           template: inttest-template
