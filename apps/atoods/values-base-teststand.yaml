@@ -28,7 +28,7 @@ nfsMountpoint:
   containerPath: /data
   readOnly: false
   server: auxtel-archiver.ls.lsst.org
-  serverPath: /
+  serverPath: /data
 configfile:
   path: /etc
   filename: atoods.yaml
